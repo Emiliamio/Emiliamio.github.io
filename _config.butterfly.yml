@@ -36,6 +36,28 @@ code_blocks:
   macStyle: true
   copy: true
 
+error_404:
+  enable: true
+  subtitle: '404 - 页面不见了'
+
+comments:
+  use: null
+  text: true
+  lazyload: false
+  count: false
+
+# Giscus — 启用前先去 https://github.com/Emiliamio/Emiliamio.github.io/settings 勾选 Discussions
+# 然后在 https://github.com/Emiliamio/Emiliamio.github.io/discussions 创建一条 Welcome 帖即可
+# 最后把下面的 use 改为 Giscus 并取消 giscus 块的注释
+# giscus:
+#   repo: Emiliamio/Emiliamio.github.io
+#   repo_id: R_kgDOTcUD1g
+#   category: General
+#   category_id: DIC_kwDOTcUD1s4Coy8e
+#   light_theme: preferred_color_scheme
+#   dark_theme: transparent_dark
+#   option:
+
 post_meta:
   page:
     date_type: created
@@ -77,7 +99,14 @@ reward:
   enable: false
 
 local_search:
-  enable: false
+  enable: true
+
+search:
+  use: local_search
+  local_search:
+    preload: true
+    top_n_per_article: 1
+    unescape: true
 
 wordcount:
   enable: true
