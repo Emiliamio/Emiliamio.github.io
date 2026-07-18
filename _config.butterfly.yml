@@ -43,7 +43,7 @@ error_404:
 comments:
   use: Giscus
   text: true
-  lazyload: true
+  lazyload: false
   count: false
 
 giscus:
