@@ -32,6 +32,15 @@ body {
   display: none !important;
 }
 
+/* 非首页头图:拉满宽度,不用 cover 避免切割 */
+#page-header.not-home-page,
+#page-header.post-bg {
+  background-size: contain !important;
+  background-position: center top !important;
+  background-repeat: no-repeat !important;
+  background-attachment: scroll !important;
+}
+
 #nav {
   background: #0d0820 !important;
   border-bottom: 1px solid rgba(255, 158, 197, 0.2) !important;
