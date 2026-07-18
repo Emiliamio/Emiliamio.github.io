@@ -69,7 +69,7 @@ post_meta:
 rightside:
   readmode: true
   fontsize: true
-  darkmode: true
+  darkmode: false
   aside: true
 
 footer:
@@ -83,11 +83,11 @@ footer:
 inject:
   head:
     - <script>(function(){var n=10,u='/images/random/bg'+(Math.floor(Math.random()*n)+1)+'.webp';var s=document.createElement('style');s.textContent='#page-header{background-image:url('+u+') !important}';document.head.appendChild(s);var l=document.createElement('link');l.rel='preload';l.as='image';l.href=u;document.head.appendChild(l);window.addEventListener('load',function(){setTimeout(function(){for(var k=1;k<=n;k++){var p='/images/random/bg'+k+'.webp';if(p!==u){(new Image()).src=p}}},1000)})})();</script>
-    - <style>:root{--card-bg:#24184a;--global-bg:#1a1035;--font-color:#e0d0f0;--card-meta:#b8a8d8;--hr-border:rgba(255,158,197,.3);--hr-before-color:#ffa5c8;--text-bg-hover:rgba(255,158,197,.15);--blockquote-bg:#1a1035;--blockquote-color:#e0d0f0;--headline-presudo:#b8a8d8;--card-box-shadow:0 3px 8px 6px rgba(0,0,0,.25);--card-hover-box-shadow:0 3px 8px 6px rgba(0,0,0,.35)}html,body{background:#1a1035!important;color:#e0d0f0!important}#page-header,#page-header.post-bg,#page-header.full_page{background-color:#1a1035!important}#page-header::after{display:none!important}#recent-posts .recent-post-item,#aside-content .card-widget,.archive .recent-post-item,.post-block,#post,#page,#archive{background:#24184a!important;border:1px solid rgba(255,158,197,0.2)!important;border-radius:12px!important}#nav{background:#0d0820!important;border-bottom:1px solid rgba(255,158,197,0.2)!important}#footer{background:#0f0a20!important}a{color:#ffa5c8!important}#site-title{color:#fff!important}h1,h2,h3,h4,h5,h6{color:#fff!important}#live2d-widget{opacity:0!important;transition:opacity .8s ease!important}#live2d-widget.l2d-show{opacity:1!important}.card-archive-list-count,.category-list-count,.tag-list-count,.length-num{color:#e0d0f0!important}#card-info-btn{color:#fff!important}#card-info-btn i{color:#fff!important}.tag-cloud a,.tag-cloud-list a,.card-tag-cloud a,#tags a{background:rgba(255,158,197,.15)!important;color:#ffa5c8!important;border:1px solid rgba(255,158,197,.35)!important;border-radius:6px!important;padding:4px 12px!important;font-weight:500!important}.tag-cloud a:hover,.tag-cloud-list a:hover,.card-tag-cloud a:hover,#tags a:hover{background:rgba(255,158,197,.3)!important;border-color:#ffa5c8!important}#rightside{z-index:100000!important}#live2d-widget{right:40px!important}</style>
+    - <link rel="stylesheet" href="/css/custom.css">
+    - <link rel="stylesheet" href="/css/sakura.min.css">
     - <script>(function(){var gc=HTMLCanvasElement.prototype.getContext;HTMLCanvasElement.prototype.getContext=function(t,a){if(t&&String(t).indexOf('webgl')>-1){a=a||{};a.preserveDrawingBuffer=true}return gc.call(this,t,a)};function hasContent(){var c=document.getElementById('live2dcanvas');if(!c||!c.width)return false;try{var s=document.createElement('canvas');s.width=40;s.height=80;var x=s.getContext('2d');x.drawImage(c,0,0,40,80);var d=x.getImageData(0,0,40,80).data;var n=0;for(var i=0;i<d.length;i+=4){if(d[i+3]>40&&!(d[i]>235&&d[i+1]>235&&d[i+2]>235)){n++}}return n>60}catch(e){return false}}var t0=Date.now();var iv=setInterval(function(){var w=document.getElementById('live2d-widget');if(w&&hasContent()){clearInterval(iv);w.classList.add('l2d-show')}else if(Date.now()-t0>15000){clearInterval(iv);iv=setInterval(function(){var w2=document.getElementById('live2d-widget');if(w2&&hasContent()){clearInterval(iv);w2.classList.add('l2d-show')}},2000)}},250)})();</script>
 
     - <script>document.addEventListener('DOMContentLoaded',function(){if(location.hostname==='localhost'||location.hostname==='127.0.0.1'){['busuanzi_value_site_uv','busuanzi_value_site_pv'].forEach(function(id){var el=document.getElementById(id);var row=el&&el.closest('.webinfo-item');if(row){row.style.display='none'}})}})</script>
-    - <link rel="stylesheet" href="/css/sakura.min.css">
   bottom:
     - <script src="/js/sakura.min.js"></script>
     - <script>new Sakura('body',{delay:400,maxSize:12,minSize:6})</script>
