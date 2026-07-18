@@ -1,6 +1,7 @@
 ---
 title: 关于我
 date: 2026-07-17
+comments: false
 ---
 
 ## 关于我
