@@ -1,1 +1,131 @@
-:root{--card-bg:#24184a;--global-bg:#1a1035;--font-color:#e0d0f0;--card-meta:#b8a8d8;--hr-border:rgba(255,158,197,.3);--hr-before-color:#ffa5c8;--text-bg-hover:rgba(255,158,197,.15);--blockquote-bg:#1a1035;--blockquote-color:#e0d0f0;--headline-presudo:#b8a8d8;--card-box-shadow:0 3px 8px 6px rgba(0,0,0,.25);--card-hover-box-shadow:0 3px 8px 6px rgba(0,0,0,.35)}html,body{background:#1a1035!important;color:#e0d0f0!important}#page-header,#page-header.post-bg,#page-header.full_page{background-color:#1a1035!important}#page-header::after{display:none!important}#recent-posts .recent-post-item,#aside-content .card-widget,.archive .recent-post-item,.post-block,#post,#page,#archive{background:#24184a!important;border:1px solid rgba(255,158,197,0.2)!important;border-radius:12px!important}#nav{background:#0d0820!important;border-bottom:1px solid rgba(255,158,197,0.2)!important}#footer{background:#0f0a20!important}a{color:#ffa5c8!important}#site-title{color:#fff!important}h1,h2,h3,h4,h5,h6{color:#fff!important}#live2d-widget{opacity:0!important;transition:opacity .8s ease!important}#live2d-widget.l2d-show{opacity:1!important}.card-archive-list-count,.category-list-count,.tag-list-count,.length-num{color:#e0d0f0!important}.tag-cloud a,.tag-cloud-list a,.card-tag-cloud a,#tags a{background:rgba(255,158,197,.15)!important;color:#ffa5c8!important;border:1px solid rgba(255,158,197,.35)!important;border-radius:6px!important;padding:4px 12px!important;font-weight:500!important}.tag-cloud a:hover,.tag-cloud-list a:hover,.card-tag-cloud a:hover,#tags a:hover{background:rgba(255,158,197,.3)!important;border-color:#ffa5c8!important}#rightside{z-index:100000!important}#live2d-widget{right:40px!important}#card-info-btn{background:rgba(255,158,197,.2)!important;border:1px solid rgba(255,158,197,.35)!important;border-radius:8px!important;color:#fff!important;transition:all .3s!important}#card-info-btn:hover{background:rgba(255,158,197,.4)!important;border-color:#ffa5c8!important}#card-info-btn i{color:#fff!important}
+/* Custom dark pink-purple theme — last edit 2026-07-18 */
+
+/* ── CSS Variables ── */
+:root {
+  --card-bg: #24184a;
+  --global-bg: #1a1035;
+  --font-color: #e0d0f0;
+  --card-meta: #b8a8d8;
+  --hr-border: rgba(255, 158, 197, 0.3);
+  --hr-before-color: #ffa5c8;
+  --text-bg-hover: rgba(255, 158, 197, 0.15);
+  --blockquote-bg: #1a1035;
+  --blockquote-color: #e0d0f0;
+  --headline-presudo: #b8a8d8;
+  --card-box-shadow: 0 3px 8px 6px rgba(0, 0, 0, 0.25);
+  --card-hover-box-shadow: 0 3px 8px 6px rgba(0, 0, 0, 0.35);
+}
+
+/* ── Body & Layout ── */
+html,
+body {
+  background: #1a1035 !important;
+  color: #e0d0f0 !important;
+}
+
+#page-header,
+#page-header.post-bg,
+#page-header.full_page {
+  background-color: #1a1035 !important;
+}
+#page-header::after {
+  display: none !important;
+}
+
+#nav {
+  background: #0d0820 !important;
+  border-bottom: 1px solid rgba(255, 158, 197, 0.2) !important;
+}
+
+#footer {
+  background: #0f0a20 !important;
+}
+
+/* ── Cards ── */
+#recent-posts .recent-post-item,
+#aside-content .card-widget,
+.archive .recent-post-item,
+.post-block,
+#post,
+#page,
+#archive {
+  background: #24184a !important;
+  border: 1px solid rgba(255, 158, 197, 0.2) !important;
+  border-radius: 12px !important;
+}
+
+/* ── Typography ── */
+a {
+  color: #ffa5c8 !important;
+}
+#site-title {
+  color: #fff !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #fff !important;
+}
+
+/* ── Follow Me Button ── */
+#card-info-btn {
+  background: rgba(255, 158, 197, 0.2) !important;
+  border: 1px solid rgba(255, 158, 197, 0.35) !important;
+  border-radius: 8px !important;
+  color: #fff !important;
+  transition: all 0.3s !important;
+}
+#card-info-btn:hover {
+  background: rgba(255, 158, 197, 0.4) !important;
+  border-color: #ffa5c8 !important;
+}
+#card-info-btn i {
+  color: #fff !important;
+}
+
+/* ── Tag Cloud ── */
+.tag-cloud a,
+.tag-cloud-list a,
+.card-tag-cloud a,
+#tags a {
+  background: rgba(255, 158, 197, 0.15) !important;
+  color: #ffa5c8 !important;
+  border: 1px solid rgba(255, 158, 197, 0.35) !important;
+  border-radius: 6px !important;
+  padding: 4px 12px !important;
+  font-weight: 500 !important;
+}
+.tag-cloud a:hover,
+.tag-cloud-list a:hover,
+.card-tag-cloud a:hover,
+#tags a:hover {
+  background: rgba(255, 158, 197, 0.3) !important;
+  border-color: #ffa5c8 !important;
+}
+
+/* ── Sidebar Count Numbers ── */
+.card-archive-list-count,
+.category-list-count,
+.tag-list-count,
+.length-num {
+  color: #e0d0f0 !important;
+}
+
+/* ── Live2D Widget ── */
+#live2d-widget {
+  opacity: 0 !important;
+  transition: opacity 0.8s ease !important;
+  right: 40px !important;
+}
+#live2d-widget.l2d-show {
+  opacity: 1 !important;
+}
+
+/* ── Rightside Buttons ── */
+#rightside {
+  z-index: 100000 !important;
+}
+
