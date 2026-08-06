@@ -1,0 +1,49 @@
+- generic [ref=e1]:
+  - region "Notifications alt+T"
+  - progressbar
+  - generic [ref=e2]:
+    - link "Skip to main content" [ref=e3] [cursor=pointer]:
+      - /url: "#main"
+    - main [ref=e5]:
+      - generic [ref=e7]:
+        - link "ngrok home" [ref=e8] [cursor=pointer]:
+          - /url: https://ngrok.com
+        - generic [ref=e12]:
+          - generic [ref=e13]:
+            - link "Sign up with GitHub" [ref=e14] [cursor=pointer]:
+              - /url: /login/github
+            - link [ref=e17] [cursor=pointer]:
+              - /url: /login/google
+              - img "Google" [ref=e18]
+              - text: Sign up with Google
+          - generic [ref=e19]:
+            - generic [ref=e20]: or
+            - generic [ref=e21]:
+              - generic [ref=e22]:
+                - generic [ref=e23] [cursor=pointer]: Name
+                - textbox "Name" [active] [ref=e24]
+              - generic [ref=e25]:
+                - generic [ref=e26] [cursor=pointer]: Email
+                - textbox "Email" [ref=e27]
+              - generic [ref=e28]:
+                - generic [ref=e29] [cursor=pointer]: Password
+                - textbox "Password" [ref=e30]
+                - button "Turn password visibility on" [ref=e31] [cursor=pointer]
+              - generic [ref=e36] [cursor=pointer]:
+                - checkbox "I accept the terms of service and privacy policy" [ref=e38]
+                - paragraph [ref=e39]:
+                  - text: I accept the
+                  - link "terms of service" [ref=e40]:
+                    - /url: https://ngrok.com/tos
+                  - text: and
+                  - link "privacy policy" [ref=e41]:
+                    - /url: https://ngrok.com/privacy
+              - button "Sign up" [ref=e42] [cursor=pointer]
+          - generic [ref=e43]:
+            - text: Already have an account?
+            - link "Log in" [ref=e44] [cursor=pointer]:
+              - /url: /login
+        - link "Privacy Preferences" [ref=e46] [cursor=pointer]:
+          - /url: https://ngrok.com/privacy-preferences
+    - contentinfo [ref=e47]:
+      - button "Change Theme" [ref=e48] [cursor=pointer]

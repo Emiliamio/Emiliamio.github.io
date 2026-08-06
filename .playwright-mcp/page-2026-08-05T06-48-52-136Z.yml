@@ -1,0 +1,57 @@
+- generic [ref=f3e2]:
+  - generic [ref=f3e3]:
+    - link "Skip to content" [ref=f3e4] [cursor=pointer]:
+      - /url: "#start-of-content"
+    - banner [ref=f3e6]
+  - main [ref=f3e9]:
+    - generic [ref=f3e10]:
+      - generic [ref=f3e12]:
+        - img "ngrok.com logo" [ref=f3e14]
+        - paragraph [ref=f3e15]:
+          - text: Sign in to
+          - strong [ref=f3e16]: GitHub
+          - text: to continue to
+          - strong [ref=f3e17]: ngrok.com
+      - generic [ref=f3e18]:
+        - generic [ref=f3e21]:
+          - button "Dismiss this message" [active] [ref=f3e22] [cursor=pointer]
+          - alert [ref=f3e25]: Incorrect username or password.
+        - generic [ref=f3e27]:
+          - generic [ref=f3e28]:
+            - generic [ref=f3e29]: Username or email address
+            - textbox "Username or email address" [ref=f3e30]: 2932722050@qq.com
+          - generic [ref=f3e31]:
+            - generic [ref=f3e32]: Password
+            - textbox "Password" [ref=f3e33]
+            - link "Forgot password?" [ref=f3e34] [cursor=pointer]:
+              - /url: /password_reset
+          - button "Sign in" [ref=f3e36] [cursor=pointer]
+        - generic [ref=f3e37]:
+          - generic [ref=f3e38]: or
+          - button "Continue with Google" [ref=f3e41] [cursor=pointer]
+          - button "Continue with Apple" [ref=f3e45] [cursor=pointer]
+      - generic [ref=f3e48]:
+        - paragraph [ref=f3e50]:
+          - text: New to GitHub?
+          - link "Create an account" [ref=f3e51] [cursor=pointer]:
+            - /url: /join?return_to=%2Flogin%2Foauth%2Fauthorize%3Fclient_id%3De3ab4045e762cd114437%26redirect_uri%3Dhttps%253A%252F%252Fdashboard.ngrok.com%252Foauth%252Fgithub%252Flogin%252Fauthorize%26response_type%3Dcode%26scope%3Duser%253Aemail%26state%3DcBEzG2bFQVvJV98W2Du7beSQPUhVTTe-azTtShVK8E05vzq9OyMTI4Xsud3WjOapoy7276tOOOhlom_tbV3WVmtnyrr7KCfbngrypn8zxTmtnIusxDdB7iTEZs5gJoF6wWjh4_Uv7u_8LvVc7-jFCp28kbXkbq-5oxJNIFmTk1g7KaxFUGxAPMvSqR15gsHxftmrx9yHGxOS3d043A%253D%253D&source=oauth
+        - paragraph [ref=f3e53]:
+          - button "Sign in with a passkey" [ref=f3e54] [cursor=pointer]
+  - contentinfo [ref=f3e57]:
+    - list [ref=f3e58]:
+      - listitem [ref=f3e59]:
+        - link "Terms" [ref=f3e60] [cursor=pointer]:
+          - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+      - listitem [ref=f3e61]:
+        - link "Privacy" [ref=f3e62] [cursor=pointer]:
+          - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+      - listitem [ref=f3e63]:
+        - link "Docs" [ref=f3e64] [cursor=pointer]:
+          - /url: https://docs.github.com
+      - listitem [ref=f3e65]:
+        - link "Contact GitHub Support" [ref=f3e66] [cursor=pointer]:
+          - /url: https://support.github.com
+      - listitem [ref=f3e67]:
+        - button "Manage cookies" [ref=f3e69] [cursor=pointer]
+      - listitem [ref=f3e70]:
+        - button "Do not share my personal information" [ref=f3e72] [cursor=pointer]
