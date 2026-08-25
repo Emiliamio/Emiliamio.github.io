@@ -60,6 +60,23 @@ tags:
 
 面试时讲这个点，可以自然引出对架构设计的思考——"系统不止审别人，也要审自己"。
 
+## Redis 三大实战落地——安全与性能兼备
+
+很多项目简历上写了 Redis 却只是拿来做最简单的查表缓存。在 AuditVault 中，我把 Redis 用在了三个真正解决生产痛点的场景中：
+
+1. **登录防暴力破解限流（RedisRateLimiter）**：基于 `StringRedisTemplate` 记录 IP 登录失败计数，连续 5 次失败自动锁定 15 分钟（返回 HTTP 429），登录成功自动重置计数。底层设计了 Fail-Open 容灾，Redis 瞬时异常自动降级放行，绝不阻断正常业务。
+2. **JWT 登出即时吊销黑名单（TokenBlacklistService）**：针对无状态 JWT 前端登出无法即时失效的安全痛点，登出时计算 Token 剩余有效时长（Remaining TTL），存入 Redis 键 `auditvault:blacklist:{token}`。在 `JwtAuthFilter` 中进行黑名单拦截，解决令牌被窃取后无法作废的问题。
+3. **HyperLogLog 极速活跃 IP 统计**：使用 Redis HyperLogLog（`PFADD` / `PFCOUNT`），仅用 12KB 内存与 $O(1)$ 时间复杂度实现海量独立 IP 去重统计，配合 MySQL 兜底查询。
+
+## 海量日志导出防 OOM——从 XSSF 到 SXSSFWorkbook
+
+导出数十万条日志如果使用全内存的 `XSSFWorkbook`，很容易因为高并发导致 JVM 堆内存耗尽触发 OOM 崩溃。
+
+我将其重构为 **`SXSSFWorkbook(100)` 流式滑动窗口模式**：
+- 内存中仅保留最近 100 行记录，早期行自动溢出刷入磁盘临时文件。
+- 设置单次导出上限为 50,000 条。
+- 在 `finally` 块中显式调用 `workbook.dispose()`，确保请求结束时临时文件被物理销毁，内存曲线平稳可控。
+
 ## 前端：原生三件套也能好看
 
 不想被前端框架绑架，用了原生 HTML + CSS + JavaScript 写了三个页面：日志列表、详情、统计面板。深色控制台风格，低蓝光配色，适合长时间盯着看。
