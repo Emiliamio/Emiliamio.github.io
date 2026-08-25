@@ -77,11 +77,31 @@ tags:
 - 设置单次导出上限为 50,000 条。
 - 在 `finally` 块中显式调用 `workbook.dispose()`，确保请求结束时临时文件被物理销毁，内存曲线平稳可控。
 
-## 前端：原生三件套也能好看
+## 实时 Webhook 采集中心与模拟器
 
-不想被前端框架绑架，用了原生 HTML + CSS + JavaScript 写了三个页面：日志列表、详情、统计面板。深色控制台风格，低蓝光配色，适合长时间盯着看。
+在实际微服务架构中，日志通过 HTTP Webhook 异步推送到审计中心。
 
-前端代码放在 `resources/static` 下，Spring Boot 自动托管，浏览器打开就能访问，不需要额外部署。
+我实现了 **`POST /api/logs/webhook` 实时日志接入端点**：
+- 采用专用 `X-Audit-Token` 安全鉴权与速率限制；
+- 收到请求后 `< 5ms` 内极速返回 `202 Accepted`，由 Spring `ThreadPoolTaskExecutor` 线程池异步批量解析入库并实时计入 HyperLogLog 独立 IP 统计；
+- 前端内置 **📡 Webhook 模拟器**，预设支付失败堆栈、限流拦截、SQL 注入、单点登录与批量日志 5 种场景，支持一键实时压测上报。
+
+## ADMIN 与 USER 双角色视觉与权限深度隔离
+
+针对企业中“系统管理员”与“只读审计员”的分权管控，我设计了严密的 RBAC 体系：
+- **管理员 (`admin`)**：导航栏高亮显示 `👑 admin [系统管理员]` 金色徽章，全量开放日志检索、Excel 导出与 Webhook 模拟推送；
+- **普通用户 (`user`)**：导航栏显示 `👤 user [普通用户(只读)]` 蓝色徽章，前端将导出按钮智能置灰锁定（`🔒 导出 Excel`），若调用写入或导出接口，后端与前端拦截器统一返回 `403 Forbidden` 并弹出友好安全警示。
+
+## 规范化 OpenAPI 3.0 (Swagger UI)
+
+集成 `springdoc-openapi-starter-webmvc-ui 2.3.0`，为所有 RESTful 控制器配置了规范的 `@Tag` 与 `@Operation` 注解，访问 `/swagger-ui.html` 即可交互式调试与导出 OpenAPI 规范文档。
+
+## 全链路自动化测试保障
+
+项目包含 **42 个 Spring MockMvc 与 Security 自动化测试**，覆盖率 100%：
+- 认证流：登录、失败限流锁定、Token 刷新、登出黑名单；
+- RBAC 权限：管理员导出放行、普通用户 403 拦截；
+- 核心业务：多条件动态分页查询、SXSSFWorkbook 流式导出、Webhook 异步摄取、操作审计自追踪。
 
 ## 收获与思考
 
@@ -93,4 +113,4 @@ tags:
 
 ## 项目地址
 
-GitHub：[https://github.com/Emiliamio/log-audit-system](https://github.com/Emiliamio/log-audit-system)
+GitHub：[https://github.com/Emiliamio/java-portfolio/tree/main/01-log-audit-system](https://github.com/Emiliamio/java-portfolio/tree/main/01-log-audit-system)

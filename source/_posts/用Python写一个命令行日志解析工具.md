@@ -26,7 +26,7 @@ tags:
 | 日志解析 | 支持 CSV（结构化）和纯文本（非结构化）两种格式，自动检测 |
 | 字段提取 | 从原始日志行中提取时间戳、IP、用户、操作类型、结果、严重程度等 |
 | 异常检测 | 按 IP 分组统计失败次数，超过阈值 → 标记可疑 + 风险等级 |
-| 报告导出 | 控制台报告 / CSV / Excel 多 Sheet / MySQL INSERT SQL |
+| 报告导出 | 控制台报告 / CSV / Excel 多 Sheet / MySQL INSERT SQL / 单文件离线 HTML 大屏 |
 | 前端仪表盘 | 纯前端解析 + 可视化（LogScope） |
 
 ## 技术选型
@@ -39,7 +39,8 @@ tags:
 | argparse | 命令行参数解析 |
 | logging | 工程级日志输出（替代 print）|
 | openpyxl | Excel 文件写入 |
-| pytest | 42 个单元 + 集成测试 |
+| pytest | 46 个单元 + 集成测试 |
+
 
 ## 正则引擎设计
 
@@ -89,11 +90,11 @@ IP_PATTERN = re.compile(
 ## 命令行设计
 
 ```bash
-# 解析 CSV 日志并检测异常
-python -m log_parser.cli -i sample_logs/access.csv -o output/
+# 解析 CSV 日志并检测异常，一键生成单文件离线态势大屏 HTML
+python -m log_parser.cli -i sample_logs/access.csv -o output/ --html
 
-# 解析非结构化文本日志，同时导出 Excel + SQL
-python -m log_parser.cli -i sample_logs/server.log -o output/ --excel --sql
+# 解析非结构化文本日志，同时导出 HTML + Excel + SQL
+python -m log_parser.cli -i sample_logs/server.log -o output/ --html --excel --sql
 
 # 自定义阈值
 python -m log_parser.cli -i sample_logs/access.csv -t 10
@@ -117,7 +118,7 @@ mysql -u root -p log_audit < output/access_data.sql
 
 ## 测试
 
-43 个 pytest 测试覆盖了所有核心路径：
+46 个 pytest 测试覆盖了所有核心路径：
 
 | 测试模块 | 测试数 | 覆盖内容 |
 |----------|--------|----------|
@@ -128,7 +129,10 @@ mysql -u root -p log_audit < output/access_data.sql
 | 文件级解析 | 2 | CSV 50 条 / 文本 48 条 |
 | 异常检测 | 3 | 阈值判定 / 空输入 / 高风险 |
 | SQL 导出 | 2 | 转义 / 格式 |
-| 集成测试 | 1 | 完整链路：解析 → 检测 → SQL |
+| HTML 离线大屏导出 | 3 | 单文件生成 / 结构完整性 / 异常状态着色 |
+| 多行堆栈状态机 | 3 | Java 异常多行合并 / 跨行追踪 |
+| 规则引擎与集成 | 13 | 完整链路：解析 → 检测 → SQL / Excel / HTML |
+
 
 ## 可视化仪表盘
 

@@ -42,7 +42,7 @@ tags:
   3. `Path=/`：使两个同域或子域微服务（如 8080 和 8081）能够实现自然的单点登录（SSO）。
 
 ```java
-ResponseCookie cookie = ResponseCookie.from("token", jwtToken)
+ResponseCookie cookie = ResponseCookie.from("auditvault_token", jwtToken)
     .httpOnly(true)
     .secure(false) // 生产环境配证书后置为 true
     .path("/")
@@ -51,6 +51,7 @@ ResponseCookie cookie = ResponseCookie.from("token", jwtToken)
     .build();
 response.addHeader(HttpHeaders.SET_COOKIE, cookie.toString());
 ```
+
 
 ---
 
