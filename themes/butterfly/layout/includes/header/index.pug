@@ -29,9 +29,7 @@ if !theme.disable_top_img && page.top_img !== false
 header#page-header(class=`${headerClassName + isFixedClass}` style=bg_img)
   include ./nav.pug
   if top_img !== false
-    if globalPageType === 'post'
-      include ./post-info.pug
-    else if globalPageType === 'home'
+    if globalPageType === 'home'
       #site-info
         h1#site-title=config.title
         if theme.subtitle.enable
@@ -43,7 +41,7 @@ header#page-header(class=`${headerClassName + isFixedClass}` style=bg_img)
             !=partial('includes/header/social', {}, {cache: true})
       #scroll-down
         i.fas.fa-angle-down.scroll-down-effects
-    else
+    else if globalPageType !== 'post'
       #page-site-info
         h1#site-title=page.title || page.tag || page.category
   else
