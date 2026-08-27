@@ -66,36 +66,79 @@ body {
   height: 100%;
   background: linear-gradient(
     to bottom,
-    rgba(13, 8, 32, 0.4) 0%,
-    rgba(26, 16, 53, 0.15) 40%,
-    rgba(26, 16, 53, 0.6) 80%,
-    rgba(26, 16, 53, 0.98) 100%
+    rgba(13, 8, 32, 0.5) 0%,
+    rgba(26, 16, 53, 0.1) 35%,
+    rgba(26, 16, 53, 0.55) 70%,
+    rgba(26, 16, 53, 0.96) 100%
   ) !important;
   pointer-events: none;
   z-index: 1;
 }
 
-#page-header.not-home-page #post-info,
-#page-header.post-bg #post-info,
-#page-header #page-site-info {
-  position: relative;
-  z-index: 2;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.85) !important;
+/* 文章标题与元信息：绝对定位于大图底部，给上方动漫插画留出完整纯净展示空间，彻底避免顶栏遮挡 */
+#post-info {
+  position: absolute !important;
+  bottom: 35px !important;
+  left: 0 !important;
+  width: 100% !important;
+  padding: 0 45px !important;
+  box-sizing: border-box !important;
+  z-index: 2 !important;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.95) !important;
+  text-align: left !important;
+}
+
+#post-info .post-title {
+  font-size: 2.1rem !important;
+  line-height: 1.35 !important;
+  margin-bottom: 12px !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  word-break: break-word !important;
+}
+
+#post-info #post-meta {
+  font-size: 13.5px !important;
+  color: #e0d0f0 !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+  align-items: center !important;
+}
+
+#post-info #post-meta a {
+  color: #ffa5c8 !important;
 }
 
 /* 移动端适配 */
 @media screen and (max-width: 768px) {
   #page-header.not-home-page,
   #page-header.post-bg {
-    height: 50vh !important;
-    min-height: 360px !important;
+    height: 52vh !important;
+    min-height: 380px !important;
     background-position: center center !important;
+  }
+  #post-info {
+    bottom: 20px !important;
+    padding: 0 18px !important;
+  }
+  #post-info .post-title {
+    font-size: 1.55rem !important;
   }
 }
 
 #nav {
-  background: #0d0820 !important;
+  background: rgba(13, 8, 32, 0.45) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
   border-bottom: 1px solid rgba(255, 158, 197, 0.2) !important;
+  transition: all 0.3s ease !important;
+}
+
+#page-header.nav-fixed #nav {
+  background: rgba(13, 8, 32, 0.92) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
 }
 
 #footer {
