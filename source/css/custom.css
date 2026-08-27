@@ -145,8 +145,22 @@ main.layout,
   -webkit-backdrop-filter: blur(16px) !important;
 }
 
-#footer {
+/* ── Footer 彻底杜绝亮蓝色 ── */
+#footer,
+footer#footer,
+#footer::before,
+footer#footer::before {
   background: #0f0a20 !important;
+  background-color: #0f0a20 !important;
+  border-top: 1px solid rgba(255, 158, 197, 0.2) !important;
+  color: #e0d0f0 !important;
+}
+#footer::before,
+footer#footer::before {
+  display: none !important;
+}
+#footer a {
+  color: #ffa5c8 !important;
 }
 
 /* ── Cards & Content ── */
@@ -254,4 +268,11 @@ h6 {
 #article-container table td {
   border: 1px solid rgba(255, 158, 197, 0.15) !important;
   color: #e0d0f0 !important;
+}
+
+/* ── 樱花飘落特效全局浮动层 ── */
+.sakura {
+  pointer-events: none !important;
+  position: fixed !important;
+  z-index: 99999 !important;
 }
