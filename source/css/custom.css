@@ -1,6 +1,6 @@
 /* ==========================================================================
    Custom Dark Pink-Purple Theme — Permanently Locked to Dark Violet Tone
-   Palette: Background #1a1035 | Card #24184a | Text #e0d0f0 | Highlight #ffa5c8 | Footer #0f0a20
+   Palette: Background #1a1035 | Card rgba(36,24,74,0.85) | Text #e0d0f0 | Highlight #ffa5c8 | Footer #0f0a20
    ========================================================================== */
 
 /* ── 1. CSS Variables ── */
@@ -8,35 +8,44 @@
 [data-theme="light"],
 [data-theme="dark"] {
   --global-bg: #1a1035 !important;
-  --card-bg: #24184a !important;
+  --card-bg: rgba(36, 24, 74, 0.85) !important;
   --font-color: #e0d0f0 !important;
   --card-meta: #b8a8d8 !important;
   --hr-border: rgba(255, 158, 197, 0.3) !important;
   --hr-before-color: #ffa5c8 !important;
   --text-bg-hover: rgba(255, 158, 197, 0.15) !important;
-  --blockquote-bg: #1a1035 !important;
+  --blockquote-bg: rgba(26, 16, 53, 0.88) !important;
   --blockquote-color: #e0d0f0 !important;
   --headline-presudo: #b8a8d8 !important;
-  --card-box-shadow: 0 3px 8px 6px rgba(0, 0, 0, 0.25) !important;
-  --card-hover-box-shadow: 0 3px 8px 6px rgba(0, 0, 0, 0.35) !important;
+  --card-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35) !important;
+  --card-hover-box-shadow: 0 6px 28px rgba(0, 0, 0, 0.45) !important;
 }
 
 /* ── 2. Global Layout & Dark Tone Lock ── */
 html,
-body,
-#body-wrap,
-#content-inner,
-main.layout,
-.layout {
+body {
   background-color: #1a1035 !important;
   color: #e0d0f0 !important;
 }
 
-/* ── 3. Page Header (Pure Panoramic Wallpaper Banner - 零文字遮挡) ── */
+#body-wrap {
+  background-color: transparent !important;
+  min-height: 100vh !important;
+}
+
+#content-inner,
+main.layout,
+.layout {
+  background-color: transparent !important;
+  background: transparent !important;
+  color: #e0d0f0 !important;
+}
+
+/* ── 3. Page Header (Pure Panoramic Wallpaper Banner - 零文字遮挡，透出全局背景) ── */
 #page-header {
   position: relative;
   width: 100% !important;
-  background-color: #1a1035 !important;
+  background-color: transparent !important;
   background-size: cover !important;
   background-position: center top !important;
   background-repeat: no-repeat !important;
@@ -58,11 +67,26 @@ main.layout,
   width: 100% !important;
   height: 380px !important;
   background: transparent !important;
+  background-image: none !important;
+  background-color: transparent !important;
 }
 
+/* 平滑柔和渐变过渡：仅顶部微暗保护顶栏，下方完全通透与背景浑然一体 */
 #page-header.not-home-page::before,
 #page-header.post-bg::before {
-  display: none !important;
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: linear-gradient(
+    to bottom,
+    rgba(13, 8, 32, 0.45) 0%,
+    transparent 55%
+  ) !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
 }
 
 /* ── 4. Navigation Bar ── */
@@ -80,15 +104,22 @@ main.layout,
   -webkit-backdrop-filter: blur(16px) !important;
 }
 
-/* ── 5. Post Content Card & Sunk Title/Meta (知乎/B站/Medium 专栏排版) ── */
+/* ── 5. Post Content Card & Sunk Title/Meta (毛玻璃半透明浮于插画之上，知乎/Medium专栏排版) ── */
 #post {
-  background: rgba(36, 24, 74, 0.88) !important;
+  background: rgba(36, 24, 74, 0.85) !important;
   backdrop-filter: blur(14px) !important;
   -webkit-backdrop-filter: blur(14px) !important;
-  border: 1px solid rgba(255, 158, 197, 0.25) !important;
+  border: 1px solid rgba(255, 158, 197, 0.22) !important;
   border-radius: 12px !important;
   padding: 40px 45px 35px !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45) !important;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35) !important;
+}
+
+#article-container,
+.post-content {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 /* 下沉到正文卡片最顶部的标题与元数据 */
@@ -101,7 +132,7 @@ main.layout,
   width: 100% !important;
   padding: 0 0 22px 0 !important;
   margin: 0 0 28px 0 !important;
-  border-bottom: 1px solid rgba(255, 158, 197, 0.2) !important;
+  border-bottom: 1px solid rgba(255, 158, 197, 0.22) !important;
   text-align: left !important;
   text-shadow: none !important;
   box-sizing: border-box !important;
@@ -176,11 +207,12 @@ main.layout,
 @media screen and (max-width: 768px) {
   #page-header.not-home-page,
   #page-header.post-bg {
-    height: 260px !important;
+    height: 240px !important;
   }
   #post {
     padding: 24px 18px 20px !important;
     border-radius: 8px !important;
+    background: rgba(36, 24, 74, 0.90) !important;
   }
   #post > #post-info {
     padding-bottom: 16px !important;
@@ -205,9 +237,11 @@ footer#footer,
 footer#footer::before,
 #footer .footer-other,
 #footer .footer-flex {
-  background: #0f0a20 !important;
-  background-color: #0f0a20 !important;
-  border-top: 1px solid rgba(255, 158, 197, 0.2) !important;
+  background: rgba(15, 10, 32, 0.96) !important;
+  background-color: rgba(15, 10, 32, 0.96) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border-top: 1px solid rgba(255, 158, 197, 0.22) !important;
   color: #b8a8d8 !important;
   box-shadow: none !important;
 }
@@ -236,19 +270,21 @@ footer#footer::before {
   color: #b8a8d8 !important;
 }
 
-/* ── 8. Cards & Content (Global) ── */
+/* ── 8. Cards & Content (Global Frosted Glass) ── */
 #recent-posts .recent-post-item,
 #aside-content .card-widget,
 .archive .recent-post-item,
 .post-block,
 #page,
 #archive,
-#article-container,
 .container {
-  background: #24184a !important;
+  background: rgba(36, 24, 74, 0.85) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
   color: #e0d0f0 !important;
-  border: 1px solid rgba(255, 158, 197, 0.2) !important;
+  border: 1px solid rgba(255, 158, 197, 0.22) !important;
   border-radius: 12px !important;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35) !important;
 }
 
 /* ── 9. Typography ── */
@@ -308,13 +344,13 @@ h6 {
 
 /* ── 12. Code Blocks ── */
 #article-container figure.highlight {
-  background: #150d2c !important;
-  border: 1px solid rgba(255, 158, 197, 0.2) !important;
+  background: rgba(21, 13, 44, 0.94) !important;
+  border: 1px solid rgba(255, 158, 197, 0.22) !important;
   border-radius: 8px !important;
 }
 
 #article-container code {
-  background: rgba(255, 158, 197, 0.15) !important;
+  background: rgba(255, 158, 197, 0.18) !important;
   color: #ffa5c8 !important;
   border-radius: 4px !important;
   padding: 2px 6px !important;
@@ -322,7 +358,7 @@ h6 {
 
 /* ── 13. Blockquotes ── */
 #article-container blockquote {
-  background: #1a1035 !important;
+  background: rgba(26, 16, 53, 0.88) !important;
   border-left: 4px solid #ffa5c8 !important;
   color: #e0d0f0 !important;
 }
@@ -335,14 +371,14 @@ h6 {
 
 /* ── 15. Tables ── */
 #article-container table {
-  background: #1a1035 !important;
+  background: rgba(26, 16, 53, 0.9) !important;
   border-collapse: collapse !important;
 }
 
 #article-container table th {
-  background: #2e1e5e !important;
+  background: rgba(46, 30, 94, 0.95) !important;
   color: #ffffff !important;
-  border: 1px solid rgba(255, 158, 197, 0.2) !important;
+  border: 1px solid rgba(255, 158, 197, 0.22) !important;
 }
 
 #article-container table td {
