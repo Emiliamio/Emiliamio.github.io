@@ -96,6 +96,15 @@ tags:
 
 集成 `springdoc-openapi-starter-webmvc-ui 2.3.0`，为所有 RESTful 控制器配置了规范的 `@Tag` 与 `@Operation` 注解，访问 `/swagger-ui.html` 即可交互式调试与导出 OpenAPI 规范文档。
 
+
+## Datadog / SigNoz 级企业 SOC 遥测大屏与 Live Tail 实时流
+
+为了彻底摆脱传统管理后台粗糙的“AI 模板味”，我参照 **Datadog、SigNoz 与 Linear** 的专业监控台设计标准，对前端进行了彻底重构：
+1. **暗黑工业遥测视觉**：深度黑曜石背景 (`#090a0f`)、精密 1px 边框、等宽 `JetBrains Mono` 排版与多色状态呼吸指示灯；
+2. **Live Tail 实时流监听模式**：点击一键开启流监听，增量微服务日志在表格顶部平滑插入并伴随青色扫光动效，动态显示实时流速（如 `⚡ 12 msg/s`）；
+3. **右侧滑出式日志深度抽屉 (`#detailDrawer`)**：点击任意日志行平滑滑出 580px 侧边分析栏，内含 **属性画像**、**彩色语法高亮 JSON 树**、以及 **分级高亮 Java 异常堆栈追踪（Caused by 红色突显）**；
+4. **跨系统智能研判联动**：抽屉底部提供 `[ 🚀 发送至 Nexus AI 智能研判 ]` 按钮，一键将异常日志无缝导入项目三进行大模型推理。
+
 ## 全链路自动化测试保障
 
 项目包含 **42 个 Spring MockMvc 与 Security 自动化测试**，覆盖率 100%：
