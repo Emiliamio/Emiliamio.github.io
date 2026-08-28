@@ -992,3 +992,121 @@ h6 {
   display: none !important;
 }
 
+/* ── 24. Home Tech Arsenal Matrix (首页底部技术栈徽章墙) ── */
+.home-tech-arsenal {
+  margin-top: 40px !important;
+  padding: 28px 28px 30px !important;
+  background: rgba(36, 24, 74, 0.85) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border: 1px solid rgba(255, 158, 197, 0.25) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35) !important;
+}
+
+.tech-arsenal-header {
+  margin-bottom: 22px !important;
+}
+
+.tech-arsenal-title {
+  color: #ffffff !important;
+  font-size: 1.25rem !important;
+  font-weight: 700 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  margin-bottom: 6px !important;
+}
+
+.tech-arsenal-subtitle {
+  color: #c8b8e8 !important;
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+}
+
+.tech-arsenal-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)) !important;
+  gap: 14px !important;
+}
+
+.tech-item {
+  background: rgba(22, 14, 46, 0.8) !important;
+  border: 1px solid rgba(255, 158, 197, 0.2) !important;
+  border-radius: 10px !important;
+  padding: 14px 16px !important;
+  text-align: center !important;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+}
+
+.tech-item:hover {
+  background: rgba(45, 28, 92, 0.95) !important;
+  border-color: #ffa5c8 !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 6px 20px rgba(255, 158, 197, 0.22) !important;
+}
+
+.tech-item .tech-icon {
+  font-size: 1.8rem !important;
+  margin-bottom: 8px !important;
+}
+
+.tech-item .tech-name {
+  color: #ffffff !important;
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
+  margin-bottom: 4px !important;
+}
+
+.tech-item .tech-desc {
+  color: #b8a8d8 !important;
+  font-size: 11.5px !important;
+  line-height: 1.4 !important;
+}
+
+/* ── 25. Sidebar Sticky Widgets (侧边栏最新文章与标签云质感优化) ── */
+#aside-content .card-widget.card-recent-post .aside-list-item {
+  padding: 8px 0 !important;
+  border-bottom: 1px dashed rgba(255, 158, 197, 0.15) !important;
+}
+
+#aside-content .card-widget.card-recent-post .aside-list-item:last-child {
+  border-bottom: none !important;
+}
+
+#aside-content .card-widget.card-recent-post .aside-list-item .title {
+  color: #ffffff !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  line-height: 1.45 !important;
+  transition: color 0.2s ease !important;
+}
+
+#aside-content .card-widget.card-recent-post .aside-list-item .title:hover {
+  color: #ffa5c8 !important;
+}
+
+#aside-content .card-widget.card-recent-post .aside-list-item time {
+  color: #ffa5c8 !important;
+  font-size: 11.5px !important;
+}
+
+#aside-content .card-widget.card-tags .card-tag-cloud a {
+  display: inline-block !important;
+  margin: 4px 5px !important;
+  padding: 3px 10px !important;
+  border-radius: 12px !important;
+  background: rgba(255, 158, 197, 0.15) !important;
+  border: 1px solid rgba(255, 158, 197, 0.3) !important;
+  color: #ffa5c8 !important;
+  font-size: 12px !important;
+  transition: all 0.25s ease !important;
+}
+
+#aside-content .card-widget.card-tags .card-tag-cloud a:hover {
+  background: rgba(255, 158, 197, 0.45) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(255, 158, 197, 0.35) !important;
+}
+

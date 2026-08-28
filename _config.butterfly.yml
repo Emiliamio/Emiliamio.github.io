@@ -39,11 +39,14 @@ aside:
   card_announcement:
     enable: false
   card_recent_post:
-    enable: false
+    enable: true
+    limit: 5
+    sort: date
   card_categories:
     enable: false
   card_tags:
-    enable: false
+    enable: true
+    limit: 25
   card_archives:
     enable: false
   card_webinfo:
