@@ -30,7 +30,7 @@ comments: true
 
 ### 2. AI 原生与安全工程 (AI & Cyber Security)
 - **大模型工程化集成**：零依赖 JDK 11+ `HttpClient` 异步流式集成、Server-Sent Events (SSE) 逐字打字机推送
-- **三级智能多模型热备**：云端大模型 (Claude / DeepSeek) $\rightarrow$ 本地私有化 Ollama (DeepSeek-R1 / Qwen2.5-Coder) $\rightarrow$ 内核专家规则引擎
+- **三级智能多模型热备**：云端大模型 (DeepSeek-V3 / Qwen) $\rightarrow$ 本地私有化 Ollama (DeepSeek-R1 / Qwen2.5-Coder) $\rightarrow$ 内核专家规则引擎
 - **数据合规与安全防线**：100% 物理隔离离线隐私盾（Air-Gapped Privacy）、System Prompt 结构化防注入约束
 - **Web 与身份安全**：HttpOnly + SameSite=Strict Cookie 传输、JWT 密码学验签与 Fail-Open 容灾、OWASP Top 10（天然免疫 SQL 注入、XSS、CSRF、路径穿越）
 - **威胁研判与自动化响应**：CVSS 3.1 评分矩阵、MITRE ATT&CK 战术链推演、Nginx WAF / iptables 阻断剧本自动生成

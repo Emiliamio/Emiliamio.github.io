@@ -22,7 +22,7 @@ tags:
 Nexus AI 的核心交互时序如下：
 
 ```
-[ 用户 / 控制台 ]                [ Nexus AI 后端 (8081) ]            [ 大模型 (Claude/DeepSeek) ]
+[ 用户 / 控制台 ]                [ Nexus AI 后端 (8081) ]            [ 大模型 (DeepSeek/Qwen) ]
        │                                   │                                      │
        │── POST /api/ai/analyze-stream ───>│                                      │
        │   (带日志载荷 & 模型偏好)           │── 组装结构化 System Prompt ─────────>│
@@ -70,7 +70,7 @@ Nexus AI 的核心交互时序如下：
 public void analyzeStream(String logContent, String username, String provider, String customModel, SseEmitter emitter) {
     CompletableFuture.runAsync(() -> {
         long startTime = System.currentTimeMillis();
-        // 构造 OpenAI / Anthropic 兼容的 JSON 载荷并开启 stream: true
+        // 构造 OpenAI / DeepSeek 标准兼容的 JSON 载荷并开启 stream: true
         JSONObject requestBody = buildRequestBody(buildSystemPrompt(), logContent);
         requestBody.put("stream", true);
 
