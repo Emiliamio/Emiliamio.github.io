@@ -1383,5 +1383,43 @@ h6 {
   margin-bottom: 0 !important;
 }
 
+/* ── 29. 独立页面（项目/归档/标签/分类/关于）顶部大标题调大、高对比度与微光艺术 ── */
+#page-header.not-home-page #page-site-info {
+  top: 170px !important;
+}
+
+#page-header.not-home-page #page-site-info #site-title {
+  font-size: 3.2rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 6px !important;
+  color: #ffffff !important;
+  text-shadow: 
+    0 2px 6px rgba(10, 5, 25, 0.95),
+    0 4px 16px rgba(255, 107, 157, 0.8),
+    0 0 35px rgba(168, 85, 247, 0.7) !important;
+  transition: all 0.3s ease !important;
+}
+
+@media (max-width: 768px) {
+  #page-header.not-home-page #page-site-info {
+    top: 130px !important;
+  }
+  #page-header.not-home-page #page-site-info #site-title {
+    font-size: 2.2rem !important;
+    letter-spacing: 3px !important;
+  }
+}
+
+/* ── 30. 文章内页整体上提（移除顶部 400px 冗余空白） ── */
+#page-header.post-bg {
+  height: 65px !important;
+  min-height: 65px !important;
+}
+
+#page-header.post-bg + #content-inner.layout,
+.layout:has(#post) {
+  padding-top: 20px !important;
+}
+
 
 
