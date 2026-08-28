@@ -5,8 +5,8 @@
 # Site
 title: Mio的技术博客
 subtitle: ''
-description: '聚焦 Java 全栈与高并发架构，记录分布式日志审计、安全工程与系统复盘实战。'
-keywords: Java,Spring Boot,全栈开发,高并发架构,分布式系统,日志审计,安全工程,技术博客
+description: 'Java 全栈开发与系统架构，探索现代 Web、分布式与 AI 工程化。'
+keywords: Java,Spring Boot,全栈开发,系统架构,现代前端,分布式系统,AI工程化,技术博客
 author: Emiliamio
 language: zh-CN
 timezone: 'Asia/Shanghai'
