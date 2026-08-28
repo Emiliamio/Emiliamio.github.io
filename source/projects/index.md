@@ -58,7 +58,7 @@ aside: false
 </div>
 
 <div class="project-links">
-<a href="https://github.com/Emiliamio/agent-forge" target="_blank" rel="noopener" class="p-btn p-btn-gh"><i class="fab fa-github"></i> GitHub 源码仓库</a>
+<a href="/about/#📬-联系方式与开源生态-connect--links" class="p-btn p-btn-gh" style="background: linear-gradient(135deg, rgba(123, 94, 167, 0.8), rgba(255, 165, 200, 0.8)); border-color: #ffa5c8; color: #fff;"><i class="fas fa-lock"></i> 商业私有仓库 (获取授权)</a>
 <a href="/2026/08/28/agentforge-pure-java-enterprise-rag-architecture/" class="p-btn p-btn-doc"><i class="fas fa-book-open"></i> 全栈架构深度复盘</a>
 <a href="/2026/08/28/agentforge-production-rag-anti-vulnerability-and-armor/" class="p-btn p-btn-doc"><i class="fas fa-shield-alt"></i> 生产长尾装甲与避坑指南</a>
 </div>
