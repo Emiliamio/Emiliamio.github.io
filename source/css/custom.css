@@ -1270,24 +1270,38 @@ h6 {
   animation: blink 0.7s infinite !important;
 }
 
-/* ── 28. TOC & Sticky Sidebar Layout (彻底解决文章页滑动到底部卡片碰撞重叠 Bug) ── */
-#aside-content .sticky_layout {
-  position: sticky !important;
-  top: 75px !important;
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 20px !important;
+/* ── 28. TOC & Sticky Sidebar Layout (文章页目录平滑跟随滑动 + 实时高亮) ── */
+@media (min-width: 900px) {
+  #aside-content {
+    position: sticky !important;
+    top: 75px !important;
+    align-self: flex-start !important;
+  }
+
+  #aside-content .sticky_layout {
+    position: relative !important;
+    top: auto !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
 }
 
 #card-toc {
   position: relative !important;
   top: auto !important;
+  max-height: calc(100vh - 120px) !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
 }
 
 #card-toc .toc-content {
   max-height: calc(100vh - 180px) !important;
   overflow-y: auto !important;
   scrollbar-width: thin !important;
+  padding-right: 4px !important;
 }
 
 #card-toc .toc-content::-webkit-scrollbar {
@@ -1295,7 +1309,7 @@ h6 {
 }
 
 #card-toc .toc-content::-webkit-scrollbar-thumb {
-  background: rgba(255, 158, 197, 0.3) !important;
+  background: rgba(255, 158, 197, 0.35) !important;
   border-radius: 4px !important;
 }
 
@@ -1304,7 +1318,8 @@ h6 {
   font-size: 13px !important;
   line-height: 1.6 !important;
   border-left: 2px solid transparent !important;
-  padding-left: 10px !important;
+  padding: 4px 8px 4px 10px !important;
+  display: block !important;
   transition: all 0.2s ease !important;
 }
 
@@ -1312,9 +1327,14 @@ h6 {
   color: #ffa5c8 !important;
   font-weight: 700 !important;
   border-left-color: #ffa5c8 !important;
-  background: rgba(255, 165, 200, 0.12) !important;
+  background: rgba(255, 165, 200, 0.15) !important;
   border-radius: 0 6px 6px 0 !important;
   text-shadow: 0 0 8px rgba(255, 165, 200, 0.4) !important;
+}
+
+#card-toc .toc-content .toc-link:hover {
+  color: #ffffff !important;
+  border-left-color: rgba(255, 158, 197, 0.5) !important;
 }
 
 
