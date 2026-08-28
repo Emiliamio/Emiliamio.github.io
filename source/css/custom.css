@@ -446,3 +446,43 @@ h6 {
   position: fixed !important;
   z-index: 99999 !important;
 }
+
+/* ── 17. Comment Section (Giscus 评论区高对比度与毛玻璃卡片优化) ── */
+#post-comment {
+  margin-top: 35px !important;
+  padding-top: 25px !important;
+  border-top: 1px solid rgba(255, 158, 197, 0.25) !important;
+}
+
+#post-comment .comment-head {
+  margin-bottom: 20px !important;
+}
+
+#post-comment .comment-head .comment-headline {
+  color: #ffffff !important;
+  font-size: 1.35rem !important;
+  font-weight: 700 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+#post-comment .comment-head .comment-headline i {
+  color: #ffa5c8 !important;
+}
+
+#post-comment .comment-wrap,
+#giscus-wrap {
+  width: 100% !important;
+  background: rgba(24, 15, 52, 0.65) !important;
+  border: 1px solid rgba(255, 158, 197, 0.35) !important;
+  border-radius: 12px !important;
+  padding: 20px !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3) !important;
+}
+
+#giscus-wrap iframe.giscus-frame {
+  width: 100% !important;
+  min-height: 280px !important;
+  border: none !important;
+}
