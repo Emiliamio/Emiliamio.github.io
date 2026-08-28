@@ -1,5 +1,5 @@
 ---
-title: 开源项目
+title: 开源与商业项目
 date: 2026-07-17 10:00:00
 type: projects
 comments: false
@@ -7,13 +7,64 @@ aside: false
 ---
 
 <div class="projects-hero text-center">
-<h1 class="projects-hero-title"><i class="fas fa-layer-group" style="color: #ffa5c8;"></i> 旗舰开源项目全景展厅</h1>
-<p class="projects-hero-subtitle">从高并发分布式日志审计、Python 状态机多行探针到 AI 智能研判 Studio，全部工程代码已开源并支持 Docker 一键部署</p>
+<h1 class="projects-hero-title"><i class="fas fa-layer-group" style="color: #ffa5c8;"></i> 旗舰工程项目全景展厅</h1>
+<p class="projects-hero-subtitle">涵盖纯血 Java 21 企业级 AI Agent & RAG 中台、高并发分布式日志审计、Python 状态机探针与 AI 智能研判 Studio</p>
 </div>
 
 <div class="projects-container">
 
-<!-- Project 1: AuditVault -->
+<!-- Project 1: AgentForge (NEW FLAGSHIP) -->
+<div class="project-card" style="border: 1px solid rgba(255, 165, 200, 0.45); box-shadow: 0 4px 20px rgba(255, 165, 200, 0.12);">
+<div class="project-header">
+<div class="project-icon-box" style="background: linear-gradient(135deg, #ffa5c8, #7b5ea7); color: #fff;"><i class="fas fa-brain"></i></div>
+<div class="project-title-box">
+<h2 class="project-name">AgentForge (灵眸智枢) · 纯血 Java 21 企业级 AI Agent & 混合 RAG 中台</h2>
+<div class="project-tech-line">Java 21 (虚拟线程) + Spring Boot 3.2 + PostgreSQL 16 (pgvector) + Redis 7 + Vue 3.4</div>
+</div>
+</div>
+
+<div class="project-badges">
+<span class="p-badge" style="background: rgba(255, 165, 200, 0.25); border-color: #ffa5c8;">旗舰商业中台</span>
+<span class="p-badge">Java 21</span>
+<span class="p-badge">pgvector HNSW</span>
+<span class="p-badge">RRF 混合召回</span>
+<span class="p-badge">Kahn DAG 响应式</span>
+<span class="p-badge">JsqlParser AST 租户隔离</span>
+<span class="p-badge">Redis 向量语义降本</span>
+<span class="p-badge">单测 100% (35/35)</span>
+</div>
+
+<div class="project-metrics">
+<div class="p-metric">
+<div class="p-num">0.00%</div>
+<div class="p-label">JsqlParser AST 语法树租户强隔离 跨租户物理越权率</div>
+</div>
+<div class="p-metric">
+<div class="p-num">60%+</div>
+<div class="p-label">Redis 向量语义缓存 (余弦 >=0.95) 大模型算力成本降低</div>
+</div>
+<div class="p-metric">
+<div class="p-num">0.5ms</div>
+<div class="p-label">高频问答语义缓存命中端到端极速秒级响应</div>
+</div>
+<div class="p-metric">
+<div class="p-num">800 MB</div>
+<div class="p-label">装甲流式解析器 (零 OOM + 单页死信 DLQ 容错)</div>
+</div>
+</div>
+
+<div class="project-body">
+<p>专为国内政企、国企信创生态量身打造的纯 Java 21 企业级 AI 智能体编排与三路混合 RAG 知识库中台。首创“JsqlParser AST 编译期租户强隔离 + 密集+稀疏+RRF+Cross-Encoder 三路混合检索 + Kahn 拓扑排序响应式 DAG 引擎 + Redis 向量语义降本”工业级全栈架构，彻底解决企业私有化交付中 Python 框架运维难与多租户越权两大痛点。</p>
+</div>
+
+<div class="project-links">
+<a href="https://github.com/Emiliamio/agent-forge" target="_blank" rel="noopener" class="p-btn p-btn-gh"><i class="fab fa-github"></i> GitHub 源码仓库</a>
+<a href="/2026/08/28/agentforge-pure-java-enterprise-rag-architecture/" class="p-btn p-btn-doc"><i class="fas fa-book-open"></i> 全栈架构深度复盘</a>
+<a href="/2026/08/28/agentforge-production-rag-anti-vulnerability-and-armor/" class="p-btn p-btn-doc"><i class="fas fa-shield-alt"></i> 生产长尾装甲与避坑指南</a>
+</div>
+</div>
+
+<!-- Project 2: AuditVault -->
 <div class="project-card">
 <div class="project-header">
 <div class="project-icon-box"><i class="fas fa-shield-halved"></i></div>
@@ -62,7 +113,7 @@ aside: false
 </div>
 </div>
 
-<!-- Project 2: LogScope CLI -->
+<!-- Project 3: LogScope CLI -->
 <div class="project-card">
 <div class="project-header">
 <div class="project-icon-box"><i class="fab fa-python"></i></div>
@@ -110,10 +161,10 @@ aside: false
 </div>
 </div>
 
-<!-- Project 3: Nexus AI Security Copilot -->
+<!-- Project 4: Nexus AI Security Copilot -->
 <div class="project-card">
 <div class="project-header">
-<div class="project-icon-box"><i class="fas fa-brain"></i></div>
+<div class="project-icon-box"><i class="fas fa-robot"></i></div>
 <div class="project-title-box">
 <h2 class="project-name">Nexus AI Security Copilot · 智能安全研判 Studio</h2>
 <div class="project-tech-line">Spring Boot 3 + SSE 流式长连接 + 本地 Ollama 私有化 + 100vw SOC 工作台</div>
