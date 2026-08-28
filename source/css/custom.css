@@ -1270,10 +1270,33 @@ h6 {
   animation: blink 0.7s infinite !important;
 }
 
-/* ── 28. TOC Smooth Active Glow Follow ── */
-#card-toc {
+/* ── 28. TOC & Sticky Sidebar Layout (彻底解决文章页滑动到底部卡片碰撞重叠 Bug) ── */
+#aside-content .sticky_layout {
   position: sticky !important;
   top: 75px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 20px !important;
+}
+
+#card-toc {
+  position: relative !important;
+  top: auto !important;
+}
+
+#card-toc .toc-content {
+  max-height: calc(100vh - 180px) !important;
+  overflow-y: auto !important;
+  scrollbar-width: thin !important;
+}
+
+#card-toc .toc-content::-webkit-scrollbar {
+  width: 4px !important;
+}
+
+#card-toc .toc-content::-webkit-scrollbar-thumb {
+  background: rgba(255, 158, 197, 0.3) !important;
+  border-radius: 4px !important;
 }
 
 #card-toc .toc-content .toc-link {
