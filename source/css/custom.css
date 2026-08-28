@@ -1110,3 +1110,191 @@ h6 {
   box-shadow: 0 4px 12px rgba(255, 158, 197, 0.35) !important;
 }
 
+/* ── 26. Widescreen Layout Expansion (宽屏全景拓宽自适应) ── */
+@media (min-width: 1300px) {
+  #content-inner.layout {
+    max-width: 1420px !important;
+    width: 92% !important;
+    padding: 30px 24px !important;
+  }
+}
+
+/* ── 27. Left Sticky Quick Nav (屏幕左侧浮动极客快捷导航胶囊) ── */
+.left-quick-nav {
+  position: fixed !important;
+  left: 20px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 99 !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+@media (max-width: 1400px) {
+  .left-quick-nav {
+    display: none !important;
+  }
+}
+
+.quick-nav-pill {
+  background: rgba(30, 20, 60, 0.85) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border: 1px solid rgba(255, 158, 197, 0.3) !important;
+  border-radius: 30px !important;
+  padding: 12px 8px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45) !important;
+}
+
+.nav-pill-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 8px 12px !important;
+  border-radius: 20px !important;
+  color: #c8b8e8 !important;
+  text-decoration: none !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  white-space: nowrap !important;
+}
+
+.nav-pill-item i {
+  font-size: 14px !important;
+  color: #ffa5c8 !important;
+  transition: transform 0.25s ease !important;
+}
+
+.nav-pill-item:hover {
+  background: rgba(255, 158, 197, 0.25) !important;
+  color: #ffffff !important;
+  transform: translateX(4px) !important;
+  box-shadow: 0 4px 14px rgba(255, 158, 197, 0.3) !important;
+}
+
+.nav-pill-item:hover i {
+  transform: scale(1.2) rotate(6deg) !important;
+  color: #ffffff !important;
+}
+
+/* ── 28. Right Sidebar Sticky Scroll (右侧边栏智能粘性吸顶跟随) ── */
+#aside-content {
+  position: sticky !important;
+  top: 75px !important;
+  align-self: flex-start !important;
+}
+
+/* ── 29. Home Bottom Explore Banner (首页底部跨栏通栏大横幅) ── */
+.home-bottom-explore-banner {
+  margin-top: 40px !important;
+  padding: 32px 36px !important;
+  background: linear-gradient(135deg, rgba(42, 26, 85, 0.9), rgba(26, 16, 53, 0.95)) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border: 1px solid rgba(255, 158, 197, 0.35) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 24px !important;
+  flex-wrap: wrap !important;
+}
+
+.explore-banner-content {
+  flex: 1 1 500px !important;
+}
+
+.explore-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  background: rgba(34, 197, 94, 0.15) !important;
+  border: 1px solid rgba(34, 197, 94, 0.4) !important;
+  color: #4ade80 !important;
+  padding: 3px 10px !important;
+  border-radius: 20px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  margin-bottom: 10px !important;
+}
+
+.pulse-dot {
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important;
+  background: #22c55e !important;
+  box-shadow: 0 0 8px #22c55e !important;
+  animation: pulseGreen 2s infinite !important;
+}
+
+@keyframes pulseGreen {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+  70% { transform: scale(1.15); box-shadow: 0 0 0 6px rgba(34, 197, 94, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+}
+
+.explore-title {
+  color: #ffffff !important;
+  font-size: 1.35rem !important;
+  font-weight: 700 !important;
+  margin: 0 0 8px 0 !important;
+  line-height: 1.3 !important;
+}
+
+.explore-desc {
+  color: #c8b8e8 !important;
+  font-size: 13.5px !important;
+  line-height: 1.6 !important;
+  margin: 0 !important;
+}
+
+.explore-banner-actions {
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  flex-wrap: wrap !important;
+}
+
+.exp-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 10px 22px !important;
+  border-radius: 10px !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+}
+
+.exp-btn-primary {
+  background: linear-gradient(135deg, #ffa5c8, #f472b6) !important;
+  color: #1a1035 !important;
+  box-shadow: 0 4px 18px rgba(255, 165, 200, 0.35) !important;
+}
+
+.exp-btn-primary:hover {
+  background: linear-gradient(135deg, #ffffff, #ffa5c8) !important;
+  color: #1a1035 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 24px rgba(255, 165, 200, 0.5) !important;
+}
+
+.exp-btn-secondary {
+  background: rgba(255, 158, 197, 0.15) !important;
+  border: 1px solid rgba(255, 158, 197, 0.4) !important;
+  color: #ffa5c8 !important;
+}
+
+.exp-btn-secondary:hover {
+  background: rgba(255, 158, 197, 0.35) !important;
+  color: #ffffff !important;
+  border-color: #ffa5c8 !important;
+  transform: translateY(-2px) !important;
+}
+

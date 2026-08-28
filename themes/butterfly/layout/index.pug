@@ -1,7 +1,26 @@
 extends includes/layout.pug
 
 block content
-  .featured-series-container
+  //- 屏幕左侧边缘：浮动极客快捷导航胶囊
+  .left-quick-nav
+    .quick-nav-pill
+      a.nav-pill-item(href='#featured-series', title='核心架构专题')
+        i.fas.fa-bolt
+        span.pill-text 架构专题
+      a.nav-pill-item(href='#recent-posts', title='全部技术文章')
+        i.fas.fa-book-open
+        span.pill-text 全部文章
+      a.nav-pill-item(href='#home-tech-arsenal', title='技术栈全景')
+        i.fas.fa-microchip
+        span.pill-text 技术图谱
+      a.nav-pill-item(href='/projects/', title='开源项目展厅')
+        i.fas.fa-layer-group
+        span.pill-text 开源展厅
+      a.nav-pill-item(href='/about/', title='关于作者')
+        i.fas.fa-user-astronaut
+        span.pill-text 关于作者
+
+  .featured-series-container#featured-series
     .featured-series-header
       span.f-tag ⚡ 核心架构专题
       h2.f-title 工业级全栈与分布式系统架构演进
@@ -29,7 +48,7 @@ block content
           .f-card-desc 对标 Datadog，打造全视口双窗格工作台与 AI 威胁研判大脑
   include ./includes/mixins/indexPostUI.pug
   +indexPostUI
-  .home-tech-arsenal
+  .home-tech-arsenal#home-tech-arsenal
     .tech-arsenal-header
       .tech-arsenal-title
         i.fas.fa-microchip(style='color: #ffa5c8;')
@@ -76,3 +95,19 @@ block content
           i.fab.fa-docker(style='color: #2496ed;')
         .tech-name Docker & Compose
         .tech-desc 一键多环境编排 / 工业级交付
+
+  //- 首页底部跨栏通栏收尾大横幅
+  .home-bottom-explore-banner
+    .explore-banner-content
+      .explore-badge
+        span.pulse-dot
+        span 工业级全栈交付 · 持续迭代
+      h3.explore-title 探索更多开源项目与企业级系统架构实践
+      p.explore-desc 涵盖集中式日志审计平台 AuditVault、多维分析 CLI LogScope 及 AI 威胁研判大脑 Nexus AI，全方位展示高并发流式处理与系统防御工程能力。
+    .explore-banner-actions
+      a.exp-btn.exp-btn-primary(href='/projects/')
+        i.fas.fa-layer-group
+        span 浏览开源展厅
+      a.exp-btn.exp-btn-secondary(href='/about/')
+        i.fas.fa-paper-plane
+        span 交流与合作
