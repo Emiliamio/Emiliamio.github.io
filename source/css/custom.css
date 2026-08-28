@@ -1001,9 +1001,9 @@ h6 {
   display: none !important;
 }
 
-/* ── 24. 3-Column Home Layout & Post Layout (仅首页和文章页生效，不影响独立页面) ── */
+/* ── 24. 3-Column Home Layout (仅首页生效 1480px 三栏宽屏，文章页和子页面保持原样) ── */
 @media (min-width: 1200px) {
-  #content-inner.layout:not(.hide-aside) {
+  #content-inner.layout:has(.home-main-wrapper) {
     max-width: 1480px !important;
     width: 95% !important;
     padding: 30px 15px !important;
@@ -1012,7 +1012,7 @@ h6 {
     gap: 22px !important;
   }
 
-  .layout:not(.hide-aside) > div:first-child:not(#aside-content) {
+  .layout:has(.home-main-wrapper) > div:first-child:not(#aside-content) {
     flex: 1 1 auto !important;
     width: calc(100% - 300px) !important;
     min-width: 0 !important;
@@ -1047,8 +1047,8 @@ h6 {
     min-width: 0 !important;
   }
 
-  /* 右侧：作者与挂件（宽度 280px，Sticky 智能吸顶跟随） */
-  #aside-content {
+  /* 首页右侧：作者与挂件（宽度 280px，Sticky 智能吸顶跟随） */
+  .layout:has(.home-main-wrapper) #aside-content {
     width: 280px !important;
     flex: 0 0 280px !important;
     position: sticky !important;
