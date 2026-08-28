@@ -32,7 +32,7 @@ aside:
     projects: false
   card_author:
     enable: true
-    description: 'Java 全栈开发与系统架构<br>探索现代 Web · 分布式 · AI 工程化'
+    description: 'Java 21 全栈开发与系统架构<br>探索现代 Web · 混合 RAG · AI 智能体工程化'
     button:
       enable: true
       icon: fab fa-github
@@ -121,9 +121,9 @@ subtitle:
   effect: true
   source: false
   sub:
-    - 'Java 21 全栈开发 & 工业级分布式系统架构'
-    - 'Kafka 削峰 · ClickHouse 45x 毫秒列存 · AI 原生工程'
-    - '专注于高并发、毫秒级时序分析与零信任安全防御'
+    - 'Java 21 全栈开发 & 企业级 AI Agent 架构'
+    - '三路混合 RAG · Kafka 削峰 · ClickHouse 45x 毫秒列存'
+    - '专注于高并发系统、向量语义降本与零信任安全隔离'
 
 Open_Graph_meta:
   enable: true
