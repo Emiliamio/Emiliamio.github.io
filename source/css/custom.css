@@ -493,20 +493,29 @@ h6 {
   background: transparent !important;
 }
 
-/* ── 18. Full-Width Centered Layout for Tags, Categories, Archives, About ── */
+/* ── 18. Full-Width Centered Layout for Tags, Categories, Archives, About, Projects ── */
+#content-inner.layout.hide-aside,
 .layout.hide-aside {
   max-width: 1050px !important;
+  width: 90% !important;
   margin: 0 auto !important;
   justify-content: center !important;
   padding: 30px 15px !important;
+  display: block !important;
 }
 
+#content-inner.layout.hide-aside > div:first-child,
+#content-inner.layout.hide-aside #page,
+#content-inner.layout.hide-aside #archive,
+#content-inner.layout.hide-aside #tag,
+#content-inner.layout.hide-aside #category,
 .layout.hide-aside > div:first-child,
 .layout.hide-aside #page,
 .layout.hide-aside #archive,
 .layout.hide-aside #tag,
 .layout.hide-aside #category {
   width: 100% !important;
+  max-width: 1050px !important;
   margin: 0 auto !important;
 }
 
@@ -992,9 +1001,9 @@ h6 {
   display: none !important;
 }
 
-/* ── 24. 3-Column Home Layout (左侧架构专题吸顶 + 中间长宽文章流 + 右侧作者卡片吸顶) ── */
+/* ── 24. 3-Column Home Layout & Post Layout (仅首页和文章页生效，不影响独立页面) ── */
 @media (min-width: 1200px) {
-  #content-inner.layout {
+  #content-inner.layout:not(.hide-aside) {
     max-width: 1480px !important;
     width: 95% !important;
     padding: 30px 15px !important;
@@ -1003,7 +1012,7 @@ h6 {
     gap: 22px !important;
   }
 
-  .layout > div:first-child:not(#aside-content) {
+  .layout:not(.hide-aside) > div:first-child:not(#aside-content) {
     flex: 1 1 auto !important;
     width: calc(100% - 300px) !important;
     min-width: 0 !important;
