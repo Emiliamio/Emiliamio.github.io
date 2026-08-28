@@ -1,3 +1,5 @@
+favicon: /img/favicon.png
+
 nav:
   display_title: true
   fixed: false
@@ -144,6 +146,8 @@ darkmode:
 
 inject:
   head:
+    - <link rel="icon" type="image/png" href="/img/favicon.png?v=20260828_01">
+    - <link rel="shortcut icon" href="/img/favicon.ico?v=20260828_01">
     - <script>try{localStorage.setItem('theme','dark');document.documentElement.setAttribute('data-theme','dark');}catch(e){}</script>
     - <script>(function(){var n=10,u='/images/random/bg'+(Math.floor(Math.random()*n)+1)+'.webp';var s=document.createElement('style');s.textContent='#body-wrap{background-image:url('+u+')!important;background-position:center top!important;background-size:cover!important;background-repeat:no-repeat!important;background-attachment:fixed!important}#page-header.post-bg,#page-header.not-home-page{background-image:none!important;background-color:transparent!important}#page-header.full_page{height:100vh!important;background-image:url('+u+')!important;background-size:cover!important;background-position:center top!important}';document.head.appendChild(s);var l=document.createElement('link');l.rel='preload';l.as='image';l.href=u;document.head.appendChild(l);window.addEventListener('load',function(){setTimeout(function(){for(var k=1;k<=n;k++){var p='/images/random/bg'+k+'.webp';if(p!==u){(new Image()).src=p}}},1000)})})();</script>
     - <link rel="stylesheet" href="/css/custom.css?v=20260828_18">
