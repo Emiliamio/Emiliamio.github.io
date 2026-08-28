@@ -492,3 +492,81 @@ h6 {
   border: none !important;
   background: transparent !important;
 }
+
+/* ── 18. Full-Width Centered Layout for Tags, Categories, Archives, About ── */
+.layout.hide-aside {
+  max-width: 1050px !important;
+  margin: 0 auto !important;
+  justify-content: center !important;
+  padding: 30px 15px !important;
+}
+
+.layout.hide-aside > div:first-child,
+.layout.hide-aside #page,
+.layout.hide-aside #archive,
+.layout.hide-aside #tag,
+.layout.hide-aside #category {
+  width: 100% !important;
+  margin: 0 auto !important;
+}
+
+/* 标签页全宽沉浸式彩虹标签云 */
+.layout.hide-aside .tag-cloud-list,
+.layout.hide-aside #tags .tag-cloud-list {
+  text-align: center !important;
+  padding: 30px 20px !important;
+}
+
+.layout.hide-aside .tag-cloud-list a {
+  display: inline-block !important;
+  margin: 8px 10px !important;
+  padding: 6px 16px !important;
+  font-size: 15px !important;
+  border-radius: 20px !important;
+  background: rgba(255, 158, 197, 0.15) !important;
+  border: 1px solid rgba(255, 158, 197, 0.3) !important;
+  color: #ffa5c8 !important;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+}
+
+.layout.hide-aside .tag-cloud-list a:hover {
+  background: rgba(255, 158, 197, 0.45) !important;
+  color: #ffffff !important;
+  transform: translateY(-3px) scale(1.08) !important;
+  box-shadow: 0 6px 18px rgba(255, 158, 197, 0.35) !important;
+}
+
+/* 分类页优雅居中网格 */
+.layout.hide-aside .category-lists {
+  padding: 20px 30px !important;
+}
+
+.layout.hide-aside .category-lists ul {
+  list-style: none !important;
+  padding: 0 !important;
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) !important;
+  gap: 16px !important;
+}
+
+.layout.hide-aside .category-lists ul li {
+  background: rgba(45, 30, 86, 0.6) !important;
+  border: 1px solid rgba(255, 158, 197, 0.25) !important;
+  border-radius: 10px !important;
+  padding: 14px 20px !important;
+  transition: all 0.3s ease !important;
+}
+
+.layout.hide-aside .category-lists ul li:hover {
+  background: rgba(65, 40, 115, 0.85) !important;
+  border-color: #ffa5c8 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* 归档页时间轴居中优化 */
+.layout.hide-aside #archive .article-sort {
+  margin-left: 20px !important;
+  padding-left: 25px !important;
+  border-left: 2px solid rgba(255, 158, 197, 0.35) !important;
+}

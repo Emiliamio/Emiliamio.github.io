@@ -2,6 +2,7 @@
 title: 关于我
 date: 2026-07-17 10:00:00
 comments: false
+aside: false
 ---
 
 # 👨‍💻 Emiliamio (Mio)
