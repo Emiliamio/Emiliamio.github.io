@@ -992,51 +992,171 @@ h6 {
   display: none !important;
 }
 
-/* ── 24. Homepage Spacious Layout & Broad Article Cards (中间文章边框拓宽与舒适呼吸感) ── */
+/* ── 24. 3-Column Home Layout (左侧架构专题吸顶 + 中间长宽文章流 + 右侧作者卡片吸顶) ── */
 @media (min-width: 1200px) {
   #content-inner.layout {
-    max-width: 1360px !important;
-    width: 90% !important;
-    padding: 35px 20px !important;
-    gap: 28px !important;
+    max-width: 1480px !important;
+    width: 95% !important;
+    padding: 30px 15px !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 22px !important;
   }
 
-  #recent-posts.nc {
-    flex: 1 1 calc(100% - 340px) !important;
-    width: calc(100% - 340px) !important;
+  .layout > div:first-child:not(#aside-content) {
+    flex: 1 1 auto !important;
+    width: calc(100% - 300px) !important;
+    min-width: 0 !important;
   }
 
+  .home-main-wrapper {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 22px !important;
+    width: 100% !important;
+  }
+
+  /* 左侧：核心架构专题（宽度 270px，Sticky 智能吸顶跟随） */
+  .home-left-sticky {
+    width: 270px !important;
+    flex: 0 0 270px !important;
+    position: sticky !important;
+    top: 75px !important;
+    align-self: flex-start !important;
+    background: rgba(36, 24, 74, 0.85) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+    border: 1px solid rgba(255, 158, 197, 0.25) !important;
+    border-radius: 14px !important;
+    padding: 18px 15px !important;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35) !important;
+  }
+
+  /* 中间：长宽文章流（宽屏长边框通畅展开） */
+  .home-center-posts {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+  }
+
+  /* 右侧：作者与挂件（宽度 280px，Sticky 智能吸顶跟随） */
   #aside-content {
-    width: 310px !important;
-    flex: 0 0 310px !important;
+    width: 280px !important;
+    flex: 0 0 280px !important;
     position: sticky !important;
     top: 75px !important;
     align-self: flex-start !important;
   }
 }
 
-/* 文章卡片边框拓宽与高质感排版 */
+/* 左侧专题内部精炼排版 */
+.home-left-sticky .featured-series-header {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin-bottom: 12px !important;
+  padding-bottom: 8px !important;
+  border-bottom: 1px dashed rgba(255, 158, 197, 0.2) !important;
+}
+
+.home-left-sticky .featured-series-header .f-tag {
+  background: linear-gradient(135deg, rgba(255, 107, 157, 0.35), rgba(168, 85, 247, 0.35)) !important;
+  border: 1px solid rgba(255, 158, 197, 0.4) !important;
+  color: #ffa5c8 !important;
+  padding: 2px 7px !important;
+  border-radius: 5px !important;
+  font-size: 11.5px !important;
+  font-weight: 600 !important;
+}
+
+.home-left-sticky .featured-series-header .f-title {
+  color: #ffffff !important;
+  font-size: 1.05rem !important;
+  font-weight: 700 !important;
+  margin: 0 !important;
+}
+
+.home-left-sticky .featured-series-cards {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+}
+
+.home-left-sticky .f-card {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 10px !important;
+  background: rgba(22, 14, 46, 0.75) !important;
+  border: 1px solid rgba(255, 158, 197, 0.2) !important;
+  border-radius: 10px !important;
+  padding: 12px 12px !important;
+  text-decoration: none !important;
+  transition: all 0.25s ease !important;
+}
+
+.home-left-sticky .f-card:hover {
+  background: rgba(45, 28, 92, 0.95) !important;
+  border-color: #ffa5c8 !important;
+  transform: translateX(4px) !important;
+  box-shadow: 0 4px 16px rgba(255, 158, 197, 0.25) !important;
+}
+
+.home-left-sticky .f-card-icon {
+  width: 32px !important;
+  height: 32px !important;
+  flex-shrink: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: rgba(255, 158, 197, 0.2) !important;
+  border: 1px solid rgba(255, 158, 197, 0.35) !important;
+  border-radius: 8px !important;
+  color: #ffa5c8 !important;
+  font-size: 0.95rem !important;
+}
+
+.home-left-sticky .f-card-category {
+  color: #ffa5c8 !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  margin-bottom: 2px !important;
+}
+
+.home-left-sticky .f-card-title {
+  color: #ffffff !important;
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  margin-bottom: 3px !important;
+}
+
+.home-left-sticky .f-card-desc {
+  color: #b8a8d8 !important;
+  font-size: 11px !important;
+  line-height: 1.4 !important;
+}
+
+/* 中间长宽文章卡片：边框长、排版宽敞舒适 */
 #recent-posts {
   width: 100% !important;
 }
 
 #recent-posts > .recent-post-items > .recent-post-item {
   width: 100% !important;
-  margin-bottom: 26px !important;
-  padding: 32px 38px !important;
+  margin-bottom: 24px !important;
+  padding: 28px 36px !important;
   background: rgba(36, 24, 74, 0.85) !important;
   backdrop-filter: blur(14px) !important;
   -webkit-backdrop-filter: blur(14px) !important;
-  border: 1.5px solid rgba(255, 158, 197, 0.28) !important;
+  border: 1px solid rgba(255, 158, 197, 0.25) !important;
   border-radius: 14px !important;
-  box-shadow: 0 6px 26px rgba(0, 0, 0, 0.35) !important;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35) !important;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
 }
 
 #recent-posts > .recent-post-items > .recent-post-item:hover {
   border-color: #ffa5c8 !important;
   transform: translateY(-3px) !important;
-  box-shadow: 0 10px 32px rgba(255, 158, 197, 0.22) !important;
+  box-shadow: 0 10px 30px rgba(255, 158, 197, 0.22) !important;
 }
 
 #recent-posts > .recent-post-items > .recent-post-item .article-title {
