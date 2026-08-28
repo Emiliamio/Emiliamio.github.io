@@ -1025,12 +1025,12 @@ h6 {
     width: 100% !important;
   }
 
-  /* 左侧：核心架构专题（宽度 270px，Sticky 智能吸顶跟随） */
+  /* 左侧：核心架构专题（宽度 270px，跟随视口垂直居中滑动） */
   .home-left-sticky {
     width: 270px !important;
     flex: 0 0 270px !important;
     position: sticky !important;
-    top: 75px !important;
+    top: max(80px, calc(50vh - 190px)) !important;
     align-self: flex-start !important;
     background: rgba(36, 24, 74, 0.85) !important;
     backdrop-filter: blur(14px) !important;
@@ -1039,6 +1039,7 @@ h6 {
     border-radius: 14px !important;
     padding: 18px 15px !important;
     box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35) !important;
+    transition: top 0.25s ease !important;
   }
 
   /* 中间：长宽文章流（宽屏长边框通畅展开） */
