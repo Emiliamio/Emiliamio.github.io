@@ -1,25 +1,6 @@
 extends includes/layout.pug
 
 block content
-  //- 屏幕左侧边缘：浮动极客快捷导航胶囊
-  .left-quick-nav
-    .quick-nav-pill
-      a.nav-pill-item(href='#featured-series', title='核心架构专题')
-        i.fas.fa-bolt
-        span.pill-text 架构专题
-      a.nav-pill-item(href='#recent-posts', title='全部技术文章')
-        i.fas.fa-book-open
-        span.pill-text 全部文章
-      a.nav-pill-item(href='#home-tech-arsenal', title='技术栈全景')
-        i.fas.fa-microchip
-        span.pill-text 技术图谱
-      a.nav-pill-item(href='/projects/', title='开源项目展厅')
-        i.fas.fa-layer-group
-        span.pill-text 开源展厅
-      a.nav-pill-item(href='/about/', title='关于作者')
-        i.fas.fa-user-astronaut
-        span.pill-text 关于作者
-
   .featured-series-container#featured-series
     .featured-series-header
       span.f-tag ⚡ 核心架构专题
@@ -48,66 +29,3 @@ block content
           .f-card-desc 对标 Datadog，打造全视口双窗格工作台与 AI 威胁研判大脑
   include ./includes/mixins/indexPostUI.pug
   +indexPostUI
-  .home-tech-arsenal#home-tech-arsenal
-    .tech-arsenal-header
-      .tech-arsenal-title
-        i.fas.fa-microchip(style='color: #ffa5c8;')
-        span 核心技术栈与工程基础设施 (Tech Arsenal & Infrastructure)
-      .tech-arsenal-subtitle 覆盖后端高并发、分布式存储、现代 Web 可视化、Python 算法与 AI 原生工程
-    .tech-arsenal-grid
-      .tech-item
-        .tech-icon
-          i.fab.fa-java(style='color: #f89820;')
-        .tech-name Java 21 / 17
-        .tech-desc 虚拟线程 / 现代语言特性
-      .tech-item
-        .tech-icon
-          i.fas.fa-leaf(style='color: #6db33f;')
-        .tech-name Spring Boot 3
-        .tech-desc Security 6 / 异步 Webhook
-      .tech-item
-        .tech-icon
-          i.fas.fa-stream(style='color: #e37400;')
-        .tech-name Apache Kafka
-        .tech-desc KRaft 集群 / 异步流式削峰
-      .tech-item
-        .tech-icon
-          i.fas.fa-database(style='color: #ffcc00;')
-        .tech-name ClickHouse
-        .tech-desc MergeTree / 45x 毫秒时序直方图
-      .tech-item
-        .tech-icon
-          i.fas.fa-cube(style='color: #d82c20;')
-        .tech-name Redis 7.0
-        .tech-desc HyperLogLog / JWT 动态黑名单
-      .tech-item
-        .tech-icon
-          i.fab.fa-python(style='color: #3776ab;')
-        .tech-name Python 3.11
-        .tech-desc Pandas / FSM 有限状态机
-      .tech-item
-        .tech-icon
-          i.fas.fa-brain(style='color: #a855f7;')
-        .tech-name Ollama & LLM
-        .tech-desc SSE 流式打字机 / 离线物理隔离
-      .tech-item
-        .tech-icon
-          i.fab.fa-docker(style='color: #2496ed;')
-        .tech-name Docker & Compose
-        .tech-desc 一键多环境编排 / 工业级交付
-
-  //- 首页底部跨栏通栏收尾大横幅
-  .home-bottom-explore-banner
-    .explore-banner-content
-      .explore-badge
-        span.pulse-dot
-        span 工业级全栈交付 · 持续迭代
-      h3.explore-title 探索更多开源项目与企业级系统架构实践
-      p.explore-desc 涵盖集中式日志审计平台 AuditVault、多维分析 CLI LogScope 及 AI 威胁研判大脑 Nexus AI，全方位展示高并发流式处理与系统防御工程能力。
-    .explore-banner-actions
-      a.exp-btn.exp-btn-primary(href='/projects/')
-        i.fas.fa-layer-group
-        span 浏览开源展厅
-      a.exp-btn.exp-btn-secondary(href='/about/')
-        i.fas.fa-paper-plane
-        span 交流与合作
