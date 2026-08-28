@@ -305,12 +305,62 @@ h6 {
   color: #ffffff !important;
 }
 
-/* ── 10. Aside / Widget Follow Me Button ── */
+/* ── 10. Aside / Widget Author Card & Site Data (常态高亮清晰显色，去除多余社交图标) ── */
+#aside-content .card-info .author-info__description {
+  color: #d8c8f0 !important;
+  font-size: 13.5px !important;
+  line-height: 1.6 !important;
+  margin: 6px 0 14px 0 !important;
+}
+
+#aside-content .card-info .site-data {
+  display: table !important;
+  width: 100% !important;
+  table-layout: fixed !important;
+  margin: 12px 0 16px 0 !important;
+}
+
+#aside-content .card-info .site-data > a {
+  display: table-cell !important;
+  text-align: center !important;
+  text-decoration: none !important;
+}
+
+#aside-content .card-info .site-data > a .headline {
+  color: #c8b8e8 !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 1.4 !important;
+  transition: color 0.2s ease !important;
+}
+
+#aside-content .card-info .site-data > a .length-num {
+  color: #ffffff !important;
+  font-size: 1.35rem !important;
+  font-weight: 700 !important;
+  font-family: var(--font-mono, 'Consolas', monospace) !important;
+  line-height: 1.3 !important;
+  margin-top: 4px !important;
+  text-shadow: 0 0 12px rgba(255, 165, 200, 0.45) !important;
+  transition: all 0.2s ease !important;
+}
+
+#aside-content .card-info .site-data > a:hover .headline {
+  color: #ffa5c8 !important;
+}
+
+#aside-content .card-info .site-data > a:hover .length-num {
+  color: #ffa5c8 !important;
+  text-shadow: 0 0 16px rgba(255, 165, 200, 0.8) !important;
+  transform: translateY(-2px) scale(1.08) !important;
+}
+
 #card-info-btn {
   background: rgba(255, 158, 197, 0.2) !important;
   border: 1px solid rgba(255, 158, 197, 0.35) !important;
   border-radius: 8px !important;
   color: #ffffff !important;
+  margin-top: 14px !important;
   transition: all 0.3s !important;
 }
 
@@ -321,6 +371,10 @@ h6 {
 
 #card-info-btn i {
   color: #ffffff !important;
+}
+
+#aside-content .card-info .card-info-social-icons {
+  display: none !important;
 }
 
 /* ── 11. Tag Cloud ── */
