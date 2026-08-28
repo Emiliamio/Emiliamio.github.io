@@ -44,6 +44,99 @@ aside: false
 - **系统安全与防御体系**：OWASP Top 10 防护、JWT 密码学验签与 Fail-Open 容灾、HttpOnly + SameSite 安全传输、离线数据隐私盾
 - **容器化与工程交付**：Docker、Docker Compose 多环境编排 (Standard / Enterprise Profiles)、Linux Shell 自动化脚本、Git
 
+<div class="tech-radar-card" style="margin: 30px 0 10px 0; padding: 25px 20px 20px; background: rgba(26, 16, 53, 0.7); border: 1px solid rgba(255, 158, 197, 0.3); border-radius: 12px;">
+  <h3 style="text-align: center; color: #ffffff; margin-top: 0; font-size: 1.25rem;"><i class="fas fa-chart-pie" style="color: #ffa5c8;"></i> 全栈技术全景能力雷达 (Full-Stack Competence Radar)</h3>
+  <div style="max-width: 500px; margin: 0 auto; padding: 10px 0;">
+    <canvas id="techRadarCanvas" width="480" height="380"></canvas>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var canvas = document.getElementById('techRadarCanvas');
+  if (!canvas) return;
+  new Chart(canvas, {
+    type: 'radar',
+    data: {
+      labels: [
+        'Java后端 & 高并发架构',
+        '分布式存储 (Kafka/ClickHouse/Redis)',
+        '现代前端 & 可视化Studio',
+        'Python数据处理 & FSM算法',
+        'AI原生工程 (SSE/Ollama)',
+        'DevOps容器化 & 系统安全'
+      ],
+      datasets: [{
+        label: '技能熟练度 & 工程实战深度 (%)',
+        data: [95, 92, 85, 88, 88, 86],
+        fill: true,
+        backgroundColor: 'rgba(255, 165, 200, 0.22)',
+        borderColor: '#ffa5c8',
+        pointBackgroundColor: '#ffffff',
+        pointBorderColor: '#ffa5c8',
+        pointHoverBackgroundColor: '#ffa5c8',
+        pointHoverBorderColor: '#ffffff',
+        pointRadius: 4,
+        pointHoverRadius: 6,
+        borderWidth: 2
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      scales: {
+        r: {
+          min: 0,
+          max: 100,
+          ticks: {
+            stepSize: 25,
+            display: false,
+            backdropColor: 'transparent'
+          },
+          grid: {
+            color: 'rgba(255, 165, 200, 0.18)'
+          },
+          angleLines: {
+            color: 'rgba(255, 165, 200, 0.22)'
+          },
+          pointLabels: {
+            color: '#e0d0f0',
+            font: {
+              size: 12.5,
+              weight: 'bold'
+            }
+          }
+        }
+      },
+      plugins: {
+        legend: {
+          display: true,
+          position: 'bottom',
+          labels: {
+            color: '#c8b8e8',
+            font: { size: 12 }
+          }
+        },
+        tooltip: {
+          backgroundColor: 'rgba(26, 16, 53, 0.95)',
+          titleColor: '#ffa5c8',
+          bodyColor: '#ffffff',
+          borderColor: 'rgba(255, 165, 200, 0.35)',
+          borderWidth: 1,
+          padding: 8,
+          callbacks: {
+            label: function(context) {
+              return ' 综合评分: ' + context.raw + '%';
+            }
+          }
+        }
+      }
+    }
+  });
+});
+</script>
+
 ---
 
 ## 🏛️ 旗舰开源与工程实践 (Featured Projects)

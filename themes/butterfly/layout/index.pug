@@ -1,5 +1,31 @@
 extends includes/layout.pug
 
 block content
+  .featured-series-container
+    .featured-series-header
+      span.f-tag ⚡ 核心架构专题
+      h2.f-title 工业级全栈与分布式系统架构演进
+    .featured-series-cards
+      a.f-card(href='/2026/08/27/kafka-clickhouse-ollama-enterprise-distributed-architecture/')
+        .f-card-icon
+          i.fas.fa-bolt
+        .f-card-content
+          .f-card-category 高并发 & 分布式存储
+          .f-card-title Kafka 削峰 · ClickHouse 45x 毫秒列存 · Redis HLL
+          .f-card-desc 攻克写入阻塞、千万级时序聚合慢查询与 18MB 内存防爆
+      a.f-card(href='/2026/08/25/jwt-redis-blacklist-security/')
+        .f-card-icon
+          i.fas.fa-shield-halved
+        .f-card-content
+          .f-card-category 企业安全 & 鉴权防御
+          .f-card-title JWT 动态黑名单 · HttpOnly 双重防御 · OWASP
+          .f-card-desc 无状态 Token 即时注销、Fail-Open 容灾与安全防御闭环
+      a.f-card(href='/2026/08/27/datadog-style-security-copilot-studio/')
+        .f-card-icon
+          i.fas.fa-desktop
+        .f-card-content
+          .f-card-category 全栈 Studio & AI 研判
+          .f-card-title 100vw SOC Studio · SSE 打字机 · Ollama 私有化
+          .f-card-desc 对标 Datadog，打造全视口双窗格工作台与 AI 威胁研判大脑
   include ./includes/mixins/indexPostUI.pug
   +indexPostUI
