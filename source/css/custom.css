@@ -1025,19 +1025,19 @@ h6 {
     width: 100% !important;
   }
 
-  /* 左侧：核心架构专题（宽度 270px，跟随视口垂直居中滑动） */
+  /* 左侧：核心架构专题（宽度 270px，充实拉长 + 跟随视口黄金垂直居中） */
   .home-left-sticky {
     width: 270px !important;
     flex: 0 0 270px !important;
     position: sticky !important;
-    top: max(80px, calc(50vh - 190px)) !important;
+    top: max(80px, calc(50vh - 270px)) !important;
     align-self: flex-start !important;
     background: rgba(36, 24, 74, 0.85) !important;
     backdrop-filter: blur(14px) !important;
     -webkit-backdrop-filter: blur(14px) !important;
     border: 1px solid rgba(255, 158, 197, 0.25) !important;
     border-radius: 14px !important;
-    padding: 18px 15px !important;
+    padding: 18px 14px !important;
     box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35) !important;
     transition: top 0.25s ease !important;
   }
@@ -1088,7 +1088,7 @@ h6 {
 .home-left-sticky .featured-series-cards {
   display: flex !important;
   flex-direction: column !important;
-  gap: 10px !important;
+  gap: 9px !important;
 }
 
 .home-left-sticky .f-card {
@@ -1098,7 +1098,7 @@ h6 {
   background: rgba(22, 14, 46, 0.75) !important;
   border: 1px solid rgba(255, 158, 197, 0.2) !important;
   border-radius: 10px !important;
-  padding: 12px 12px !important;
+  padding: 10px 11px !important;
   text-decoration: none !important;
   transition: all 0.25s ease !important;
 }
@@ -1111,38 +1111,76 @@ h6 {
 }
 
 .home-left-sticky .f-card-icon {
-  width: 32px !important;
-  height: 32px !important;
+  width: 30px !important;
+  height: 30px !important;
   flex-shrink: 0 !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   background: rgba(255, 158, 197, 0.2) !important;
   border: 1px solid rgba(255, 158, 197, 0.35) !important;
-  border-radius: 8px !important;
+  border-radius: 7px !important;
   color: #ffa5c8 !important;
-  font-size: 0.95rem !important;
+  font-size: 0.9rem !important;
 }
 
 .home-left-sticky .f-card-category {
   color: #ffa5c8 !important;
-  font-size: 11px !important;
+  font-size: 10.5px !important;
   font-weight: 600 !important;
-  margin-bottom: 2px !important;
+  margin-bottom: 1px !important;
 }
 
 .home-left-sticky .f-card-title {
   color: #ffffff !important;
-  font-size: 12.5px !important;
+  font-size: 12px !important;
   font-weight: 700 !important;
   line-height: 1.35 !important;
-  margin-bottom: 3px !important;
+  margin-bottom: 2px !important;
 }
 
 .home-left-sticky .f-card-desc {
   color: #b8a8d8 !important;
-  font-size: 11px !important;
-  line-height: 1.4 !important;
+  font-size: 10.5px !important;
+  line-height: 1.35 !important;
+}
+
+/* 开源展厅直达快捷按钮 */
+.home-left-sticky .f-projects-btn {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  margin-top: 11px !important;
+  padding: 9px 13px !important;
+  background: linear-gradient(135deg, rgba(255, 158, 197, 0.2), rgba(168, 85, 247, 0.2)) !important;
+  border: 1px solid rgba(255, 158, 197, 0.35) !important;
+  border-radius: 9px !important;
+  color: #ffa5c8 !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  transition: all 0.25s ease !important;
+}
+
+.home-left-sticky .f-projects-btn:hover {
+  background: linear-gradient(135deg, rgba(255, 158, 197, 0.4), rgba(168, 85, 247, 0.4)) !important;
+  border-color: #ffa5c8 !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 16px rgba(255, 158, 197, 0.3) !important;
+}
+
+.home-left-sticky .f-projects-btn i:first-child {
+  font-size: 12.5px !important;
+}
+
+.home-left-sticky .f-projects-btn i:last-child {
+  font-size: 10.5px !important;
+  transition: transform 0.25s ease !important;
+}
+
+.home-left-sticky .f-projects-btn:hover i:last-child {
+  transform: translateX(3px) !important;
 }
 
 /* 中间长宽文章卡片：边框长、排版宽敞舒适 */

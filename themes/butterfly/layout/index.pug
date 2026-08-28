@@ -2,11 +2,11 @@ extends includes/layout.pug
 
 block content
   .home-main-wrapper
-    //- 左侧：核心架构专题（精简紧凑 + 智能吸顶跟随滑动）
+    //- 左侧：核心架构专题（充实拉长 + 视口黄金垂直居中跟随）
     .home-left-sticky#featured-series
       .featured-series-header
-        span.f-tag ⚡ 专题
-        h2.f-title 核心架构精选
+        span.f-tag ⚡ 架构精选
+        h2.f-title 核心系统演进
       .featured-series-cards
         a.f-card(href='/2026/08/27/kafka-clickhouse-ollama-enterprise-distributed-architecture/')
           .f-card-icon
@@ -14,14 +14,14 @@ block content
           .f-card-content
             .f-card-category 高并发 & 分布式
             .f-card-title Kafka 削峰 · ClickHouse
-            .f-card-desc 45x 毫秒列存与内存防爆
+            .f-card-desc 45x 毫秒列存与写入缓冲
         a.f-card(href='/2026/08/25/jwt-redis-blacklist-security/')
           .f-card-icon
             i.fas.fa-shield-halved
           .f-card-content
-            .f-card-category 安全 & 鉴权防御
+            .f-card-category 企业安全 & 鉴权
             .f-card-title JWT 黑名单 · HttpOnly
-            .f-card-desc 无状态注销与安全闭环
+            .f-card-desc 即时注销与 Fail-Open 容灾
         a.f-card(href='/2026/08/27/datadog-style-security-copilot-studio/')
           .f-card-icon
             i.fas.fa-desktop
@@ -29,6 +29,24 @@ block content
             .f-card-category 全栈 Studio & AI
             .f-card-title 100vw SOC Studio
             .f-card-desc SSE 打字机 · Ollama 研判
+        a.f-card(href='/2026/08/25/poi-sxssf-hyperloglog-high-concurrency/')
+          .f-card-icon
+            i.fas.fa-microchip
+          .f-card-content
+            .f-card-category 高并发 & 内存防爆
+            .f-card-title POI 窗口 · Redis HLL
+            .f-card-desc 滑动窗口与伯努利基数统计
+        a.f-card(href='/2026/08/05/python-log-parser-anomaly-detection/')
+          .f-card-icon
+            i.fas.fa-terminal
+          .f-card-content
+            .f-card-category 离线引擎 & 异常分析
+            .f-card-title FSM 状态机 · Pandas
+            .f-card-desc 多行堆栈合并与异常检测
+      a.f-projects-btn(href='/projects/')
+        i.fas.fa-layer-group
+        span 探索开源项目展厅
+        i.fas.fa-chevron-right
 
     //- 中间：长宽文章流（宽屏长卡片、排版通透舒展）
     .home-center-posts
