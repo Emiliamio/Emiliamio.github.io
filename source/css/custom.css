@@ -447,20 +447,25 @@ h6 {
   z-index: 99999 !important;
 }
 
-/* ── 17. Comment Section (Giscus 评论区高对比度与毛玻璃卡片优化) ── */
+/* ── 17. Comment Section (Giscus 评论区极简无缝融合，拒绝多层边框) ── */
 #post-comment {
-  margin-top: 35px !important;
-  padding-top: 25px !important;
-  border-top: 1px solid rgba(255, 158, 197, 0.25) !important;
+  margin-top: 36px !important;
+  padding-top: 24px !important;
+  border-top: 1px dashed rgba(255, 158, 197, 0.25) !important;
+  background: transparent !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
 }
 
 #post-comment .comment-head {
-  margin-bottom: 20px !important;
+  margin-bottom: 16px !important;
 }
 
 #post-comment .comment-head .comment-headline {
   color: #ffffff !important;
-  font-size: 1.35rem !important;
+  font-size: 1.25rem !important;
   font-weight: 700 !important;
   display: inline-flex !important;
   align-items: center !important;
@@ -474,15 +479,16 @@ h6 {
 #post-comment .comment-wrap,
 #giscus-wrap {
   width: 100% !important;
-  background: rgba(24, 15, 52, 0.65) !important;
-  border: 1px solid rgba(255, 158, 197, 0.35) !important;
-  border-radius: 12px !important;
-  padding: 20px !important;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3) !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  box-shadow: none !important;
 }
 
 #giscus-wrap iframe.giscus-frame {
   width: 100% !important;
-  min-height: 280px !important;
+  min-height: 260px !important;
   border: none !important;
+  background: transparent !important;
 }
