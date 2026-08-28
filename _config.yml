@@ -5,8 +5,8 @@
 # Site
 title: Mio的技术博客
 subtitle: ''
-description: 'Emiliamio (Mio) 的技术博客,分享 Java 全栈开发、Spring Boot 项目复盘与学习笔记'
-keywords: Java,Spring Boot,全栈开发,技术博客,项目复盘
+description: '聚焦 Java 全栈与高并发架构，记录分布式日志审计、安全工程与系统复盘实战。'
+keywords: Java,Spring Boot,全栈开发,高并发架构,分布式系统,日志审计,安全工程,技术博客
 author: Emiliamio
 language: zh-CN
 timezone: 'Asia/Shanghai'
