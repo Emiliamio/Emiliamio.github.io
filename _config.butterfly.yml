@@ -26,11 +26,24 @@ aside:
     tag: false
     category: false
   card_author:
+    enable: true
     button:
       enable: true
       icon: fab fa-github
       text: Follow Me
       link: https://github.com/Emiliamio
+  card_announcement:
+    enable: false
+  card_recent_post:
+    enable: false
+  card_categories:
+    enable: false
+  card_tags:
+    enable: false
+  card_archives:
+    enable: false
+  card_webinfo:
+    enable: false
 
 disable_top_img: false
 default_top_img: /images/random/bg1.webp
