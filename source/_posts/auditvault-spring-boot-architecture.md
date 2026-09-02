@@ -2,14 +2,15 @@
 title: 从零构建企业级高并发日志审计系统：我的 Spring Boot 3 + Redis + MySQL 工业级全栈架构实践
 date: 2026-07-17 10:00:00
 categories:
-  - 项目复盘
+  - 分布式与高并发架构
 tags:
-  - Spring Boot
-  - Java
+  - Spring Boot 3
+  - Java 21
   - 全栈开发
   - MySQL
   - Redis
-  - 日志审计
+  - 分布式追踪
+  - 慢SQL监控
 ---
 
 > 日志是分布式系统的黑匣子与安全生命线。  

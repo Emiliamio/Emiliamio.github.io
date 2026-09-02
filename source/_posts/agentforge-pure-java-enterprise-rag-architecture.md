@@ -1,12 +1,11 @@
 ---
-title: 基于 Java 21 + Spring Boot 3.2 的企业级 AI Agent 编排与三路混合 RAG 中台全栈架构实践
+title: 纯血 Java 21 + Spring Boot 3.2 企业级 AI Agent 与三路混合 RAG 中台全栈架构实践
 date: 2026-08-28 21:00:00
 categories:
-  - 项目复盘
-  - AI架构
+  - AI Agent 与混合 RAG
 tags:
   - Java 21
-  - Spring Boot
+  - Spring Boot 3
   - RAG
   - AI Agent
   - pgvector

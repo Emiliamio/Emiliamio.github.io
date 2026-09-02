@@ -1,12 +1,12 @@
 ---
-title: 给日志系统装上 AI 大脑：基于 Spring Boot + 大语言模型 + SSE 流式打字机的智能安全研判助手
+title: 当安全日志遇上大模型：基于 Spring Boot 3 + 本地私有化 Ollama + SSE 流式打字机的智能安全研判 Studio
 date: 2026-08-05 16:00:00
 categories:
-  - AI与安全工程
+  - AI Agent 与混合 RAG
 tags:
-  - AI
-  - LLM
-  - Spring Boot
+  - AI Agent
+  - Ollama
+  - Spring Boot 3
   - 安全研判
   - Prompt工程
   - SSE流式

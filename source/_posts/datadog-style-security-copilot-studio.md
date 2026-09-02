@@ -1,15 +1,15 @@
 ---
-title: 对标 Datadog 与 Security Copilot：从 0 到 1 打造全视口日志审计与 AI 威胁研判 Studio
+title: 告别传统粗糙 AI 味：我为 AuditVault 和 Nexus AI 打造的 Datadog 级 SOC 遥测 Studio 设计复盘
 date: 2026-08-27 17:15:00
 categories:
-  - 架构与前端实战
+  - 企业级安全与可观测性
 tags:
-  - Spring Boot
+  - Spring Boot 3
   - SIEM
   - SOC
   - Datadog
-  - AI Security
-  - Copilot
+  - Security Copilot
+  - 前端工程
 ---
 
 > 很多后台管理系统充斥着千篇一律的表格与弹窗，不仅缺乏专业美感，更在排查突发安全事件时效率低下。  

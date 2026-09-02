@@ -1,16 +1,15 @@
 ---
-title: 从单机吞吐到亿级日志与混合RAG：Kafka流式摄取、ClickHouse列式45x毫秒聚合与Java 21智能体架构演进
+title: 从单机高并发到亿级分布式微服务：Kafka 3.7 KRaft 流式削峰、ClickHouse 45x 毫秒级聚合与 Ollama 私有化研判演进实践
 date: 2026-08-27 21:00:00
 categories:
-  - 架构设计
+  - 分布式与高并发架构
 tags:
-  - Spring Boot
+  - Spring Boot 3
   - Kafka
   - ClickHouse
-  - Ollama
+  - 分布式追踪
   - 架构演进
   - 高并发
-  - RAG
   - Java 21
 ---
 

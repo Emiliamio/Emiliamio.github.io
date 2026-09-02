@@ -1,15 +1,15 @@
 ---
-title: 高并发与内存防爆：POI SXSSFWorkbook 滑动窗口与 Redis HyperLogLog 伯努利试验在大规模日志系统中的工程实践
+title: 高并发内存防爆实战：POI SXSSFWorkbook 流式滑动窗口与 Redis HyperLogLog 伯努利试验海量基数统计
 date: 2026-08-25 20:00:00
 categories:
-  - 高并发架构
+  - 分布式与高并发架构
 tags:
-  - Spring Boot
+  - Spring Boot 3
   - Redis
   - Apache POI
   - 内存优化
   - HyperLogLog
-  - OOM防爆
+  - 防OOM
 ---
 
 > 当系统管理 5000 万条日志且面临大容量导出与基数统计时，堆内存往往是最脆弱的瓶颈。  

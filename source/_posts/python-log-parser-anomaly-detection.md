@@ -2,14 +2,14 @@
 title: 用 Python 构建高性能日志解析与异常检测引擎：Pandas + 有限状态机多行堆栈合并实战
 date: 2026-08-05 14:30:00
 categories:
-  - 数据分析与安全
+  - 企业级安全与可观测性
 tags:
   - Python
   - Pandas
-  - 正则表达式
+  - FSM状态机
   - 异常检测
-  - 状态机
-  - CLI 工具
+  - 3.4万QPS
+  - CLI探针
 ---
 
 > 在安全运维与数据分析场景中，经常需要对离线日志（Nginx、Spring Boot、Tomcat、CSV 导出文件）进行快速结构化与威胁建模。  

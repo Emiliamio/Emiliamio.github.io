@@ -1,15 +1,15 @@
 ---
-title: 无状态 JWT 如何实现安全即时注销？Redis 黑名单与 HttpOnly Cookie 双重防御架构深度解析
+title: 无状态 JWT 的即时注销与防暴力破解：基于 Redis 黑名单与 HttpOnly Cookie 的金融级安全实战
 date: 2026-08-25 20:30:00
 categories:
-  - 安全架构
+  - 企业级安全与可观测性
 tags:
   - JWT
   - Spring Boot 3
   - Spring Security 6
   - Redis
-  - 认证授权
-  - XSS防御
+  - 认证鉴权
+  - 防暴力破解
 ---
 
 > JWT（JSON Web Token）凭借自包含与无状态的特性，成为了分布式系统鉴权的事实标准。  
