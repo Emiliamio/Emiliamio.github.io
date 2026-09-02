@@ -9,6 +9,9 @@ aside: false
 <div class="projects-hero text-center">
 <h1 class="projects-hero-title"><i class="fas fa-layer-group" style="color: #ffa5c8;"></i> 旗舰工程项目全景展厅</h1>
 <p class="projects-hero-subtitle">涵盖纯血 Java 21 企业级 AI Agent & RAG 中台、高并发分布式日志审计、Python 状态机探针与 AI 智能研判 Studio</p>
+<div style="margin-top: 15px;">
+  <a href="/2026/08/31/enterprise-architecture-roadmap-and-matrix/" class="p-btn p-btn-doc" style="background: linear-gradient(135deg, rgba(255, 165, 200, 0.3), rgba(123, 94, 167, 0.4)); border: 1px solid #ffa5c8; font-weight: bold;"><i class="fas fa-map-signs"></i> 点击查看：系统架构全景演进路线图 (Architecture Roadmap)</a>
+</div>
 </div>
 
 <div class="projects-container">
@@ -80,8 +83,9 @@ aside: false
 <span class="p-badge">Spring Boot 3</span>
 <span class="p-badge">Kafka KRaft</span>
 <span class="p-badge">ClickHouse OLAP</span>
-<span class="p-badge">Redis HLL</span>
-<span class="p-badge">Docker Compose</span>
+<span class="p-badge">MDC TraceId 追踪</span>
+<span class="p-badge">慢 SQL 告警</span>
+<span class="p-badge">单测 100% (49/49)</span>
 </div>
 
 <div class="project-metrics">
@@ -104,7 +108,7 @@ aside: false
 </div>
 
 <div class="project-body">
-<p>为中大型分布式系统打造的高并发日志审计中枢。首创“非阻塞异步摄取 + 磁盘滑动窗口流式导出 + 列存时序直方图”工业级架构，彻底攻克日志写入堵塞、大文件导出 OOM 与千万级数据聚合慢查询三大技术瓶颈。</p>
+<p>为中大型分布式系统打造的高并发日志审计中枢。首创“非阻塞异步摄取 + 磁盘滑动窗口流式导出 + 列存时序直方图 + 分布式 MDC TraceId 全链路追踪”工业级架构，彻底攻克日志写入堵塞、大文件导出 OOM 与千万级数据聚合慢查询三大技术瓶颈。</p>
 </div>
 
 <div class="project-links">
@@ -129,14 +133,14 @@ aside: false
 <span class="p-badge">Pandas</span>
 <span class="p-badge">有限状态机 (FSM)</span>
 <span class="p-badge">时序滑动窗口</span>
-<span class="p-badge">Openpyxl</span>
-<span class="p-badge">Pytest (46/46)</span>
+<span class="p-badge">34,000+ QPS</span>
+<span class="p-badge">Pytest (50/50)</span>
 </div>
 
 <div class="project-metrics">
 <div class="p-metric">
-<div class="p-num">O(N)</div>
-<div class="p-label">FSM 状态机单遍线性扫描复杂度</div>
+<div class="p-num">34,000+</div>
+<div class="p-label">实测状态机多行解析吞吐量 (QPS 行/秒)</div>
 </div>
 <div class="p-metric">
 <div class="p-num">100%</div>
@@ -153,7 +157,7 @@ aside: false
 </div>
 
 <div class="project-body">
-<p>面向企业级离线运维与安全研判的高性能 CLI 探针。针对传统正则无法处理多行 Java 报错的痛点，设计 FSM 状态机实现单遍扫描堆栈归并，结合 Pandas 滑动窗口模型秒级识别暴力破解与敏感路径扫描。</p>
+<p>面向企业级离线运维与安全研判的高性能 CLI 探针。针对传统正则无法处理多行 Java 报错的痛点，设计 FSM 状态机实现单遍扫描堆栈归并（实测 34,317 QPS），结合 Pandas 滑动窗口模型秒级识别暴力破解与敏感路径扫描。</p>
 </div>
 
 <div class="project-links">
@@ -178,7 +182,7 @@ aside: false
 <span class="p-badge">Ollama 私有化</span>
 <span class="p-badge">CVSS 3.1 定级</span>
 <span class="p-badge">100vw SOC Studio</span>
-<span class="p-badge">Chart.js 可视化</span>
+<span class="p-badge">单测 100% (9/9)</span>
 </div>
 
 <div class="project-metrics">
