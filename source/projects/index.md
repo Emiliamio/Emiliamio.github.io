@@ -85,8 +85,9 @@ aside: false
 <span class="p-badge">ClickHouse OLAP</span>
 <span class="p-badge">MDC TraceId 追踪</span>
 <span class="p-badge">WebSocket 威胁推流</span>
-<span class="p-badge">Grafana 大盘</span>
-<span class="p-badge">单测 100% (52/52)</span>
+<span class="p-badge">Flyway 增量迁移</span>
+<span class="p-badge">K8s Helm 编排</span>
+<span class="p-badge">单测 100% (54/54)</span>
 </div>
 
 <div class="project-metrics">
