@@ -57,8 +57,11 @@ Nexus AI 的核心交互时序如下：
 }
 ```
 
-### 防御 Prompt 注入（Anti-Prompt Injection）
-通过在服务端对用户日志载荷进行边界包裹与转义，避免攻击者在日志中伪造 `Ignore previous instructions` 等注入指令。
+### 1. 防御 Prompt 注入（Anti-Prompt Injection）
+通过在服务端对用户日志载荷进行 `<security_telemetry_payload>` 沙箱隔离与转义，避免攻击者在日志中伪造 `Ignore previous instructions` 等注入指令。
+
+### 2. 金融级 PII 敏感信息脱敏装甲 (PiiSanitizer)
+在将原始日志发送至公网商业大模型（DeepSeek / OpenAI）前，系统通过 `PiiSanitizer` 自动对密码凭证（`[REDACTED_SECRET]`）、手机号（`138****5678`）、身份证与内网物理绝对路径进行金融级规则脱敏，确保数据出域零合规风险。
 
 ---
 
@@ -129,4 +132,4 @@ Nexus AI 实现了三级容灾矩阵：
 
 ## 📊 五、总结
 
-通过融合 **结构化 Prompt 设计**、**JDK 原生 SSE 流式传输** 与 **多级 Fail-Safe 容灾机制**，Nexus AI 成功将大语言模型的智能推理能力赋能于日志安全审计，显著降低了安全研判的响应时间与误报成本。
+通过融合 **结构化 Prompt 设计**、**金融级 PII 敏感脱敏装甲**、**JDK 原生 SSE 流式传输** 与 **三级 Fail-Safe 容灾机制**，Nexus AI 成功将大语言模型的智能推理能力赋能于日志安全审计，全套 14 项自动化单元测试 100% 绿灯通过，显著降低了安全研判的响应时间与误报成本。

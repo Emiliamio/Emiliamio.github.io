@@ -139,13 +139,14 @@ public class MdcTaskDecorator implements TaskDecorator {
 }
 ```
 
-- **全链路闭环**：HTTP 请求头、统一日志输出 `[%X{traceId}]`、异步落库与微服务调用双向绑定，排查线上故障只需检索单一 TraceId 即可还原完整调用链。
-
 ### 2. MyBatis 慢 SQL 自动化拦截与告警
 开发 MyBatis 插件 `SlowSqlInterceptor`，在语句执行前后捕获耗时。一旦单次 SQL 执行超过阈值（如 200ms），立即触发 WARN 告警日志并同步递增 Prometheus `auditvault.slow_queries.total` 监控指标。
+
+### 3. WebSocket 实时高危安全威胁推流与 Grafana 生产大屏
+在 Webhook 异步摄取流水线上挂载 `ThreatAlertNotifier`，当捕获 `CRITICAL` 级别或 SQL 注入载荷时，通过 `/ws/threat-alerts` WebSocket 通道向在线 SOC 工作台推流，并提供开箱即用的 Grafana 生产监控仪表盘模板（`docs/grafana/auditvault-dashboard.json`）。
 
 ---
 
 ## 📈 七、总结与落地成效
 
-通过将 **异步非阻塞摄取**、**SXSSFWorkbook 内存防爆流式导出**、**分布式 MDC TraceId 链路追踪**、**MyBatis 慢 SQL 拦截** 与 **Redis HyperLogLog 独立基数统计** 深度结合，AuditVault 在低资源占用下稳定支撑了海量日志查询与可视化审计需求，全套 49 项自动化单元与集成测试 100% 绿灯通过，为后续演进至分布式流式架构奠定了坚实基础。
+通过将 **异步非阻塞摄取**、**SXSSFWorkbook 内存防爆流式导出**、**分布式 MDC TraceId 链路追踪**、**MyBatis 慢 SQL 拦截**、**WebSocket 实时威胁推流** 与 **Redis HyperLogLog 独立基数统计** 深度结合，AuditVault 在低资源占用下稳定支撑了海量日志查询与可视化审计需求，全套 52 项自动化单元与集成测试 100% 绿灯通过，为后续演进至分布式流式架构奠定了坚实基础。
