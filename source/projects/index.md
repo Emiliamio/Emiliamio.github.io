@@ -133,12 +133,13 @@ aside: false
 
 <div class="project-badges">
 <span class="p-badge">Python 3.11</span>
+<span class="p-badge">DuckDB 内存即席分析</span>
 <span class="p-badge">Apache Parquet 列存</span>
 <span class="p-badge">mmap 零拷贝</span>
 <span class="p-badge">有限状态机 (FSM)</span>
 <span class="p-badge">多核分块并行</span>
 <span class="p-badge">34,317 QPS</span>
-<span class="p-badge">Pytest (55/55)</span>
+<span class="p-badge">Pytest (58/58)</span>
 </div>
 
 <div class="project-metrics">
