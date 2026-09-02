@@ -114,14 +114,37 @@ CREATE TABLE `log_entry` (
 
 ---
 
-## 🔒 五、企业级防御性安全设计
+## 🌐 六、分布式链路追踪 (TraceId) 与慢 SQL 监控可观测性实践
 
-1. **HttpOnly Cookie 认证**：JWT 存储在 `HttpOnly`、`SameSite=Strict` Cookie 中，彻底杜绝 XSS 脚本窃取 Token；
-2. **Redis Token 黑名单**：用户注销登出时，后端计算 Token 剩余生命周期存入 Redis，实现无状态 JWT 的精准秒级即时吊销；
-3. **原子防爆破限流**：登录接口部署 Redis `INCR` + `EXPIRE` 计数器，严格限制单个 IP 15 分钟内最多尝试 5 次。
+为了让单体及后续微服务化架构具备工业级的故障可追溯性，AuditVault 实装了全链路上下文穿透与数据库性能防线：
+
+### 1. 基于 MDC 的分布式 TraceId 穿透
+在请求入口部署 `TraceIdFilter`，自动抓取或生成 `X-Trace-Id` 注入 SLF4J MDC，并结合自定义 `MdcTaskDecorator` 解决异步线程池上下文丢失难题：
+
+```java
+public class MdcTaskDecorator implements TaskDecorator {
+    @Override
+    public Runnable decorate(Runnable runnable) {
+        Map<String, String> contextMap = MDC.getCopyOfContextMap();
+        return () -> {
+            try {
+                if (contextMap != null) MDC.setContextMap(contextMap);
+                runnable.run();
+            } finally {
+                MDC.clear();
+            }
+        };
+    }
+}
+```
+
+- **全链路闭环**：HTTP 请求头、统一日志输出 `[%X{traceId}]`、异步落库与微服务调用双向绑定，排查线上故障只需检索单一 TraceId 即可还原完整调用链。
+
+### 2. MyBatis 慢 SQL 自动化拦截与告警
+开发 MyBatis 插件 `SlowSqlInterceptor`，在语句执行前后捕获耗时。一旦单次 SQL 执行超过阈值（如 200ms），立即触发 WARN 告警日志并同步递增 Prometheus `auditvault.slow_queries.total` 监控指标。
 
 ---
 
-## 📈 六、总结与落地成效
+## 📈 七、总结与落地成效
 
-通过将 **异步非阻塞摄取**、**SXSSFWorkbook 内存防爆流式导出** 与 **Redis HyperLogLog 独立基数统计** 深度结合，AuditVault 在低资源占用下稳定支撑了海量日志查询与可视化审计需求，为后续演进至分布式流式架构奠定了坚实基础。
+通过将 **异步非阻塞摄取**、**SXSSFWorkbook 内存防爆流式导出**、**分布式 MDC TraceId 链路追踪**、**MyBatis 慢 SQL 拦截** 与 **Redis HyperLogLog 独立基数统计** 深度结合，AuditVault 在低资源占用下稳定支撑了海量日志查询与可视化审计需求，全套 49 项自动化单元与集成测试 100% 绿灯通过，为后续演进至分布式流式架构奠定了坚实基础。
