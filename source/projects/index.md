@@ -84,8 +84,9 @@ aside: false
 <span class="p-badge">Kafka KRaft</span>
 <span class="p-badge">ClickHouse OLAP</span>
 <span class="p-badge">MDC TraceId 追踪</span>
-<span class="p-badge">慢 SQL 告警</span>
-<span class="p-badge">单测 100% (49/49)</span>
+<span class="p-badge">WebSocket 威胁推流</span>
+<span class="p-badge">Grafana 大盘</span>
+<span class="p-badge">单测 100% (52/52)</span>
 </div>
 
 <div class="project-metrics">
@@ -178,11 +179,12 @@ aside: false
 
 <div class="project-badges">
 <span class="p-badge">Spring Boot 3</span>
+<span class="p-badge">PII 敏感脱敏</span>
 <span class="p-badge">SSE 流式推送</span>
 <span class="p-badge">Ollama 私有化</span>
 <span class="p-badge">CVSS 3.1 定级</span>
 <span class="p-badge">100vw SOC Studio</span>
-<span class="p-badge">单测 100% (9/9)</span>
+<span class="p-badge">单测 100% (14/14)</span>
 </div>
 
 <div class="project-metrics">
