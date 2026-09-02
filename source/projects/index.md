@@ -133,11 +133,12 @@ aside: false
 
 <div class="project-badges">
 <span class="p-badge">Python 3.11</span>
+<span class="p-badge">Apache Parquet 列存</span>
 <span class="p-badge">mmap 零拷贝</span>
 <span class="p-badge">有限状态机 (FSM)</span>
 <span class="p-badge">多核分块并行</span>
 <span class="p-badge">34,317 QPS</span>
-<span class="p-badge">Pytest (53/53)</span>
+<span class="p-badge">Pytest (55/55)</span>
 </div>
 
 <div class="project-metrics">
@@ -150,12 +151,12 @@ aside: false
 <div class="p-label">多行 Java 异常堆栈断裂精准拼接还原</div>
 </div>
 <div class="p-metric">
-<div class="p-num">Rolling</div>
-<div class="p-label">Pandas 滑动窗口时序高频爆破检测</div>
+<div class="p-num">85%</div>
+<div class="p-label">Parquet 高压缩比与 DuckDB 毫秒级即席查询</div>
 </div>
 <div class="p-metric">
-<div class="p-num">3 种管道</div>
-<div class="p-label">格式化 Excel / 动态 HTML / SQL DDL 导出</div>
+<div class="p-num">4 种管道</div>
+<div class="p-label">Excel / 动态 HTML / Parquet / SQL DDL 导出</div>
 </div>
 </div>
 
@@ -175,19 +176,19 @@ aside: false
 <div class="project-icon-box"><i class="fas fa-robot"></i></div>
 <div class="project-title-box">
 <h2 class="project-name">Nexus AI Security Copilot · 智能安全研判 Studio</h2>
-<div class="project-tech-line">Spring Boot 3 + SSE 流式长连接 + 本地 Ollama 私有化 + 100vw SOC 工作台</div>
+<div class="project-tech-line">Spring Boot 3 + 语义向量缓存 + 本地 Ollama 私有化 + 100vw SOC 工作台</div>
 </div>
 </div>
 
 <div class="project-badges">
 <span class="p-badge">Spring Boot 3</span>
+<span class="p-badge">语义向量缓存 (0 Token)</span>
 <span class="p-badge">Sigma 规则 AST 校验</span>
 <span class="p-badge">PII 敏感脱敏</span>
 <span class="p-badge">SSE 流式推送</span>
 <span class="p-badge">Ollama 私有化</span>
 <span class="p-badge">CVSS 3.1 定级</span>
-<span class="p-badge">100vw SOC Studio</span>
-<span class="p-badge">单测 100% (18/18)</span>
+<span class="p-badge">单测 100% (21/21)</span>
 </div>
 
 <div class="project-metrics">
