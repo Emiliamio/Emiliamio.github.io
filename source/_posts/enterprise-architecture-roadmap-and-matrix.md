@@ -49,7 +49,7 @@ tags:
 在分布式系统研发中，安全边界与排查手段是一切业务的基石。
 
 1. [从零构建企业级高并发日志审计系统：我的 Spring Boot 3 + Redis + MySQL 工业级全栈架构实践](/2026/07/17/auditvault-spring-boot-architecture/)  
-   * **核心重点**：系统整体分层、HTTP Webhook 毫秒级非阻塞摄取、MDC 分布式 TraceId 穿透、MyBatis 慢 SQL 自动告警、`@AuditLog` 无侵入 AOP 埋点与 Flyway 数据库版本化增量热升级。
+   * **核心重点**：系统整体分层、HTTP Webhook 毫秒级非阻塞摄取、W3C TraceContext / OTel 双模链路透传、IP 威胁信誉评分与自适应自动熔断黑名单 (Auto-Ban)、MyBatis 慢 SQL 自动告警、`@AuditLog` 无侵入 AOP 埋点与 Flyway 数据库版本化增量热升级 (59项单测)。
 2. [无状态 JWT 的即时吊销与防暴力破解：基于 Redis 黑名单与令牌桶限流的金融级安全实战](/2026/07/20/jwt-redis-blacklist-security/)  
    * **核心重点**：解决 JWT 无法主动作废难题（剩余 TTL 自动过期）、Redis 连续 5 次失败锁定 15 分钟、Fail-Open 容灾降级。
 3. [告别传统粗糙 AI 味：我为 AuditVault 和 Nexus AI 打造的 Datadog 级 SOC 遥测 Studio 设计复盘](/2026/08/05/datadog-style-security-copilot-studio/)  
@@ -64,7 +64,7 @@ tags:
 4. [海量日志导出如何防 JVM OOM？SXSSFWorkbook 流式写入与 Redis HyperLogLog 亿级基数统计实战](/2026/07/25/poi-sxssf-hyperloglog-high-concurrency/)  
    * **核心重点**：POI SXSSFWorkbook(100) 磁盘滑动窗口机制彻底避免 FullGC、HyperLogLog 伯努利试验以 12KB 内存统计亿级活跃 IP。
 5. [多行 Java 异常堆栈的精准还原与时序异常检测：LogScope CLI Python 状态机探针开发实录](/2026/08/01/python-log-parser-anomaly-detection/)  
-   * **核心重点**：有限状态机 (FSM) 识别与多行拼接、实测 34,317 QPS 高吞吐、滑动窗口暴力破解告警。
+   * **核心重点**：零拷贝 `mmap` 内存映射与多核并行分块解析引擎、有限状态机 (FSM) 识别与多行拼接、实测 34,317 QPS 高吞吐、滑动窗口暴力破解告警 (53项单测)。
 
 ---
 
@@ -75,7 +75,7 @@ tags:
 6. [从单机高并发到亿级分布式微服务：Kafka 3.7 KRaft 流式削峰、ClickHouse 45x 毫秒级聚合与 Ollama 私有化研判演进实践](/2026/08/27/kafka-clickhouse-ollama-enterprise-distributed-architecture/)  
    * **核心重点**：Kubernetes Helm Chart 云原生弹性编排 (HPA 2~10 副本)、Kafka 消息缓冲削峰、ClickHouse MergeTree 列式存储将 24 小时直方图查询从 28ms 压缩至 1.8ms。
 7. [当安全日志遇上大模型：Nexus AI 智能研判 Studio 与三级容灾架构设计](/2026/08/10/ai-log-security-llm-assistant/)  
-   * **核心重点**：金融级 PII 敏感信息脱敏装甲、云端 (DeepSeek/OpenAI) ➔ 本地私有化 (Ollama) ➔ 规则引擎三级自动热备、100% 离线隐私盾。
+   * **核心重点**：工业级 Sigma 告警规则 AST 语法校验器、金融级 PII 敏感信息脱敏装甲、云端 (DeepSeek/OpenAI) ➔ 本地私有化 (Ollama) ➔ 规则引擎三级自动热备、100% 离线隐私盾 (18项单测)。
 
 ---
 

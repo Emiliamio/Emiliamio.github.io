@@ -81,13 +81,14 @@ aside: false
 <div class="project-badges">
 <span class="p-badge">Java 21</span>
 <span class="p-badge">Spring Boot 3</span>
+<span class="p-badge">W3C OTel 链路</span>
+<span class="p-badge">IP 威胁熔断</span>
 <span class="p-badge">Kafka KRaft</span>
 <span class="p-badge">ClickHouse OLAP</span>
-<span class="p-badge">MDC TraceId 追踪</span>
 <span class="p-badge">WebSocket 威胁推流</span>
 <span class="p-badge">Flyway 增量迁移</span>
 <span class="p-badge">K8s Helm 编排</span>
-<span class="p-badge">单测 100% (54/54)</span>
+<span class="p-badge">单测 100% (59/59)</span>
 </div>
 
 <div class="project-metrics">
@@ -126,22 +127,22 @@ aside: false
 <div class="project-icon-box"><i class="fab fa-python"></i></div>
 <div class="project-title-box">
 <h2 class="project-name">LogScope CLI · 高性能离线日志解析与异常探针</h2>
-<div class="project-tech-line">Python 3.11 + Pandas + 正则表达式 + 有限状态机 (FSM)</div>
+<div class="project-tech-line">Python 3.11 + Pandas + 正则表达式 + 有限状态机 (FSM) + mmap 零拷贝</div>
 </div>
 </div>
 
 <div class="project-badges">
 <span class="p-badge">Python 3.11</span>
-<span class="p-badge">Pandas</span>
+<span class="p-badge">mmap 零拷贝</span>
 <span class="p-badge">有限状态机 (FSM)</span>
-<span class="p-badge">时序滑动窗口</span>
-<span class="p-badge">34,000+ QPS</span>
-<span class="p-badge">Pytest (50/50)</span>
+<span class="p-badge">多核分块并行</span>
+<span class="p-badge">34,317 QPS</span>
+<span class="p-badge">Pytest (53/53)</span>
 </div>
 
 <div class="project-metrics">
 <div class="p-metric">
-<div class="p-num">34,000+</div>
+<div class="p-num">34,317</div>
 <div class="p-label">实测状态机多行解析吞吐量 (QPS 行/秒)</div>
 </div>
 <div class="p-metric">
@@ -180,12 +181,13 @@ aside: false
 
 <div class="project-badges">
 <span class="p-badge">Spring Boot 3</span>
+<span class="p-badge">Sigma 规则 AST 校验</span>
 <span class="p-badge">PII 敏感脱敏</span>
 <span class="p-badge">SSE 流式推送</span>
 <span class="p-badge">Ollama 私有化</span>
 <span class="p-badge">CVSS 3.1 定级</span>
 <span class="p-badge">100vw SOC Studio</span>
-<span class="p-badge">单测 100% (14/14)</span>
+<span class="p-badge">单测 100% (18/18)</span>
 </div>
 
 <div class="project-metrics">
