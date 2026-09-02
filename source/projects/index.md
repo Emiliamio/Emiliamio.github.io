@@ -81,14 +81,15 @@ aside: false
 <div class="project-badges">
 <span class="p-badge">Java 21</span>
 <span class="p-badge">Spring Boot 3</span>
+<span class="p-badge">Resilience4j 熔断</span>
+<span class="p-badge">Caffeine L1 双级缓存</span>
 <span class="p-badge">W3C OTel 链路</span>
 <span class="p-badge">IP 威胁熔断</span>
 <span class="p-badge">Kafka KRaft</span>
 <span class="p-badge">ClickHouse OLAP</span>
 <span class="p-badge">WebSocket 威胁推流</span>
 <span class="p-badge">Flyway 增量迁移</span>
-<span class="p-badge">K8s Helm 编排</span>
-<span class="p-badge">单测 100% (59/59)</span>
+<span class="p-badge">单测 100% (61/61)</span>
 </div>
 
 <div class="project-metrics">
@@ -177,19 +178,20 @@ aside: false
 <div class="project-icon-box"><i class="fas fa-robot"></i></div>
 <div class="project-title-box">
 <h2 class="project-name">Nexus AI Security Copilot · 智能安全研判 Studio</h2>
-<div class="project-tech-line">Spring Boot 3 + 语义向量缓存 + 本地 Ollama 私有化 + 100vw SOC 工作台</div>
+<div class="project-tech-line">Spring Boot 3 + 边缘特征向量化 + 语义向量缓存 + 100vw SOC 工作台</div>
 </div>
 </div>
 
 <div class="project-badges">
 <span class="p-badge">Spring Boot 3</span>
+<span class="p-badge">边缘特征向量化 (2ms)</span>
 <span class="p-badge">语义向量缓存 (0 Token)</span>
 <span class="p-badge">Sigma 规则 AST 校验</span>
 <span class="p-badge">PII 敏感脱敏</span>
 <span class="p-badge">SSE 流式推送</span>
 <span class="p-badge">Ollama 私有化</span>
 <span class="p-badge">CVSS 3.1 定级</span>
-<span class="p-badge">单测 100% (21/21)</span>
+<span class="p-badge">单测 100% (24/24)</span>
 </div>
 
 <div class="project-metrics">
