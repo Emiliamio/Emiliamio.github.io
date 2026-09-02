@@ -8,6 +8,13 @@ block content
         span.f-tag ⚡ 架构精选
         h2.f-title 核心系统演进
       .featured-series-cards
+        a.f-card(href='/2026/08/31/enterprise-architecture-roadmap-and-matrix/' style='border-color: rgba(255, 165, 200, 0.45); background: rgba(255, 165, 200, 0.08);')
+          .f-card-icon(style='background: linear-gradient(135deg, #ffa5c8, #7b5ea7); color: #fff;')
+            i.fas.fa-map-signs
+          .f-card-content
+            .f-card-category(style='color: #ffa5c8;') 全景路线图 · 架构总纲
+            .f-card-title 架构师修炼之路
+            .f-card-desc 四大阶梯体系化演进路线图
         a.f-card(href='/2026/08/28/agentforge-pure-java-enterprise-rag-architecture/' style='border-color: rgba(255, 165, 200, 0.35);')
           .f-card-icon(style='background: linear-gradient(135deg, rgba(255, 165, 200, 0.35), rgba(123, 94, 167, 0.4)); color: #ffa5c8;')
             i.fas.fa-brain
@@ -15,20 +22,27 @@ block content
             .f-card-category(style='color: #ffa5c8;') AI 原生 & 混合 RAG
             .f-card-title AgentForge · Java 21
             .f-card-desc AST 租户隔离 · 语义降本 60%
+        a.f-card(href='/2026/08/30/agentforge-xinchuang-and-enterprise-delivery-sop/')
+          .f-card-icon
+            i.fas.fa-file-contract
+          .f-card-content
+            .f-card-category 信创合规 & 私有交付
+            .f-card-title 等保三级 · 容灾 SOP
+            .f-card-desc 国产全栈兼容 · 招投标偏离表
         a.f-card(href='/2026/08/27/kafka-clickhouse-ollama-enterprise-distributed-architecture/')
           .f-card-icon
             i.fas.fa-bolt
           .f-card-content
             .f-card-category 高并发 & 分布式
             .f-card-title Kafka 削峰 · ClickHouse
-            .f-card-desc 45x 毫秒列存与写入缓冲
-        a.f-card(href='/2026/08/25/jwt-redis-blacklist-security/')
+            .f-card-desc 45x 毫秒列存与 TraceId 穿透
+        a.f-card(href='/2026/07/17/auditvault-spring-boot-architecture/')
           .f-card-icon
             i.fas.fa-shield-halved
           .f-card-content
-            .f-card-category 企业安全 & 鉴权
-            .f-card-title JWT 黑名单 · HttpOnly
-            .f-card-desc 即时注销与 Fail-Open 容灾
+            .f-card-category 企业安全 & 追踪
+            .f-card-title AuditVault · TraceId
+            .f-card-desc 全链路追踪与慢 SQL 防御
         a.f-card(href='/2026/08/27/datadog-style-security-copilot-studio/')
           .f-card-icon
             i.fas.fa-desktop
@@ -48,7 +62,7 @@ block content
             i.fas.fa-terminal
           .f-card-content
             .f-card-category 离线引擎 & 异常分析
-            .f-card-title FSM 状态机 · Pandas
+            .f-card-title FSM 状态机 · 3.4万 QPS
             .f-card-desc 多行堆栈合并与异常检测
       a.f-projects-btn(href='/projects/')
         i.fas.fa-layer-group
