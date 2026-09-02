@@ -53,7 +53,8 @@ public boolean sendLog(WebhookLogDto dto) {
 ```
 
 - **顺序性保证**：以 `ip_address` 作为 Partition Key，确保同一来源的事件严格保序；
-- **零中断容灾**：当 Kafka 集群维护或网络异常时，`WebhookController` 自动无缝降级为 Spring `ThreadPoolTaskExecutor` 异步批量写入，对微服务客户端 100% 透明。
+- **零中断容灾**：当 Kafka 集群维护或网络异常时，`WebhookController` 自动无缝降级为 Spring `ThreadPoolTaskExecutor` 异步批量写入，对微服务客户端 100% 透明；
+- **全链路 MDC TraceId 穿透**：请求进入 Webhook 后生成或提取 `X-Trace-Id` 写入 MDC，在 Kafka 消息头与异步线程池间无损透传，彻底解决异步微服务链路断裂排查痛点。
 
 ---
 
