@@ -36,6 +36,8 @@ LOG_PATTERN = re.compile(
 
 ## ⚡ 二、关键技术：Java 多行异常堆栈的状态机合并
 
+<div id="interactive-architecture-sandbox"></div>
+
 ### 1. 痛点分析
 当 Java 程序抛出异常时，一条日志会跨越数十甚至数百行：
 ```text

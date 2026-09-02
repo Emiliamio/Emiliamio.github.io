@@ -156,6 +156,7 @@ inject:
     - <script>document.addEventListener('DOMContentLoaded',function(){if(location.hostname==='localhost'||location.hostname==='127.0.0.1'){['busuanzi_value_site_uv','busuanzi_value_site_pv'].forEach(function(id){var el=document.getElementById(id);var row=el&&el.closest('.webinfo-item');if(row){row.style.display='none'}})}})</script>
   bottom:
     - <script src="/js/sakura-canvas.js?v=20260827_09"></script>
+    - <script src="/js/interactive-fsm.js?v=20260902_01"></script>
 
 reward:
   enable: false

@@ -220,4 +220,51 @@ aside: false
 </div>
 </div>
 
+<!-- Project 5: Sample Order Service -->
+<div class="project-card">
+<div class="project-header">
+<div class="project-icon-box"><i class="fas fa-shopping-cart"></i></div>
+<div class="project-title-box">
+<h2 class="project-name">Sample Order Service · 微服务 10 秒无侵入接入示范</h2>
+<div class="project-tech-line">Spring Boot 3 + Spring AOP + @AuditLog 注解 + JDK HttpClient</div>
+</div>
+</div>
+
+<div class="project-badges">
+<span class="p-badge">Spring Boot 3</span>
+<span class="p-badge">@AuditLog 注解</span>
+<span class="p-badge">无侵入 AOP</span>
+<span class="p-badge">非阻塞异步回传</span>
+<span class="p-badge">单测 100% (3/3)</span>
+</div>
+
+<div class="project-metrics">
+<div class="p-metric">
+<div class="p-num">10 秒</div>
+<div class="p-label">外部微服务极速接入 AuditVault 平台耗时</div>
+</div>
+<div class="p-metric">
+<div class="p-num">0 侵入</div>
+<div class="p-label">仅需一个方法注解，无需修改既有业务代码</div>
+</div>
+<div class="p-metric">
+<div class="p-num">全链路</div>
+<div class="p-label">自动抓取耗时、TraceId、客户端 IP 与状态</div>
+</div>
+<div class="p-metric">
+<div class="p-num">133 项</div>
+<div class="p-label">全项目自动化单元测试总计 100% 绿灯</div>
+</div>
+</div>
+
+<div class="project-body">
+<p>为外部业务微服务提供的标准化 Starter 接入工程。演示如何在电商下单、支付或订单取消等核心业务方法上添加 <code>@AuditLog</code> 注解，实现底层耗时自动度量与跨网络异步推流回 AuditVault 审计中枢。</p>
+</div>
+
+<div class="project-links">
+<a href="https://github.com/Emiliamio/java-portfolio/tree/main/04-sample-order-service" target="_blank" rel="noopener" class="p-btn p-btn-gh"><i class="fab fa-github"></i> GitHub 源码仓库</a>
+<a href="/2026/07/17/auditvault-spring-boot-architecture/" class="p-btn p-btn-doc"><i class="fas fa-link"></i> 接入规范文档</a>
+</div>
+</div>
+
 </div>
