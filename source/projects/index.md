@@ -32,9 +32,11 @@ aside: false
 <span class="p-badge">pgvector HNSW</span>
 <span class="p-badge">RRF 混合召回</span>
 <span class="p-badge">Kahn DAG 响应式</span>
+<span class="p-badge">Prompt 注入对抗护栏</span>
+<span class="p-badge">LangSmith 级 Trace</span>
 <span class="p-badge">JsqlParser AST 租户隔离</span>
 <span class="p-badge">Redis 向量语义降本</span>
-<span class="p-badge">单测 100% (35/35)</span>
+<span class="p-badge">单测 100% (37/37)</span>
 </div>
 
 <div class="project-metrics">
@@ -81,6 +83,8 @@ aside: false
 <div class="project-badges">
 <span class="p-badge">Java 21</span>
 <span class="p-badge">Spring Boot 3</span>
+<span class="p-badge">多通道告警与防风暴</span>
+<span class="p-badge">冷热分层 ILM</span>
 <span class="p-badge">Resilience4j 熔断</span>
 <span class="p-badge">Caffeine L1 双级缓存</span>
 <span class="p-badge">W3C OTel 链路</span>
@@ -89,7 +93,7 @@ aside: false
 <span class="p-badge">ClickHouse OLAP</span>
 <span class="p-badge">WebSocket 威胁推流</span>
 <span class="p-badge">Flyway 增量迁移</span>
-<span class="p-badge">单测 100% (61/61)</span>
+<span class="p-badge">单测 100% (63/63)</span>
 </div>
 
 <div class="project-metrics">
@@ -184,6 +188,7 @@ aside: false
 
 <div class="project-badges">
 <span class="p-badge">Spring Boot 3</span>
+<span class="p-badge">跨中台协同流水线</span>
 <span class="p-badge">边缘特征向量化 (2ms)</span>
 <span class="p-badge">语义向量缓存 (0 Token)</span>
 <span class="p-badge">Sigma 规则 AST 校验</span>
@@ -191,7 +196,7 @@ aside: false
 <span class="p-badge">SSE 流式推送</span>
 <span class="p-badge">Ollama 私有化</span>
 <span class="p-badge">CVSS 3.1 定级</span>
-<span class="p-badge">单测 100% (24/24)</span>
+<span class="p-badge">单测 100% (26/26)</span>
 </div>
 
 <div class="project-metrics">

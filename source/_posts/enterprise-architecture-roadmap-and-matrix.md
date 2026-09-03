@@ -49,7 +49,7 @@ tags:
 在分布式系统研发中，安全边界与排查手段是一切业务的基石。
 
 1. [从零构建企业级高并发日志审计系统：我的 Spring Boot 3 + Redis + MySQL 工业级全栈架构实践](/2026/07/17/auditvault-spring-boot-architecture/)  
-   * **核心重点**：系统整体分层、HTTP Webhook 毫秒级非阻塞摄取、Caffeine 50ns L1 堆缓存 + Redis L2 双级近源缓存、Resilience4j 滑动窗口动态熔断与本地 WAL 降级缓冲、W3C TraceContext / OTel 双模链路透传、IP 威胁信誉评分与自适应自动熔断黑名单 (Auto-Ban)、MyBatis 慢 SQL 自动告警、`@AuditLog` 无侵入 AOP 埋点与 Flyway 数据库版本化增量热升级 (61项单测)。
+   * **核心重点**：系统整体分层、HTTP Webhook 毫秒级非阻塞摄取、多通道告警分发与 5 分钟风暴收敛 (飞书/钉钉/企微)、冷热分层数据生命周期管理 (ILM)、Caffeine 50ns L1 堆缓存 + Redis L2 双级近源缓存、Resilience4j 滑动窗口动态熔断与本地 WAL 降级缓冲、W3C TraceContext / OTel 双模链路透传、IP 威胁信誉评分与自适应自动熔断黑名单 (Auto-Ban)、MyBatis 慢 SQL 自动告警、`@AuditLog` 无侵入 AOP 埋点与 Flyway 数据库版本化增量热升级 (63项单测)。
 2. [无状态 JWT 的即时吊销与防暴力破解：基于 Redis 黑名单与令牌桶限流的金融级安全实战](/2026/07/20/jwt-redis-blacklist-security/)  
    * **核心重点**：解决 JWT 无法主动作废难题（剩余 TTL 自动过期）、Redis 连续 5 次失败锁定 15 分钟、Fail-Open 容灾降级。
 3. [告别传统粗糙 AI 味：我为 AuditVault 和 Nexus AI 打造的 Datadog 级 SOC 遥测 Studio 设计复盘](/2026/08/05/datadog-style-security-copilot-studio/)  
@@ -75,7 +75,7 @@ tags:
 6. [从单机高并发到亿级分布式微服务：Kafka 3.7 KRaft 流式削峰、ClickHouse 45x 毫秒级聚合与 Ollama 私有化研判演进实践](/2026/08/27/kafka-clickhouse-ollama-enterprise-distributed-architecture/)  
    * **核心重点**：Kubernetes Helm Chart 云原生弹性编排 (HPA 2~10 副本)、Kafka 消息缓冲削峰、ClickHouse MergeTree 列式存储将 24 小时直方图查询从 28ms 压缩至 1.8ms。
 7. [当安全日志遇上大模型：Nexus AI 智能研判 Studio 与三级容灾架构设计](/2026/08/10/ai-log-security-llm-assistant/)  
-   * **核心重点**：纯 CPU 2ms 密集特征向量化引擎、0 Token 语义向量诊断缓存 (5ms极速命中)、工业级 Sigma 告警规则 AST 语法校验器、金融级 PII 敏感信息脱敏装甲、云端 (DeepSeek/OpenAI) ➔ 本地私有化 (Ollama) ➔ 规则引擎三级自动热备、100% 离线隐私盾 (24项单测)。
+   * **核心重点**：双中台跨系统协同研判工单流水线、纯 CPU 2ms 密集特征向量化引擎、0 Token 语义向量诊断缓存 (5ms极速命中)、工业级 Sigma 告警规则 AST 语法校验器、金融级 PII 敏感信息脱敏装甲、云端 (DeepSeek/OpenAI) ➔ 本地私有化 (Ollama) ➔ 规则引擎三级自动热备、100% 离线隐私盾 (26项单测)。
 
 ---
 
@@ -84,7 +84,7 @@ tags:
 打破 Python 在大模型应用领域的垄断，专为政企机房、金融机构信创私有化交付量身定制的顶级中台。
 
 8. [纯血 Java 21 企业级 AI Agent & 混合 RAG 中台架构实践：为什么我们用 Spring Boot 3.2 替代 Python 生态？](/2026/08/28/agentforge-pure-java-enterprise-rag-architecture/)  
-   * **核心重点**：PostgreSQL 16 pgvector HNSW 密集检索 + tsvector BM25 全文检索 + RRF (Reciprocal Rank Fusion) 倒数排名融合算法、Kahn 拓扑排序 DAG 响应式执行引擎、JSqlParser SQL AST 语法树租户强隔离、Redis 向量语义降本 60% (35项单测)。
+   * **核心重点**：PostgreSQL 16 pgvector HNSW 密集检索 + tsvector BM25 全文检索 + RRF (Reciprocal Rank Fusion) 倒数排名融合算法、Kahn 拓扑排序 DAG 响应式执行引擎、企业级 Prompt 注入与对抗越狱护栏、LangSmith 级 Trace 瀑布流与成本精算、JSqlParser SQL AST 语法树租户强隔离、Redis 向量语义降本 60% (37项单测)。
 9. [大模型 RAG 系统的生产级装甲防御：大文件流式解析、脱网内存向量检索与长尾异常自愈实践](/2026/08/29/agentforge-production-rag-anti-vulnerability-and-armor/)  
    * **核心重点**：800MB 破损文件死信队列（DLQ）流式单页容错、脱网环境纯 Java 内存向量 Top-K 检索、JSON 栈式智能修复。
 10. [从信创国产化到等保三级：AgentForge 政企私有化交付、招投标答辩与高可用容灾全流程实战](/2026/08/30/agentforge-xinchuang-and-enterprise-delivery-sop/)  
@@ -94,7 +94,7 @@ tags:
 
 ## 🎯 总结与源码获取
 
-全套系统工程源码、架构设计白皮书与 Docker Compose 一键生产编排模版已全面开源/开放商业授权（全生态 183 项单测 100% 真实绿灯通过）：
+全套系统工程源码、架构设计白皮书与 Docker Compose 一键生产编排模版已全面开源/开放商业授权（全生态 189 项单测 100% 真实绿灯通过）：
 * **AuditVault 核心工程**：[https://github.com/Emiliamio/java-portfolio](https://github.com/Emiliamio/java-portfolio)
 * **AgentForge 旗舰中台**：[https://github.com/Emiliamio/agent-forge](https://github.com/Emiliamio/agent-forge)
 * **作者唯一联系邮箱**：`mio2110767128@163.com` / `2110767128@qq.com`
