@@ -32,11 +32,14 @@ aside: false
 <span class="p-badge">pgvector HNSW</span>
 <span class="p-badge">RRF 混合召回</span>
 <span class="p-badge">Kahn DAG 响应式</span>
+<span class="p-badge">Anthropic MCP 原生协议</span>
+<span class="p-badge">RAG 事实性与幻觉护栏</span>
+<span class="p-badge">DeepSeek-R1 结构化流</span>
 <span class="p-badge">Prompt 注入对抗护栏</span>
 <span class="p-badge">LangSmith 级 Trace</span>
 <span class="p-badge">JsqlParser AST 租户隔离</span>
 <span class="p-badge">Redis 向量语义降本</span>
-<span class="p-badge">单测 100% (37/37)</span>
+<span class="p-badge">单测 100% (40/40)</span>
 </div>
 
 <div class="project-metrics">
@@ -59,7 +62,7 @@ aside: false
 </div>
 
 <div class="project-body">
-<p>专为国内政企、国企信创生态量身打造的纯 Java 21 企业级 AI 智能体编排与三路混合 RAG 知识库中台。首创“JsqlParser AST 编译期租户强隔离 + 密集+稀疏+RRF+Cross-Encoder 三路混合检索 + Kahn 拓扑排序响应式 DAG 引擎 + Redis 向量语义降本”工业级全栈架构，彻底解决企业私有化交付中 Python 框架运维难与多租户越权两大痛点。</p>
+<p>专为国内政企、国企信创生态量身打造的纯 Java 21 企业级 AI 智能体编排与三路混合 RAG 知识库中台。首创“JsqlParser AST 编译期租户强隔离 + 密集+稀疏+RRF+Cross-Encoder 三路混合检索 + Kahn 拓扑排序响应式 DAG 引擎 + Anthropic MCP 协议原生客户端 + RAG 事实性评估护栏 + Redis 向量语义降本”工业级全栈架构，彻底解决企业私有化交付中 Python 框架运维难与多租户越权两大痛点。</p>
 </div>
 
 <div class="project-links">
@@ -83,6 +86,8 @@ aside: false
 <div class="project-badges">
 <span class="p-badge">Java 21</span>
 <span class="p-badge">Spring Boot 3</span>
+<span class="p-badge">入库级 PII 脱敏装甲</span>
+<span class="p-badge">ClickHouse 物化预聚合</span>
 <span class="p-badge">多通道告警与防风暴</span>
 <span class="p-badge">冷热分层 ILM</span>
 <span class="p-badge">Resilience4j 熔断</span>
@@ -93,7 +98,7 @@ aside: false
 <span class="p-badge">ClickHouse OLAP</span>
 <span class="p-badge">WebSocket 威胁推流</span>
 <span class="p-badge">Flyway 增量迁移</span>
-<span class="p-badge">单测 100% (63/63)</span>
+<span class="p-badge">单测 100% (65/65)</span>
 </div>
 
 <div class="project-metrics">
@@ -138,13 +143,14 @@ aside: false
 
 <div class="project-badges">
 <span class="p-badge">Python 3.11</span>
+<span class="p-badge">实时流式监听探针 (TailWatcher)</span>
 <span class="p-badge">DuckDB 内存即席分析</span>
 <span class="p-badge">Apache Parquet 列存</span>
 <span class="p-badge">mmap 零拷贝</span>
 <span class="p-badge">有限状态机 (FSM)</span>
 <span class="p-badge">多核分块并行</span>
 <span class="p-badge">34,317 QPS</span>
-<span class="p-badge">Pytest (58/58)</span>
+<span class="p-badge">Pytest (60/60)</span>
 </div>
 
 <div class="project-metrics">

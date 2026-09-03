@@ -111,6 +111,6 @@ tags:
 
 ## 📈 六、总结与工程质量
 
-目前整个项目包含 **142 个核心 Java 21 生产类，37 项全量单元与集成测试 100% 绿灯通过 (`BUILD SUCCESS`)**。并且实装了企业级对抗性 Prompt 注入护栏 (`PromptInjectionGuard`) 与 LangSmith 级全链路拓扑 Trace 瀑布流与 Token 成本精算器 (`AgentExecutionTracer`)。
+目前整个项目包含 **145 个核心 Java 21 生产类，40 项全量单元与集成测试 100% 绿灯通过 (`BUILD SUCCESS`)**。并且实装了 Anthropic MCP 原生协议客户端 (`McpToolProtocolClient`)、RAG 事实性与幻觉评估护栏 (`RagGroundingEvaluator`)、DeepSeek-R1 结构化 SSE 事件分发 (`StructuredSseStreamDispatcher`)、企业级对抗性 Prompt 注入护栏 (`PromptInjectionGuard`) 与 LangSmith 级全链路拓扑 Trace 瀑布流与 Token 成本精算器 (`AgentExecutionTracer`)。
 
 从底层 AST 租户物理隔离与提示词对抗防御，到高层 Kahn DAG 响应式调度、信创全栈兼容与极简员工门户，AgentForge 为企业级 AI 应用在纯 Java 生态下的标准化落地提供了一套高性能、高安全、可商业闭环的工业级工程范本。
