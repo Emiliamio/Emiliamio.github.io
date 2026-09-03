@@ -149,6 +149,8 @@ document.addEventListener('DOMContentLoaded', function() {
 - **技术栈**：Java 21 (虚拟线程) + Spring Boot 3.2 + PostgreSQL 16 (pgvector) + Redis 7 + Vue 3.4
 - **核心突破**：
   - **JsqlParser SQL AST 编译期租户强隔离**：编译层递归强行注入 `tenant_id`，物理越权率 **0.00%**；
+  - **GraphRAG 知识图谱实体三元组提取与两跳拓扑扩散**：`GraphRagEngine` 自动提取 S-P-O 三元组构建内存拓扑图，攻克多层复杂因果推理；
+  - **多租户动态 Token 消费预算与 RPM 并发限流熔断器**：`TenantTokenQuotaLimiter` 按租户硬隔离单日算力预算并执行滑动窗口限流防击穿；
   - **三路混合 RAG 与重排**：密集 HNSW + 稀疏 tsvector BM25 + RRF 融合 + Cross-Encoder 二次精排；
   - **Kahn 拓扑排序 DAG 响应式引擎**：无锁高并发分层调度 9 大反应式节点；
   - **Anthropic MCP 原生协议客户端**：原生支持 JSON-RPC 2.0 规范，直连全球上千个 MCP Server 工具生态；
@@ -157,19 +159,22 @@ document.addEventListener('DOMContentLoaded', function() {
   - **企业级 Prompt 注入对抗护栏**：`PromptInjectionGuard` 识别防御系统提示词窃取、角色越狱与定界符逃逸；
   - **LangSmith 级全链路拓扑 Trace**：`AgentExecutionTracer` 树状 Span 瀑布流追踪与 Token 成本实时精算；
   - **Redis 向量语义降本 60% 缓存**：高频问答 0.5ms 秒级响应，大幅削减企业算力账单；
-  - **生产装甲自愈防御**：800MB 破损流式解析、脱网老旧机纯 Java 向量引擎、大模型残缺 JSON 栈式修复，**40 项单测 100% 通过**。
+  - **生产装甲自愈防御**：800MB 破损流式解析、脱网老旧机纯 Java 向量引擎、大模型残缺 JSON 栈式修复，**42 项单测 100% 通过**。
 
 ### 🛡️ 2. [AuditVault](https://github.com/Emiliamio/java-portfolio) · 企业级高并发日志审计与遥测平台
 - **技术栈**：Spring Boot 3 + Redis 7 + MySQL 8 + Apache Kafka + ClickHouse + Resilience4j + Caffeine
 - **核心突破**：
   - 构建高并发非阻塞异步 Webhook 摄取接口（`202 Accepted` 极速返回，响应耗时 < 5ms）；
+  - **IP 地理空间情报富化引擎**：`GeoIpEnrichmentService` 毫秒级识别公网物理经纬度与运营商，RFC 1918 私网快速判定，赋能 3D 全球态势感知；
+  - **Prometheus 黄金四指标生产级深度度量**：`PrometheusMetricsService` 严密埋点监控吞吐、时延分位数（p50/p95/p99）、防风暴抑制数与熔断器仪表；
+  - **SOAR 自动化编排与自愈阻断闭环**：`SoarAutoRemediationExecutor` 接收研判工单自动秒级封禁威胁源，生成防篡改处置回执（RemediationReceipt）；
   - **金融合规入库级 PII 实时脱敏装甲**：`PiiDataMasker` 在日志持久化前切面不可逆遮蔽凭证、手机号、身份证与银行卡；
   - **ClickHouse 小时级物化预聚合时序直方图**：支持千万级日志小时级预聚合查询与平滑回退，保障报表零抖动；
   - **多通道告警分发与防风暴中心**：`AlertDispatcherService` 联动飞书互动卡片、钉钉 Markdown 与企微，内置 5 分钟同源 IP 告警降噪；
   - **冷热分层数据生命周期 (ILM)**：`DataLifecycleService` 划分热/温/冷存储，超期日志批量物理安全淘汰；
   - **高可用容灾与近源缓存**：Resilience4j 动态滑动窗口熔断与本地 WAL 降级缓冲，Caffeine 50ns L1 堆缓存 + Redis L2 双级缓存；
   - 基于 Apache POI `SXSSFWorkbook(100)` 实现磁盘滑动窗口流式导出，消灭大文件导出 OOM（50,000 行 JVM 堆内存稳定在 18MB）；
-  - 引入 Kafka KRaft 削峰流与 ClickHouse MergeTree 引擎，实现亿级日志多维分析 45x 毫秒级加速，**65 项单测 100% 通过**。
+  - 引入 Kafka KRaft 削峰流与 ClickHouse MergeTree 引擎，实现亿级日志多维分析 45x 毫秒级加速，**68 项单测 100% 通过**。
 
 ### 🐍 3. [LogScope CLI](https://github.com/Emiliamio/java-portfolio) · 高性能离线日志解析与异常探针
 - **技术栈**：Python 3.11 + Pandas + 正则表达式 + 有限状态机 (FSM) + Parquet + DuckDB
@@ -194,7 +199,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 ## 📐 工程交付标准与质量准则
 
-1. **100% 自动化测试闭环**：全栈全生态核心服务覆盖全量单元与集成测试（**全生态 196 项自动化测试 100% 绿灯真实通过**，0 Failures, 0 Skips）；
+1. **100% 自动化测试闭环**：全栈全生态核心服务覆盖全量单元与集成测试（**全生态 201 项自动化测试 100% 绿灯真实通过**，0 Failures, 0 Skips）；
 2. **高可用容灾与优雅降级 (Fail-Safe)**：外部依赖（Kafka / Redis / LLM / DB）均配备优雅降级与熔断机制，杜绝系统雪崩；
 3. **严格内存管理与自洁机制**：流式导出临时文件自动销毁（`dispose()`），严控资源占用与无死锁保证；
 4. **统一规范与唯一署名**：代码库与提交记录严格保持 `Emiliamio <mio2110767128@163.com>` 全链路一致。
