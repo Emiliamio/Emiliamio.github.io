@@ -149,4 +149,4 @@ public class MdcTaskDecorator implements TaskDecorator {
 
 ## 📈 七、总结与落地成效
 
-通过将 **异步非阻塞摄取**、**Caffeine 50ns L1 堆缓存 + Redis L2 双级近源缓存**、**Resilience4j 动态滑动窗口熔断器与本地 WAL 降级缓冲**、**SXSSFWorkbook 内存防爆流式导出**、**分布式 MDC TraceId 链路追踪**、**MyBatis 慢 SQL 拦截**、**WebSocket 实时威胁推流** 与 **Redis HyperLogLog 独立基数统计** 深度结合，AuditVault 在低资源占用下稳定支撑了海量日志查询与可视化审计需求，全套 61 项自动化单元与集成测试 100% 绿灯通过，为后续演进至分布式流式架构奠定了坚实基础。
+通过将 **多通道告警分发与 5 分钟防风暴收敛中心 (`AlertDispatcherService`)**、**冷热分层数据生命周期治理 (`DataLifecycleService`)**、**异步非阻塞摄取**、**Caffeine 50ns L1 堆缓存 + Redis L2 双级近源缓存**、**Resilience4j 动态滑动窗口熔断器与本地 WAL 降级缓冲**、**SXSSFWorkbook 内存防爆流式导出**、**分布式 MDC TraceId 链路追踪**、**MyBatis 慢 SQL 拦截**、**WebSocket 实时威胁推流** 与 **Redis HyperLogLog 独立基数统计** 深度结合，AuditVault 在低资源占用下稳定支撑了海量日志查询与可视化审计需求，全套 63 项自动化单元与集成测试 100% 绿灯通过，为后续演进至分布式流式架构奠定了坚实基础。
