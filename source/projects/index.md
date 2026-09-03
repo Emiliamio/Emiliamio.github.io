@@ -29,6 +29,8 @@ aside: false
 <div class="project-badges">
 <span class="p-badge" style="background: rgba(255, 165, 200, 0.25); border-color: #ffa5c8;">旗舰商业中台</span>
 <span class="p-badge">Java 21</span>
+<span class="p-badge">SQ8 向量量化压缩</span>
+<span class="p-badge">Trace 甘特瀑布流</span>
 <span class="p-badge">受限代码沙箱</span>
 <span class="p-badge">模型竞技场分流</span>
 <span class="p-badge">GraphRAG 实体扩散</span>
@@ -43,7 +45,7 @@ aside: false
 <span class="p-badge">LangSmith 级 Trace</span>
 <span class="p-badge">JsqlParser AST 租户隔离</span>
 <span class="p-badge">Redis 向量语义降本</span>
-<span class="p-badge">单测 100% (44/44)</span>
+<span class="p-badge">单测 100% (46/46)</span>
 </div>
 
 <div class="project-metrics">
@@ -66,7 +68,7 @@ aside: false
 </div>
 
 <div class="project-body">
-<p>专为国内政企、国企信创生态量身打造的纯 Java 21 企业级 AI 智能体编排与三路混合 RAG 知识库中台。首创“JsqlParser AST 编译期租户强隔离 + 受限安全代码沙箱看门狗 + 多模型金丝雀分流竞技场 + GraphRAG 实体三元组提取与两跳扩散检索 + 多租户 Token 预算限流熔断 + 密集+稀疏+RRF+Cross-Encoder 三路混合检索 + Kahn 拓扑排序响应式 DAG 引擎 + Anthropic MCP 协议原生客户端 + RAG 事实性评估护栏 + Redis 向量语义降本”工业级全栈架构，彻底解决企业私有化交付中 Python 框架运维难与多租户越权两大痛点。</p>
+<p>专为国内政企、国企信创生态量身打造的纯 Java 21 企业级 AI 智能体编排与三路混合 RAG 知识库中台。首创“JsqlParser AST 编译期租户强隔离 + 纯 Java 8-bit SQ8 标量量化压缩 (内存降75%) + 分布式 Trace 拓扑时序甘特瀑布流 + 受限安全代码沙箱看门狗 + 多模型金丝雀分流竞技场 + GraphRAG 实体三元组提取与两跳扩散检索 + 多租户 Token 预算限流熔断 + 密集+稀疏+RRF+Cross-Encoder 三路混合检索 + Kahn 拓扑排序响应式 DAG 引擎 + Anthropic MCP 协议原生客户端 + RAG 事实性评估护栏 + Redis 向量语义降本”工业级全栈架构，彻底解决企业私有化交付中 Python 框架运维难与多租户越权两大痛点。</p>
 </div>
 
 <div class="project-links">
@@ -90,6 +92,7 @@ aside: false
 <div class="project-badges">
 <span class="p-badge">Java 21</span>
 <span class="p-badge">Spring Boot 3</span>
+<span class="p-badge">Merkle 默克尔防伪树</span>
 <span class="p-badge">3-Sigma 动态基线</span>
 <span class="p-badge">区块链式防篡改哈希链</span>
 <span class="p-badge">GeoIP 空间情报</span>
@@ -107,7 +110,7 @@ aside: false
 <span class="p-badge">ClickHouse OLAP</span>
 <span class="p-badge">WebSocket 威胁推流</span>
 <span class="p-badge">Flyway 增量迁移</span>
-<span class="p-badge">单测 100% (70/70)</span>
+<span class="p-badge">单测 100% (72/72)</span>
 </div>
 
 <div class="project-metrics">
@@ -130,7 +133,7 @@ aside: false
 </div>
 
 <div class="project-body">
-<p>为中大型分布式系统打造的高并发日志审计中枢。首创“非阻塞异步摄取 + 3-Sigma 时序动态基线突变研判 + 区块链式防篡改哈希审计链 + GeoIP 空间情报富化 + Prometheus 黄金四信号度量 + SOAR 自动化自愈处置闭环 + 金融级 PII 实时脱敏 + 磁盘滑动窗口流式导出 + 列存时序直方图 + 分布式 MDC TraceId 全链路追踪”工业级架构，彻底攻克日志写入堵塞、大文件导出 OOM 与千万级数据聚合慢查询三大技术瓶颈。</p>
+<p>为中大型分布式系统打造的高并发日志审计中枢。首创“非阻塞异步摄取 + 密码学 Merkle Tree 默克尔根哈希对数级防伪存证 + 3-Sigma 时序动态基线突变研判 + 区块链式防篡改哈希审计链 + GeoIP 空间情报富化 + Prometheus 黄金四信号度量 + SOAR 自动化自愈处置闭环 + 金融级 PII 实时脱敏 + 磁盘滑动窗口流式导出 + 列存时序直方图 + 分布式 MDC TraceId 全链路追踪”工业级架构，彻底攻克日志写入堵塞、大文件导出 OOM 与千万级数据聚合慢查询三大技术瓶颈。</p>
 </div>
 
 <div class="project-links">
