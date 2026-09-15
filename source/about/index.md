@@ -165,7 +165,17 @@ document.addEventListener('DOMContentLoaded', function() {
   - **Redis 向量语义降本 60% 缓存**：高频问答 0.5ms 秒级响应，大幅削减企业算力账单；
   - **生产装甲自愈防御**：800MB 破损流式解析、脱网老旧机纯 Java 向量引擎、大模型残缺 JSON 栈式修复，**46 项单测 100% 通过**。
 
-### 🛡️ 2. [AuditVault](https://github.com/Emiliamio/java-portfolio) · 企业级高并发日志审计与遥测平台
+### ⚡ 2. [FlashCraft (极光工坊)](https://github.com/Emiliamio/FlashCraft-Desktop) · 工业级桌面业务自动化与商业变现万能脚手架
+- **技术栈**：Python 3.12 + CustomTkinter + Playwright (Edge免安装) + Pandas + UIQueue + PyInstaller
+- **核心突破**：
+  - **UIQueue 生产者-消费者削峰调度中枢**：彻底消灭 Tkinter 多线程刷新导致的 C 层段错误与内存闪退（支持万级日志无掉帧平滑渲染）；
+  - **防白嫖三重商业防御锁**：`IS_TRIAL` 试用行数截断与水印、单机硬件指纹 (`FC-XXXX-XXXX`)、单机 20 次频次硬熔断；
+  - **Windows PE 官方版本资源注入**：注入 `Emiliamio Studio` 官方版权元数据，抹除 Python 脚本特征，提升商业溢价；
+  - **极客全局快捷键与原生拖拽**：F5 一键启动、Esc 紧急强停、F1 用户指南、原生 Windows 文件/目录拖拽（windnd）；
+  - **全真脱机模拟测试靶场**：内置 15 张逼真发票 PDF、3 家电商错乱格式账单、政企学员录入系统 HTML，断网极速演示；
+  - **单测 100% (12/12) 与双交付物料**：单文件免安装 `.exe` 与微信即发免拦截 `.zip` 自动封装。
+
+### 🛡️ 3. [AuditVault](https://github.com/Emiliamio/java-portfolio) · 企业级高并发日志审计与遥测平台
 - **技术栈**：Spring Boot 3 + Redis 7 + MySQL 8 + Apache Kafka + ClickHouse + Resilience4j + Caffeine
 - **核心突破**：
   - 构建高并发非阻塞异步 Webhook 摄取接口（`202 Accepted` 极速返回，响应耗时 < 5ms）；
@@ -183,7 +193,7 @@ document.addEventListener('DOMContentLoaded', function() {
   - 基于 Apache POI `SXSSFWorkbook(100)` 实现磁盘滑动窗口流式导出，消灭大文件导出 OOM（50,000 行 JVM 堆内存稳定在 18MB）；
   - 引入 Kafka KRaft 削峰流与 ClickHouse MergeTree 引擎，实现亿级日志多维分析 45x 毫秒级加速，**72 项单测 100% 通过**。
 
-### 🐍 3. [LogScope CLI](https://github.com/Emiliamio/java-portfolio) · 高性能离线日志解析与异常探针
+### 🐍 4. [LogScope CLI](https://github.com/Emiliamio/java-portfolio) · 高性能离线日志解析与异常探针
 - **技术栈**：Python 3.11 + Pandas + 正则表达式 + 有限状态机 (FSM) + Parquet + DuckDB
 - **核心突破**：
   - **多模态日志格式自动嗅探与智能推导**：`SchemaSniffer` 自动对未知日志进行特征打分识别 Logback、Nginx、JSON Lines 与 Syslog；
@@ -194,7 +204,7 @@ document.addEventListener('DOMContentLoaded', function() {
   - 基于 Pandas 时序滚动窗口构建登录暴力破解与敏感路径扫描检测模型；
   - 打造 Excel（多 Sheet 格式化）、HTML（动态图表）、Parquet 与 SQL 自动化多格式导出管道，**62 项测试 100% 通过**。
 
-### 🤖 4. [Nexus AI Security Copilot](https://github.com/Emiliamio/java-portfolio) · 智能日志安全研判 Studio
+### 🤖 5. [Nexus AI Security Copilot](https://github.com/Emiliamio/java-portfolio) · 智能日志安全研判 Studio
 - **技术栈**：Spring Boot 3 + JDK 11 HttpClient + SSE 流式传输 + Ollama 私有化 + 边缘向量化 + 现代前端工作台
 - **核心突破**：
   - **双中台跨系统协同流水线**：`IncidentInvestigationPipeline` 自动接收 AuditVault SOC 告警，执行 PII 脱敏、特征比对并向 AgentForge 生成协同处置工单；

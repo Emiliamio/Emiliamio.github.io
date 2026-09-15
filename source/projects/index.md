@@ -8,7 +8,7 @@ aside: false
 
 <div class="projects-hero text-center">
 <h1 class="projects-hero-title"><i class="fas fa-layer-group" style="color: #ffa5c8;"></i> 旗舰工程项目全景展厅</h1>
-<p class="projects-hero-subtitle">涵盖纯血 Java 21 企业级 AI Agent & RAG 中台、高并发分布式日志审计、Python 状态机探针与 AI 智能研判 Studio</p>
+<p class="projects-hero-subtitle">涵盖纯血 Java 21 企业级 AI Agent & RAG 中台、工业级桌面业务自动化与商业变现、高并发分布式日志审计、Python 状态机探针与 AI 智能研判 Studio</p>
 <div style="margin-top: 15px;">
   <a href="/2026/08/31/enterprise-architecture-roadmap-and-matrix/" class="p-btn p-btn-doc" style="background: linear-gradient(135deg, rgba(255, 165, 200, 0.3), rgba(123, 94, 167, 0.4)); border: 1px solid #ffa5c8; font-weight: bold;"><i class="fas fa-map-signs"></i> 点击查看：系统架构全景演进路线图 (Architecture Roadmap)</a>
 </div>
@@ -76,6 +76,60 @@ aside: false
 <a href="/2026/08/28/agentforge-pure-java-enterprise-rag-architecture/" class="p-btn p-btn-doc"><i class="fas fa-book-open"></i> 全栈架构深度复盘</a>
 <a href="/2026/08/28/agentforge-production-rag-anti-vulnerability-and-armor/" class="p-btn p-btn-doc"><i class="fas fa-shield-alt"></i> 生产长尾装甲与避坑指南</a>
 <a href="/2026/08/30/agentforge-xinchuang-and-enterprise-delivery-sop/" class="p-btn p-btn-doc"><i class="fas fa-file-contract"></i> 信创与等保交付SOP</a>
+</div>
+</div>
+
+<!-- Project 2: FlashCraft-Desktop (NEW COMMERCIAL DESKTOP AUTOMATION) -->
+<div class="project-card" style="border: 1px solid rgba(56, 189, 248, 0.45); box-shadow: 0 4px 20px rgba(56, 189, 248, 0.12);">
+<div class="project-header">
+<div class="project-icon-box" style="background: linear-gradient(135deg, #38bdf8, #0284c7); color: #fff;"><i class="fas fa-bolt"></i></div>
+<div class="project-title-box">
+<h2 class="project-name">FlashCraft (极光工坊) · 工业级桌面业务自动化与商业变现万能脚手架</h2>
+<div class="project-tech-line">Python 3.12 + CustomTkinter + Playwright (Edge免安装) + Pandas + UIQueue + PyInstaller</div>
+</div>
+</div>
+
+<div class="project-badges">
+<span class="p-badge" style="background: rgba(56, 189, 248, 0.25); border-color: #38bdf8; color: #38bdf8;">商业变现脚手架</span>
+<span class="p-badge">CustomTkinter</span>
+<span class="p-badge">UIQueue 异步削峰</span>
+<span class="p-badge">防白嫖试用锁</span>
+<span class="p-badge">单机硬件指纹</span>
+<span class="p-badge">Windows PE 官方版权注入</span>
+<span class="p-badge">F5 极客热键</span>
+<span class="p-badge">全真离线靶场</span>
+<span class="p-badge">发票 PDF 智能提取</span>
+<span class="p-badge">多店铺 Excel 账单对齐</span>
+<span class="p-badge">Edge 网页自动填报</span>
+<span class="p-badge">单测 100% (12/12)</span>
+</div>
+
+<div class="project-metrics">
+<div class="p-metric">
+<div class="p-num">0 假死</div>
+<div class="p-label">UIQueue 削峰队列 彻底杜绝跨线程段错误与闪退</div>
+</div>
+<div class="p-metric">
+<div class="p-num">42~93 MB</div>
+<div class="p-label">PyInstaller 精准过滤 从 200MB 瘦身至独立单文件</div>
+</div>
+<div class="p-metric">
+<div class="p-num">3 重防御</div>
+<div class="p-label">试用行数截断 + 单机硬件指纹 + 20次频次熔断</div>
+</div>
+<div class="p-metric">
+<div class="p-num">12/12 项</div>
+<div class="p-label">全链路单元与端到端回归测试 100% 绿灯</div>
+</div>
+</div>
+
+<div class="project-body">
+<p>专为中小型企业提效与个人开发者接单量身打造的工业级自动化交付脚手架。首创“CustomTkinter 暗黑科技美学 + UIQueue 生产者-消费者削峰中枢 + 商业试用锁 (行数截断与防伪水印) + 单机硬件指纹防刷熔断 (FC-XXXX-XXXX) + Windows PE 官方版权注入 + 全局极客快捷键 (F5/Esc/F1) + 原生文件拖拽 (windnd) + 系统 Edge 免安装浏览器驱动自动化”八位一体商业体系，配套提供全真财务发票、多店电商账单与政企上报离线靶场，彻底解决桌面脚本易假死、无环境报错、交付易被白嫖三大商业痛点。</p>
+</div>
+
+<div class="project-links">
+<a href="https://github.com/Emiliamio/FlashCraft-Desktop" target="_blank" rel="noopener" class="p-btn p-btn-gh" style="background: linear-gradient(135deg, rgba(2, 132, 199, 0.8), rgba(56, 189, 248, 0.8)); border-color: #38bdf8; color: #fff;"><i class="fab fa-github"></i> GitHub 官方仓库</a>
+<a href="/2026/09/15/flashcraft-desktop-automation-scaffold-and-commercial-armor/" class="p-btn p-btn-doc"><i class="fas fa-book-open"></i> 全栈架构深度复盘</a>
 </div>
 </div>
 

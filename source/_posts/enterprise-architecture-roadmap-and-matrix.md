@@ -22,6 +22,11 @@ tags:
 
 ```
 ┌──────────────────────────────────────────────────────────────────────────────┐
+│                    第五阶梯：工业级端侧自动化与商业变现 (FlashCraft)          │
+│     CustomTkinter 暗黑桌面端 │ UIQueue 异步削峰 │ 硬件指纹防刷 │ 离线全真靶场 │
+└──────────────────────────────────────▲───────────────────────────────────────┘
+                                       │
+┌──────────────────────────────────────┴───────────────────────────────────────┐
 │                    第四阶梯：纯血 Java 21 企业级 AI 中台 (AgentForge)        │
 │    三路混合 RAG (Dense+Sparse+RRF) │ Kahn DAG 响应式引擎 │ JsqlParser 租户强隔离 │
 └──────────────────────────────────────▲───────────────────────────────────────┘
@@ -92,9 +97,20 @@ tags:
 
 ---
 
+---
+
+## 💎 阶梯五：工业级端侧业务自动化与商业变现 (FlashCraft 桌面引擎)
+
+走出服务端高并发与云端大模型，打通面向中小型企业、财务行政与电商运营的最后一公里商业交付闭环。
+
+11. [从零构建工业级桌面业务自动化脚手架：CustomTkinter、UIQueue 削峰与单机商业授权防线实战](/2026/09/15/flashcraft-desktop-automation-scaffold-and-commercial-armor/)  
+    * **核心重点**：CustomTkinter 现代暗黑科技美学与 Windows 高 DPI 适配、UIQueue 生产者-消费者削峰中枢（彻底消灭 Tkinter 跨线程段错误与假死崩溃）、防白嫖三重商业防御体系（IS_TRIAL 试用行数截断与水印、单机硬件指纹 FC-XXXX-XXXX、单机 20 次频次硬熔断）、Windows PE 官方版权元数据注入（抹除 Python 脚本特征提升商业溢价）、全局极客快捷键（F5/Esc/F1）、原生 Windows 文件拖拽（windnd）、Playwright 驱动系统 Edge 免安装浏览器自动化、全真脱机离线测试靶场（发票PDF/多店账单/政企上报）、全链路单元与端到端自动化测试 100% 绿灯 (12项单测)。
+
 ## 🎯 总结与源码获取
 
 全套系统工程源码、架构设计白皮书与 Docker Compose 一键生产编排模版已全面开源/开放商业授权（全生态 211 项单测 100% 真实绿灯通过）：
 * **AuditVault 核心工程**：[https://github.com/Emiliamio/java-portfolio](https://github.com/Emiliamio/java-portfolio)
 * **AgentForge 旗舰中台**：[https://github.com/Emiliamio/agent-forge](https://github.com/Emiliamio/agent-forge)
+* **FlashCraft 自动化工作台**：[https://github.com/Emiliamio/FlashCraft-Desktop](https://github.com/Emiliamio/FlashCraft-Desktop)
+
 * **作者唯一联系邮箱**：`mio2110767128@163.com` / `2110767128@qq.com`
