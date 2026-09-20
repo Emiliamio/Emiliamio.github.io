@@ -33,10 +33,11 @@ aside: false
 <span class="p-badge">3阶贝塞尔微震颤</span>
 <span class="p-badge">A* DAG 网络流</span>
 <span class="p-badge">PanicDaemon 抢占救场</span>
+<span class="p-badge">Route A 双轨作业完美进化</span>
 <span class="p-badge">多开低功耗压榨 (15FPS/550MB)</span>
 <span class="p-badge">PRTS Web 态势大屏</span>
 <span class="p-badge">肉鸽 Hope 预算博弈</span>
-<span class="p-badge">单测 100% (102/102)</span>
+<span class="p-badge">单测 100% (123/123)</span>
 </div>
 
 <div class="project-metrics">
@@ -53,7 +54,7 @@ aside: false
 <div class="p-label">MuMu 12 极限低功耗 15FPS 压榨单开内存占用</div>
 </div>
 <div class="p-metric">
-<div class="p-num">102 项</div>
+<div class="p-num">123 项</div>
 <div class="p-label">全工程自动化单元与并发压测 100% 绿色通过</div>
 </div>
 </div>
