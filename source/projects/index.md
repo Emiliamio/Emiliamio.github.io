@@ -29,6 +29,8 @@ aside: false
 <div class="project-badges">
 <span class="p-badge" style="background: rgba(0, 229, 255, 0.25); border-color: #00e5ff;">旗舰游戏AI中台</span>
 <span class="p-badge">Python 3.12</span>
+<span class="p-badge">主线0-17章全收录</span>
+<span class="p-badge">MAA云端作业调度中枢</span>
 <span class="p-badge">2.5D 透视单应性变换</span>
 <span class="p-badge">3阶贝塞尔微震颤</span>
 <span class="p-badge">A* DAG 网络流</span>
@@ -37,7 +39,7 @@ aside: false
 <span class="p-badge">多开低功耗压榨 (15FPS/550MB)</span>
 <span class="p-badge">PRTS Web 态势大屏</span>
 <span class="p-badge">肉鸽 Hope 预算博弈</span>
-<span class="p-badge">单测 100% (123/123)</span>
+<span class="p-badge">单测 100% (131/131)</span>
 </div>
 
 <div class="project-metrics">
@@ -50,17 +52,17 @@ aside: false
 <div class="p-label">PanicDaemon 漏怪截停毫秒级抢占空投算力延迟</div>
 </div>
 <div class="p-metric">
-<div class="p-num">550MB</div>
-<div class="p-label">MuMu 12 极限低功耗 15FPS 压榨单开内存占用</div>
+<div class="p-num">18 章节</div>
+<div class="p-label">主线 Episode 00-17 与 15+ 别传活动云端作业全覆盖</div>
 </div>
 <div class="p-metric">
-<div class="p-num">123 项</div>
+<div class="p-num">131 项</div>
 <div class="p-label">全工程自动化单元与并发压测 100% 绿色通过</div>
 </div>
 </div>
 
 <div class="project-body">
-<p>专为《明日方舟》打造的工业级全自主空间战术导航、拟人反作弊物理执行与多账号商业代肝中台。拒绝死板 JSON 脚本抄作业，核心采用 2.5D 透视单应性几何映射、拓扑网络流、毫秒级抢占式防漏怪看门狗、集成战略 (肉鸽) 希望预算博弈决策树与 PRTS 全息 Web 态势指挥控制大屏。</p>
+<p>专为《明日方舟》打造的工业级全自主空间战术导航、拟人反作弊物理执行与多账号商业代肝中台。拒绝死板 JSON 脚本抄作业，核心采用 2.5D 透视单应性几何映射、拓扑网络流、毫秒级抢占式防漏怪看门狗、集成战略 (肉鸽) 希望预算博弈决策树，并深度集成 MAA 云端社区作业实时检索调度与 PRTS 全息 Web 态势指挥控制大屏。</p>
 </div>
 
 <div class="project-links">

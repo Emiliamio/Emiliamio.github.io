@@ -36,9 +36,10 @@ author: Emiliamio
 5. **Fleet Orchestrator 多开舰队编排引擎**：基于 Python 异步协程驱动多模拟器实例并发作战与动态端口解耦；
 6. **PRTS Cyberpunk Web HUD**：基于 FastAPI 与响应式前端搭建工业风实时战术态势大屏；
 7. **肉鸽 (IS3/IS4) 深度决策与希望预算招募**：构建动态队伍赤字评估与主题风险惩罚模型，实现水月/萨卡兹肉鸽深度无人工介入巡航；
-8. **Route A MAA 作业协议双轨完美仲裁**：引入 `CopilotFuzzyMatcher` 缺人智能平替与费用差额自补偿、`DesyncDeadlockBreaker` 击杀数/费用解同步死锁断路器，彻底消除社区作业死锁。
+8. **Route A MAA 作业协议双轨完美仲裁**：引入 `CopilotFuzzyMatcher` 缺人智能平替与费用差额自补偿、`DesyncDeadlockBreaker` 击杀数/费用解同步死锁断路器，彻底消除社区作业死锁；
+9. **MAA 云端全关卡调度中枢 (Cloud Copilot Hub)**：覆盖主线 Episode 00~17 全章节、全部 15+ 别传活动与物资芯片，毫秒级直连 PRTS 云端高赞作业，大屏双通道智能优选与一键实机实测。
 
-全套系统通过 **123 项自动化单元与集成测试（117 项即刻通过，6 项实机优雅跳过，100% 绿灯全覆盖）**，展现了从底层数学推导到上层分布式系统工程的端到端严谨闭环。
+全套系统通过 **131 项自动化单元与集成测试（125 项即刻通过，6 项实机优雅跳过，100% 绿灯全覆盖）**，展现了从底层数学推导到上层分布式系统工程的端到端严谨闭环。
 
 ---
 
@@ -211,11 +212,13 @@ python main.py dashboard --host 127.0.0.1 --port 8848
 - `test_copilot_plans_integrity.py`：刷图方案结构与平替校验（5 项单测）；
 - `test_roguelike_brain.py`：希望硬门槛阻断、赤字补偿与主题惩罚（9 项单测）；
 - `test_fleet_stress_concurrency.py`：多实例异步并发编排与看门狗心跳（5 项单测）；
-- `test_dashboard.py`：PRTS Web 态势大屏 HTTP 状态与数据契约（3 项单测）；
-- 以及作战主循环、异常自愈与配置加载测试，**共计 123 项自动化测试 100% 绿色通过**。
+- `test_dashboard.py`：PRTS Web 态势大屏 HTTP 状态、关卡全景目录与数据契约（4 项单测）；
+- `test_stage_database.py`：主线 Episode 00~17、15+ 别传活动与物资关卡目录拓扑（3 项单测）；
+- `test_copilot_cloud_hub.py`：MAA 云端社区作业实时检索、优选、下载与离线基线自构（4 项单测）；
+- 以及作战主循环、异常自愈与配置加载测试，**共计 131 项自动化测试 100% 绿色通过**。
 
 ```text
-======================= 117 passed, 6 skipped in 29.60s =======================
+======================= 125 passed, 6 skipped in 46.37s =======================
 ```
 
 ---
