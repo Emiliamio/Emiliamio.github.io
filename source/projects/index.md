@@ -16,6 +16,58 @@ aside: false
 
 <div class="projects-container">
 
+<!-- Project 0: ASTA Arknights Sovereign Tactical Autopilot (LATEST FLAGSHIP) -->
+<div class="project-card" style="border: 1px solid rgba(0, 229, 255, 0.45); box-shadow: 0 4px 20px rgba(0, 229, 255, 0.12);">
+<div class="project-header">
+<div class="project-icon-box" style="background: linear-gradient(135deg, #00e5ff, #0077b6); color: #fff;"><i class="fas fa-crosshairs"></i></div>
+<div class="project-title-box">
+<h2 class="project-name">ASTA (极星战术中枢) · 工业级明日方舟全自主空间战术推演 · 拟人反作弊物理执行 · 多开商业中台</h2>
+<div class="project-tech-line">Python 3.12 + 2.5D 透视单应性几何变换 + 3阶贝塞尔触控流 + SQLite WAL 多开调度 + PRTS Web 态势大屏</div>
+</div>
+</div>
+
+<div class="project-badges">
+<span class="p-badge" style="background: rgba(0, 229, 255, 0.25); border-color: #00e5ff;">旗舰游戏AI中台</span>
+<span class="p-badge">Python 3.12</span>
+<span class="p-badge">2.5D 透视单应性变换</span>
+<span class="p-badge">3阶贝塞尔微震颤</span>
+<span class="p-badge">A* DAG 网络流</span>
+<span class="p-badge">PanicDaemon 抢占救场</span>
+<span class="p-badge">多开低功耗压榨 (15FPS/550MB)</span>
+<span class="p-badge">PRTS Web 态势大屏</span>
+<span class="p-badge">肉鸽 Hope 预算博弈</span>
+<span class="p-badge">单测 100% (102/102)</span>
+</div>
+
+<div class="project-metrics">
+<div class="p-metric">
+<div class="p-num">&lt; 0.05px</div>
+<div class="p-label">2.5D 透视梯形网格单应性双向变换几何闭环误差</div>
+</div>
+<div class="p-metric">
+<div class="p-num">0.37ms</div>
+<div class="p-label">PanicDaemon 漏怪截停毫秒级抢占空投算力延迟</div>
+</div>
+<div class="p-metric">
+<div class="p-num">550MB</div>
+<div class="p-label">MuMu 12 极限低功耗 15FPS 压榨单开内存占用</div>
+</div>
+<div class="p-metric">
+<div class="p-num">102 项</div>
+<div class="p-label">全工程自动化单元与并发压测 100% 绿色通过</div>
+</div>
+</div>
+
+<div class="project-body">
+<p>专为《明日方舟》打造的工业级全自主空间战术导航、拟人反作弊物理执行与多账号商业代肝中台。拒绝死板 JSON 脚本抄作业，核心采用 2.5D 透视单应性几何映射、拓扑网络流、毫秒级抢占式防漏怪看门狗、集成战略 (肉鸽) 希望预算博弈决策树与 PRTS 全息 Web 态势指挥控制大屏。</p>
+</div>
+
+<div class="project-links">
+<a href="https://github.com/Emiliamio/arknights-autopilot" target="_blank" rel="noopener" class="p-btn p-btn-gh"><i class="fab fa-github"></i> GitHub 源码仓库</a>
+<a href="/2026/09/20/asta-arknights-tactical-autopilot-architecture/" class="p-btn p-btn-doc"><i class="fas fa-chess-knight"></i> 战术中枢架构长文</a>
+</div>
+</div>
+
 <!-- Project 1: AgentForge (NEW FLAGSHIP) -->
 <div class="project-card" style="border: 1px solid rgba(255, 165, 200, 0.45); box-shadow: 0 4px 20px rgba(255, 165, 200, 0.12);">
 <div class="project-header">
