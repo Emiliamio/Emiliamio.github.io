@@ -14,7 +14,7 @@ tags:
 
 > JWT（JSON Web Token）凭借自包含与无状态的特性，成为了分布式系统鉴权的事实标准。  
 > 但“无状态”本身是一把双刃剑：**Token 一旦签发并在有效期内，服务端无法直接废止它**。若用户点击登出、修改密码或凭证泄露，如何实现即时安全注销？  
-> 本文深度拆解 AuditVault 的鉴权体系：**HttpOnly Cookie + Redis 动态黑名单 + Fail-Open 降级** 的生产级安全架构。
+> 本文深度拆解 AuditVault 的鉴权体系：**HttpOnly Cookie + Redis 动态黑名单 + 本地 SHA-256 写穿缓存与 Fail-Closed 兜底** 的生产级安全架构。
 
 ---
 
@@ -112,7 +112,7 @@ response.addHeader(HttpHeaders.SET_COOKIE, cookie.toString());
 | **正常请求鉴权开销** | 数据库 I/O (5~15ms) | Redis $O(1)$ 内存查询 (< 0.5ms) |
 | **黑名单内存占用** | 随全量用户线性增长 (数十 GB) | **仅暂存已登出且未过期的 Token，自动过期归零** |
 | **单设备即时登出** | 不支持或逻辑复杂 | **原生完美支持** |
-| **容灾特性** | 数据库宕机全站瘫痪 | **内置 Fail-Open 降级，保障业务可用性** |
+| **容灾特性** | 数据库宕机全站瘫痪 | **内置 SHA-256 本地写穿缓存与 Fail-Closed 兜底，兼顾可用与安全** |
 
 ---
 

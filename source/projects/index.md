@@ -219,7 +219,11 @@ aside: false
 <span class="p-badge">ClickHouse OLAP</span>
 <span class="p-badge">WebSocket 威胁推流</span>
 <span class="p-badge">Flyway 增量迁移</span>
-<span class="p-badge">单测 100% (72/72)</span>
+<span class="p-badge">Spring Boot 3.5.7</span>
+<span class="p-badge">Fail-Closed 进程兜底</span>
+<span class="p-badge">RFC 6962 域分隔</span>
+<span class="p-badge">真流式 SXSSF 零缓冲</span>
+<span class="p-badge">单测 100% (93/93)</span>
 </div>
 
 <div class="project-metrics">
@@ -249,6 +253,7 @@ aside: false
 <a href="https://github.com/Emiliamio/java-portfolio" target="_blank" rel="noopener" class="p-btn p-btn-gh"><i class="fab fa-github"></i> GitHub 源码仓库</a>
 <a href="/2026/07/17/auditvault-spring-boot-architecture/" class="p-btn p-btn-doc"><i class="fas fa-book-open"></i> 核心架构设计</a>
 <a href="/2026/08/27/kafka-clickhouse-ollama-enterprise-distributed-architecture/" class="p-btn p-btn-doc"><i class="fas fa-bolt"></i> 亿级分布式演进</a>
+<a href="/2026/09/08/auditvault-production-security-and-fail-closed-defense/" class="p-btn p-btn-doc"><i class="fas fa-shield-virus"></i> 生产安全与攻防实战</a>
 </div>
 </div>
 
@@ -272,7 +277,7 @@ aside: false
 <span class="p-badge">有限状态机 (FSM)</span>
 <span class="p-badge">多核分块并行</span>
 <span class="p-badge">34,317 QPS</span>
-<span class="p-badge">Pytest (62/62)</span>
+<span class="p-badge">Pytest (63/63)</span>
 </div>
 
 <div class="project-metrics">
@@ -318,13 +323,13 @@ aside: false
 <span class="p-badge">Spring Boot 3</span>
 <span class="p-badge">跨中台协同流水线</span>
 <span class="p-badge">边缘特征向量化 (2ms)</span>
-<span class="p-badge">语义向量缓存 (0 Token)</span>
-<span class="p-badge">Sigma 规则 AST 校验</span>
+<span class="p-badge">余弦0.95有界语义缓存</span>
+<span class="p-badge">SnakeYAML 真 AST 引擎</span>
 <span class="p-badge">PII 敏感脱敏</span>
 <span class="p-badge">SSE 流式推送</span>
 <span class="p-badge">Ollama 私有化</span>
 <span class="p-badge">CVSS 3.1 定级</span>
-<span class="p-badge">单测 100% (26/26)</span>
+<span class="p-badge">单测 100% (37/37)</span>
 </div>
 
 <div class="project-metrics">
@@ -389,8 +394,8 @@ aside: false
 <div class="p-label">自动抓取耗时、TraceId、客户端 IP 与状态</div>
 </div>
 <div class="p-metric">
-<div class="p-num">133 项</div>
-<div class="p-label">全项目自动化单元测试总计 100% 绿灯</div>
+<div class="p-num">198 项</div>
+<div class="p-label">全项目五模块自动化测试 100% 绿灯</div>
 </div>
 </div>
 

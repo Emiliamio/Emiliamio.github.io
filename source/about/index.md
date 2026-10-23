@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', function() {
   - **冷热分层数据生命周期 (ILM)**：`DataLifecycleService` 划分热/温/冷存储，超期日志批量物理安全淘汰；
   - **高可用容灾与近源缓存**：Resilience4j 动态滑动窗口熔断与本地 WAL 降级缓冲，Caffeine 50ns L1 堆缓存 + Redis L2 双级缓存；
   - 基于 Apache POI `SXSSFWorkbook(100)` 实现磁盘滑动窗口流式导出，消灭大文件导出 OOM（50,000 行 JVM 堆内存稳定在 18MB）；
-  - 引入 Kafka KRaft 削峰流与 ClickHouse MergeTree 引擎，实现亿级日志多维分析 45x 毫秒级加速，**72 项单测 100% 通过**。
+  - 引入 Kafka KRaft 削峰流与 ClickHouse MergeTree 引擎，实现亿级日志多维分析 45x 毫秒级加速，实装 Fail-Closed 防爆破与 RFC 6962 默克尔域分隔，**93 项单测与攻防测试 100% 通过**。
 
 ### 🐍 4. [LogScope CLI](https://github.com/Emiliamio/java-portfolio) · 高性能离线日志解析与异常探针
 - **技术栈**：Python 3.11 + Pandas + 正则表达式 + 有限状态机 (FSM) + Parquet + DuckDB
@@ -202,7 +202,7 @@ document.addEventListener('DOMContentLoaded', function() {
   - **列存与单机即席分析**：Apache Parquet 85% 高压缩比列存与 DuckDB 嵌入式内存即席分析；
   - **零拷贝与多核并行**：`mmap` 内存映射结合多核分块解析，实测吞吐量达 **34,317 QPS**；
   - 基于 Pandas 时序滚动窗口构建登录暴力破解与敏感路径扫描检测模型；
-  - 打造 Excel（多 Sheet 格式化）、HTML（动态图表）、Parquet 与 SQL 自动化多格式导出管道，**62 项测试 100% 通过**。
+  - 打造 Excel（多 Sheet 格式化）、HTML（动态图表）、Parquet 与 SQL 自动化多格式导出管道，修复 FSM 跨分块续行边界，**63 项测试 100% 通过**。
 
 ### 🤖 5. [Nexus AI Security Copilot](https://github.com/Emiliamio/java-portfolio) · 智能日志安全研判 Studio
 - **技术栈**：Spring Boot 3 + JDK 11 HttpClient + SSE 流式传输 + Ollama 私有化 + 边缘向量化 + 现代前端工作台
@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded', function() {
   - **边缘特征向量化与语义缓存**：纯 CPU 2ms 提取 64 维特征向量，`SemanticDiagnosisCache` 相似攻击 0 Token 5ms 秒级命中；
   - 打造“云端大模型 + 本地 Ollama 私有化 + 内核规则引擎”三级智能热备架构；
   - 实现 100% 离线数据隐私盾（Air-Gapped Privacy Shield），保障核心业务日志不出域；
-  - 结合 100vw 全视口 SOC Studio 前端工作台，提供实时威胁流式研判与一键 WAF 阻断剧本生成，**26 项单测 100% 通过**。
+  - 结合 100vw 全视口 SOC Studio 前端工作台，实装 SnakeYAML 真 AST 威胁规则引擎与余弦 0.95 有界语义缓存，提供实时威胁流式研判与一键 WAF 阻断剧本生成，**37 项单测 100% 通过**。
 
 ### 🛰️ 6. [ASTA (极星战术中枢)](https://github.com/Emiliamio/arknights-autopilot) · 工业级空间几何推演与多开集群挂机代肝中台
 - **技术栈**：Python 3.12 + OpenCV 4 + ADB + FastAPI + Asyncio + 贝塞尔曲线 + Pytest
@@ -229,7 +229,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 ## 📐 工程交付标准与质量准则
 
-1. **100% 自动化测试闭环**：全栈全生态核心服务覆盖全量单元与集成测试（**全生态 313+ 项自动化测试 100% 绿灯真实通过**，0 Failures, 0 Skips）；
+1. **100% 自动化测试闭环**：全栈全生态核心服务覆盖全量单元与集成测试（**全生态 380+ 项自动化测试 100% 绿灯真实通过**，0 Failures, 0 Skips）；
 2. **高可用容灾与优雅降级 (Fail-Safe)**：外部依赖（Kafka / Redis / LLM / DB）均配备优雅降级与熔断机制，杜绝系统雪崩；
 3. **严格内存管理与自洁机制**：流式导出临时文件自动销毁（`dispose()`），严控资源占用与无死锁保证；
 4. **统一规范与唯一署名**：代码库与提交记录严格保持 `Emiliamio <mio2110767128@163.com>` 全链路一致。
