@@ -57,7 +57,7 @@ aside: false
 </div>
 <div class="p-metric">
 <div class="p-num">131 项</div>
-<div class="p-label">全工程自动化单元与并发压测 100% 绿色通过</div>
+<div class="p-label">全工程自动化单元与并发压测通过</div>
 </div>
 </div>
 
@@ -116,7 +116,7 @@ aside: false
 </div>
 <div class="p-metric">
 <div class="p-num">224 项</div>
-<div class="p-label">全套自动化单元与集成回归用例 100% 绿灯 (40s 单机并发)</div>
+<div class="p-label">全套自动化单元与集成回归用例 (40s 单机并发)</div>
 </div>
 <div class="p-metric">
 <div class="p-num">17 秒</div>
@@ -177,7 +177,7 @@ aside: false
 </div>
 <div class="p-metric">
 <div class="p-num">12/12 项</div>
-<div class="p-label">全链路单元与端到端回归测试 100% 绿灯</div>
+<div class="p-label">全链路单元与端到端回归测试</div>
 </div>
 </div>
 
@@ -398,7 +398,7 @@ aside: false
 </div>
 <div class="p-metric">
 <div class="p-num">198 项</div>
-<div class="p-label">全项目五模块自动化测试 100% 绿灯</div>
+<div class="p-label">全项目五模块自动化测试</div>
 </div>
 </div>
 

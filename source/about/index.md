@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', function() {
 - **技术栈**：Java 21 (虚拟线程) + Spring Boot 3.5.16 + PostgreSQL 16 (pgvector) + Redis 7 + Vue 3.5 + Vite 6 + Vitest 4
 - **核心突破**：
   - **R1–R6 六大机器可验架构不变量**：ArchUnit 全量守护 8 个特性域 API/Internal 依赖倒置隔离，分层单向流动，循环依赖 0 容忍；
-  - **OpenAPI 契约快照防腐化锁**：接口端点、入参 Schema 变动机器自动化差分，100% 保障对外 Widget 与客户端稳定性；
+  - **OpenAPI 契约快照防腐化锁**：接口端点、入参 Schema 变动机器自动化差分，保障对外 Widget 与客户端稳定性；
   - **14 项全自动机器宣称门禁 (`verify-claims.sh`)**：覆盖内部检索召回、单 IP 30 RPM 原子限流、备份恢复往返、冷启动 ≤60s (实测 17s) 等全部量化指标，杜绝虚标；
   - **免鉴权公开挂件脱敏异步审计管道**：真实 IP 与 UA 以带盐 SHA-256 摘要入库，专用有界线程池故障隔离，写库异常业务零阻断 (L1 反向验证通过)；
   - **9090 独立未发布管理端口结构性防御**：Spring Boot Actuator 私有内网监听，对外发布端口 `8080` 物理 404，坚守 L2b 真实攻击路径铁律；
@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', function() {
   - **三路混合 RAG 与重排**：密集 HNSW + 稀疏 tsvector BM25 + RRF 融合 + Cross-Encoder 二次精排；
   - **Kahn 拓扑排序 DAG 响应式引擎**：无锁高并发分层调度 9 大反应式节点；
   - **Anthropic MCP 原生协议客户端**：原生支持 JSON-RPC 2.0 规范，直连全球上千个 MCP Server 工具生态；
-  - **生产装甲自愈防御**：800MB 破损流式解析、脱网老旧机纯 Java 向量引擎、大模型残缺 JSON 栈式修复，**224 项测试 100% 通过** (40s 并发)。
+  - **生产装甲自愈防御**：800MB 破损流式解析、脱网老旧机纯 Java 向量引擎、大模型残缺 JSON 栈式修复，**224 项测试通过** (40s 并发)。
 
 ### ⚡ 2. [FlashCraft (极光工坊)](https://github.com/Emiliamio/FlashCraft-Desktop) · 工业级桌面业务自动化与商业变现万能脚手架
 - **技术栈**：Python 3.12 + CustomTkinter + Playwright (Edge免安装) + Pandas + UIQueue + PyInstaller
@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function() {
   - **冷热分层数据生命周期 (ILM)**：`DataLifecycleService` 划分热/温/冷存储，超期日志批量物理安全淘汰；
   - **高可用容灾与近源缓存**：Resilience4j 动态滑动窗口熔断与本地 WAL 降级缓冲，Caffeine 50ns L1 堆缓存 + Redis L2 双级缓存；
   - 基于 Apache POI `SXSSFWorkbook(100)` 实现磁盘滑动窗口流式导出，消灭大文件导出 OOM（50,000 行 JVM 堆内存稳定在 18MB）；
-  - 引入 Kafka KRaft 削峰流与 ClickHouse MergeTree 引擎，实现亿级日志多维分析 45x 毫秒级加速，实装 Fail-Closed 防爆破与 RFC 6962 默克尔域分隔，**93 项单测与攻防测试 100% 通过**。
+  - 引入 Kafka KRaft 削峰流与 ClickHouse MergeTree 引擎，实现亿级日志多维分析 45x 毫秒级加速，实装 Fail-Closed 防爆破与 RFC 6962 默克尔域分隔，**93 项单测与攻防测试通过**。
 
 ### 🐍 4. [LogScope CLI](https://github.com/Emiliamio/java-portfolio) · 高性能离线日志解析与异常探针
 - **技术栈**：Python 3.11 + Pandas + 正则表达式 + 有限状态机 (FSM) + Parquet + DuckDB
@@ -203,7 +203,7 @@ document.addEventListener('DOMContentLoaded', function() {
   - **列存与单机即席分析**：Apache Parquet 85% 高压缩比列存与 DuckDB 嵌入式内存即席分析；
   - **零拷贝与多核并行**：`mmap` 内存映射结合多核分块解析，实测吞吐量达 **34,317 QPS**；
   - 基于 Pandas 时序滚动窗口构建登录暴力破解与敏感路径扫描检测模型；
-  - 打造 Excel（多 Sheet 格式化）、HTML（动态图表）、Parquet 与 SQL 自动化多格式导出管道，修复 FSM 跨分块续行边界，**63 项测试 100% 通过**。
+  - 打造 Excel（多 Sheet 格式化）、HTML（动态图表）、Parquet 与 SQL 自动化多格式导出管道，修复 FSM 跨分块续行边界，**63 项测试通过**。
 
 ### 🤖 5. [Nexus AI Security Copilot](https://github.com/Emiliamio/java-portfolio) · 智能日志安全研判 Studio
 - **技术栈**：Spring Boot 3 + JDK 11 HttpClient + SSE 流式传输 + Ollama 私有化 + 边缘向量化 + 现代前端工作台
@@ -212,7 +212,7 @@ document.addEventListener('DOMContentLoaded', function() {
   - **边缘特征向量化与语义缓存**：纯 CPU 2ms 提取 64 维特征向量，`SemanticDiagnosisCache` 相似攻击 0 Token 5ms 秒级命中；
   - 打造“云端大模型 + 本地 Ollama 私有化 + 内核规则引擎”三级智能热备架构；
   - 实现 100% 离线数据隐私盾（Air-Gapped Privacy Shield），保障核心业务日志不出域；
-  - 结合 100vw 全视口 SOC Studio 前端工作台，实装 SnakeYAML 真 AST 威胁规则引擎与余弦 0.95 有界语义缓存，提供实时威胁流式研判与一键 WAF 阻断剧本生成，**37 项单测 100% 通过**。
+  - 结合 100vw 全视口 SOC Studio 前端工作台，实装 SnakeYAML 真 AST 威胁规则引擎与余弦 0.95 有界语义缓存，提供实时威胁流式研判与一键 WAF 阻断剧本生成，**37 项单测通过**。
 
 ### 🛰️ 6. [ASTA (极星战术中枢)](https://github.com/Emiliamio/arknights-autopilot) · 工业级空间几何推演与多开集群挂机代肝中台
 - **技术栈**：Python 3.12 + OpenCV 4 + ADB + FastAPI + Asyncio + 贝塞尔曲线 + Pytest
@@ -224,13 +224,13 @@ document.addEventListener('DOMContentLoaded', function() {
   - **动态端口探测与多开编队并发调度器 (Fleet Orchestrator)**：Asyncio 异步编排多实例并发作战，自动故障降级与重试；
   - **PRTS 遥测作战指挥仪表盘 (Cyberpunk Web HUD)**：FastAPI + 暗黑工业风实时大屏，干员状态、理智统计与战斗日志可视化；
   - **肉鸽 (IS3/IS4) 深度决策树与希望预算干员招募引擎**：根据希望点数硬门槛与队伍职能赤字智能推荐最优进阶与战斗路径；
-  - **102 项自动化测试 100% 绿灯回归**，支持零人工干预 24 小时高并发挂机。
+  - **102 项自动化测试回归**，支持零人工干预 24 小时高并发挂机。
 
 ---
 
 ## 📐 工程交付标准与质量准则
 
-1. **100% 自动化测试闭环**：全栈全生态核心服务覆盖全量单元与集成测试（**全生态 500+ 项自动化测试 100% 绿灯真实通过**，0 Failures, 0 Skips）；
+1. **全自动化测试闭环**：全栈全生态核心服务覆盖全量单元与集成测试（**全生态 500+ 项自动化测试通过**，0 Failures, 0 Skips）；
 2. **高可用容灾与优雅降级 (Fail-Safe)**：外部依赖（Kafka / Redis / LLM / DB）均配备优雅降级与熔断机制，杜绝系统雪崩；
 3. **严格内存管理与自洁机制**：流式导出临时文件自动销毁（`dispose()`），严控资源占用与无死锁保证；
 4. **统一规范与唯一署名**：代码库与提交记录严格保持 `Emiliamio <mio2110767128@163.com>` 全链路一致。

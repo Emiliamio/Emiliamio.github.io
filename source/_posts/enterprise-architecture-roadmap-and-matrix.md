@@ -100,7 +100,7 @@ tags:
 10. [从信创国产化到等保三级：AgentForge 政企私有化交付、招投标答辩与高可用容灾全流程实战](/2026/08/30/agentforge-xinchuang-and-enterprise-delivery-sop/)  
     * **核心重点**：银河麒麟/统信 UOS 国产信创全栈兼容矩阵、招投标技术偏离表、秒级灾备演练 SOP。
 11. [从代码混沌到架构满分：AgentForge v1.5 企业级架构不变量、依赖现代化与结构性安全防御演进实战](/2026/10/24/agentforge-v1-5-enterprise-architecture-evolution/)  
-    * **核心重点**：R1–R6 六大机器可验架构不变量（ArchUnit 守护分层单向流动与 8 大特性域 API/Internal 隔离）、OpenAPI 契约快照防腐化锁、Spring Boot 3.5.16 依赖现代化与 VEX 漏洞精细治理、前端 Vite 6 / Vitest 4 零漏洞工具链、14 项全自动机器宣称门禁 (verify-claims 冷启动 17s)、免鉴权公开挂件脱敏异步审计管道 (有界线程池故障隔离)、9090 独立未发布管理端口结构性防御 (L2b 真实攻击路径铁律)、全套 224 项自动化单元与集成回归用例 100% 绿灯 (40s 单机并发)。
+    * **核心重点**：R1–R6 六大机器可验架构不变量（ArchUnit 守护分层单向流动与 8 大特性域 API/Internal 隔离）、OpenAPI 契约快照防腐化锁、Spring Boot 3.5.16 依赖现代化与 VEX 漏洞精细治理、前端 Vite 6 / Vitest 4 零漏洞工具链、14 项全自动机器宣称门禁 (verify-claims 冷启动 17s)、免鉴权公开挂件脱敏异步审计管道 (有界线程池故障隔离)、9090 独立未发布管理端口结构性防御 (L2b 真实攻击路径铁律)、全套 224 项自动化单元与集成回归用例 (40s 单机并发)。
 
 ---
 
@@ -111,7 +111,7 @@ tags:
 走出服务端高并发与云端大模型，打通面向中小型企业、财务行政与电商运营的最后一公里商业交付闭环。
 
 12. [从零构建工业级桌面业务自动化脚手架：CustomTkinter、UIQueue 削峰与单机商业授权防线实战](/2026/09/15/flashcraft-desktop-automation-scaffold-and-commercial-armor/)  
-    * **核心重点**：CustomTkinter 现代暗黑科技美学与 Windows 高 DPI 适配、UIQueue 生产者-消费者削峰中枢（彻底消灭 Tkinter 跨线程段错误与假死崩溃）、防白嫖三重商业防御体系（IS_TRIAL 试用行数截断与水印、单机硬件指纹 FC-XXXX-XXXX、单机 20 次频次硬熔断）、Windows PE 官方版权元数据注入（抹除 Python 脚本特征提升商业溢价）、全局极客快捷键（F5/Esc/F1）、原生 Windows 文件拖拽（windnd）、Playwright 驱动系统 Edge 免安装浏览器自动化、全真脱机离线测试靶场（发票PDF/多店账单/政企上报）、全链路单元与端到端自动化测试 100% 绿灯 (12项单测)。
+    * **核心重点**：CustomTkinter 现代暗黑科技美学与 Windows 高 DPI 适配、UIQueue 生产者-消费者削峰中枢（彻底消灭 Tkinter 跨线程段错误与假死崩溃）、防白嫖三重商业防御体系（IS_TRIAL 试用行数截断与水印、单机硬件指纹 FC-XXXX-XXXX、单机 20 次频次硬熔断）、Windows PE 官方版权元数据注入（抹除 Python 脚本特征提升商业溢价）、全局极客快捷键（F5/Esc/F1）、原生 Windows 文件拖拽（windnd）、Playwright 驱动系统 Edge 免安装浏览器自动化、全真脱机离线测试靶场（发票PDF/多店账单/政企上报）、全链路单元与端到端自动化测试（12 项单测）。
 
 ---
 
@@ -120,7 +120,7 @@ tags:
 突破传统图像模板匹配与固定像素点击局限，攻克 2.5D 战场空间畸变、防作弊手势动力学与高并发多开调度。
 
 13. [从零构建工业级空间几何推演与拟人代肝中台：ASTA 极星战术中枢架构全景复盘](/2026/09/20/asta-arknights-tactical-autopilot-architecture/)  
-    * **核心重点**：2.5D 空间单应性逆透视投影矩阵运算 (Homography)、高斯-三次贝塞尔拟人触控动力学引擎 (Bezier Humanization)、A* 拓扑 DAG 网络流干员部署时序推演、PanicDaemon 毫秒级防线崩溃守护神、Fleet Orchestrator 多开编队并发调度器、PRTS Cyberpunk Web HUD 实时遥测大屏、肉鸽 (IS3/IS4) 深度决策树与希望预算招募模型 (102 项单测 100% 绿灯)。
+    * **核心重点**：2.5D 空间单应性逆透视投影矩阵运算 (Homography)、高斯-三次贝塞尔拟人触控动力学引擎 (Bezier Humanization)、A* 拓扑 DAG 网络流干员部署时序推演、PanicDaemon 毫秒级防线崩溃守护神、Fleet Orchestrator 多开编队并发调度器、PRTS Cyberpunk Web HUD 实时遥测大屏、肉鸽 (IS3/IS4) 深度决策树与希望预算招募模型（132 项单测）。
 
 ## 🎯 总结与源码获取
 
