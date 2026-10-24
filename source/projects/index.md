@@ -76,14 +76,20 @@ aside: false
 <div class="project-header">
 <div class="project-icon-box" style="background: linear-gradient(135deg, #ffa5c8, #7b5ea7); color: #fff;"><i class="fas fa-brain"></i></div>
 <div class="project-title-box">
-<h2 class="project-name">AgentForge (灵眸智枢) · 纯血 Java 21 企业级 AI Agent & 混合 RAG 中台</h2>
-<div class="project-tech-line">Java 21 (虚拟线程) + Spring Boot 3.2 + PostgreSQL 16 (pgvector) + Redis 7 + Vue 3.4</div>
+<h2 class="project-name">AgentForge (灵眸智枢) · 纯血 Java 21 企业级 AI Agent & 混合 RAG 中台 (v1.5.0)</h2>
+<div class="project-tech-line">Java 21 (虚拟线程) + Spring Boot 3.5.16 + PostgreSQL 16 (pgvector) + Redis 7 + Vue 3.5 + Vite 6 + Vitest 4</div>
 </div>
 </div>
 
 <div class="project-badges">
-<span class="p-badge" style="background: rgba(255, 165, 200, 0.25); border-color: #ffa5c8;">旗舰商业中台</span>
+<span class="p-badge" style="background: rgba(255, 165, 200, 0.25); border-color: #ffa5c8;">旗舰商业中台 v1.5</span>
 <span class="p-badge">Java 21</span>
+<span class="p-badge">Spring Boot 3.5.16</span>
+<span class="p-badge">R1~R6 机器可验架构</span>
+<span class="p-badge">14 项宣称自动化门禁</span>
+<span class="p-badge">前端 0 CVE 纯净供应链</span>
+<span class="p-badge">L2b 真实攻击路径结构隔离</span>
+<span class="p-badge">挂件异步审计脱敏留痕</span>
 <span class="p-badge">SQ8 向量量化压缩</span>
 <span class="p-badge">Trace 甘特瀑布流</span>
 <span class="p-badge">受限代码沙箱</span>
@@ -94,13 +100,9 @@ aside: false
 <span class="p-badge">RRF 混合召回</span>
 <span class="p-badge">Kahn DAG 响应式</span>
 <span class="p-badge">Anthropic MCP 原生协议</span>
-<span class="p-badge">RAG 事实性与幻觉护栏</span>
-<span class="p-badge">DeepSeek-R1 结构化流</span>
-<span class="p-badge">Prompt 注入对抗护栏</span>
-<span class="p-badge">LangSmith 级 Trace</span>
+<span class="p-badge">OpenAPI 契约快照防腐化</span>
 <span class="p-badge">JsqlParser AST 租户隔离</span>
-<span class="p-badge">Redis 向量语义降本</span>
-<span class="p-badge">单测 100% (46/46)</span>
+<span class="p-badge">单测 100% (224/224)</span>
 </div>
 
 <div class="project-metrics">
@@ -109,25 +111,26 @@ aside: false
 <div class="p-label">JsqlParser AST 语法树租户强隔离 跨租户物理越权率</div>
 </div>
 <div class="p-metric">
-<div class="p-num">60%+</div>
-<div class="p-label">Redis 向量语义缓存 (余弦 >=0.95) 大模型算力成本降低</div>
+<div class="p-num">14 / 14</div>
+<div class="p-label">机器宣称门禁自动化校验项 100% 自动判定通过 (verify-claims)</div>
 </div>
 <div class="p-metric">
-<div class="p-num">0.5ms</div>
-<div class="p-label">高频问答语义缓存命中端到端极速秒级响应</div>
+<div class="p-num">224 项</div>
+<div class="p-label">全套自动化单元与集成回归用例 100% 绿灯 (40s 单机并发)</div>
 </div>
 <div class="p-metric">
-<div class="p-num">800 MB</div>
-<div class="p-label">装甲流式解析器 (零 OOM + 单页死信 DLQ 容错)</div>
+<div class="p-num">17 秒</div>
+<div class="p-label">Docker-Compose 全栈冷启动就绪耗时 (生产基准 ≤60s)</div>
 </div>
 </div>
 
 <div class="project-body">
-<p>专为国内政企、国企信创生态量身打造的纯 Java 21 企业级 AI 智能体编排与三路混合 RAG 知识库中台。首创“JsqlParser AST 编译期租户强隔离 + 纯 Java 8-bit SQ8 标量量化压缩 (内存降75%) + 分布式 Trace 拓扑时序甘特瀑布流 + 受限安全代码沙箱看门狗 + 多模型金丝雀分流竞技场 + GraphRAG 实体三元组提取与两跳扩散检索 + 多租户 Token 预算限流熔断 + 密集+稀疏+RRF+Cross-Encoder 三路混合检索 + Kahn 拓扑排序响应式 DAG 引擎 + Anthropic MCP 协议原生客户端 + RAG 事实性评估护栏 + Redis 向量语义降本”工业级全栈架构，彻底解决企业私有化交付中 Python 框架运维难与多租户越权两大痛点。</p>
+<p>专为国内政企、国企信创生态量身打造的纯 Java 21 企业级 AI 智能体编排与三路混合 RAG 知识库中台。在 v1.5.0 全面落地“R1–R6 六大机器可验架构不变量 (ArchUnit 守护分层单向流动与 8 大特性域 API/Internal 隔离) + OpenAPI 契约快照锁 + 纯血 Spring Boot 3.5.16 依赖现代化与 VEX 漏洞精细治理 + 前端 Vite 6 / Vitest 4 零漏洞工具链 + 14 项全自动机器宣称门禁 + 免鉴权公开挂件脱敏异步审计管道 (有界线程池故障隔离) + 9090 独立未发布管理端口结构性防御 (L2b 真实攻击路径铁律) + JsqlParser 租户强隔离 + 纯 Java 8-bit SQ8 标量量化压缩 + 分布式 Trace 甘特瀑布流 + GraphRAG 两跳实体扩散”，彻底解决企业私有化交付中 Python 运维难、代码腐化与安全自欺三大痛点。</p>
 </div>
 
 <div class="project-links">
 <a href="https://github.com/Emiliamio/agent-forge" target="_blank" rel="noopener" class="p-btn p-btn-gh" style="background: linear-gradient(135deg, rgba(123, 94, 167, 0.8), rgba(255, 165, 200, 0.8)); border-color: #ffa5c8; color: #fff;"><i class="fab fa-github"></i> GitHub 官方仓库</a>
+<a href="/2026/10/24/agentforge-v1-5-enterprise-architecture-evolution/" class="p-btn p-btn-doc" style="background: linear-gradient(135deg, rgba(255, 165, 200, 0.3), rgba(123, 94, 167, 0.3)); border-color: #ffa5c8;"><i class="fas fa-layer-group"></i> v1.5 架构满分演进复盘</a>
 <a href="/2026/08/28/agentforge-pure-java-enterprise-rag-architecture/" class="p-btn p-btn-doc"><i class="fas fa-book-open"></i> 全栈架构深度复盘</a>
 <a href="/2026/08/28/agentforge-production-rag-anti-vulnerability-and-armor/" class="p-btn p-btn-doc"><i class="fas fa-shield-alt"></i> 生产长尾装甲与避坑指南</a>
 <a href="/2026/08/30/agentforge-xinchuang-and-enterprise-delivery-sop/" class="p-btn p-btn-doc"><i class="fas fa-file-contract"></i> 信创与等保交付SOP</a>

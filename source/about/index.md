@@ -145,9 +145,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
 ## 🏛️ 旗舰项目与核心系统演进 (Featured Systems)
 
-### 🌟 1. [AgentForge (灵眸智枢)](https://github.com/Emiliamio/agent-forge) · 纯血 Java 21 企业级 AI Agent & 混合 RAG 中台
-- **技术栈**：Java 21 (虚拟线程) + Spring Boot 3.2 + PostgreSQL 16 (pgvector) + Redis 7 + Vue 3.4
+### 🌟 1. [AgentForge (灵眸智枢)](https://github.com/Emiliamio/agent-forge) · 纯血 Java 21 企业级 AI Agent & 混合 RAG 中台 (v1.5.0)
+- **技术栈**：Java 21 (虚拟线程) + Spring Boot 3.5.16 + PostgreSQL 16 (pgvector) + Redis 7 + Vue 3.5 + Vite 6 + Vitest 4
 - **核心突破**：
+  - **R1–R6 六大机器可验架构不变量**：ArchUnit 全量守护 8 个特性域 API/Internal 依赖倒置隔离，分层单向流动，循环依赖 0 容忍；
+  - **OpenAPI 契约快照防腐化锁**：接口端点、入参 Schema 变动机器自动化差分，100% 保障对外 Widget 与客户端稳定性；
+  - **14 项全自动机器宣称门禁 (`verify-claims.sh`)**：覆盖内部检索召回、单 IP 30 RPM 原子限流、备份恢复往返、冷启动 ≤60s (实测 17s) 等全部量化指标，杜绝虚标；
+  - **免鉴权公开挂件脱敏异步审计管道**：真实 IP 与 UA 以带盐 SHA-256 摘要入库，专用有界线程池故障隔离，写库异常业务零阻断 (L1 反向验证通过)；
+  - **9090 独立未发布管理端口结构性防御**：Spring Boot Actuator 私有内网监听，对外发布端口 `8080` 物理 404，坚守 L2b 真实攻击路径铁律；
+  - **纯血依赖现代化与供应链清零**：前端 0 CVE / 0 豁免，后端仅余 4 条不可抗跨大版本项并受 VEX 严格溯源；
   - **JsqlParser SQL AST 编译期租户强隔离**：编译层递归强行注入 `tenant_id`，物理越权率 **0.00%**；
   - **纯 Java 8-bit 标量量化压缩引擎 (SQ8)**：`ScalarQuantizationEngine` 内存物理占用降低 75%，保持 98%+ 余弦相似度高保真度；
   - **分布式 Trace 拓扑时间线甘特图格式化**：`TraceWaterfallGanttService` 输出 Datadog/Jaeger 级时序瀑布流，赋能前端渲染；
@@ -158,12 +164,7 @@ document.addEventListener('DOMContentLoaded', function() {
   - **三路混合 RAG 与重排**：密集 HNSW + 稀疏 tsvector BM25 + RRF 融合 + Cross-Encoder 二次精排；
   - **Kahn 拓扑排序 DAG 响应式引擎**：无锁高并发分层调度 9 大反应式节点；
   - **Anthropic MCP 原生协议客户端**：原生支持 JSON-RPC 2.0 规范，直连全球上千个 MCP Server 工具生态；
-  - **RAG 事实性与幻觉评估护栏**：`RagGroundingEvaluator` 实时比对生成断言与知识分块匹配度，自动防范模型幻觉；
-  - **DeepSeek-R1 结构化 SSE 事件分发**：`StructuredSseStreamDispatcher` 实现 `<think>` 思维链流式与正式内容清晰分流；
-  - **企业级 Prompt 注入对抗护栏**：`PromptInjectionGuard` 识别防御系统提示词窃取、角色越狱与定界符逃逸；
-  - **LangSmith 级全链路拓扑 Trace**：`AgentExecutionTracer` 树状 Span 瀑布流追踪与 Token 成本实时精算；
-  - **Redis 向量语义降本 60% 缓存**：高频问答 0.5ms 秒级响应，大幅削减企业算力账单；
-  - **生产装甲自愈防御**：800MB 破损流式解析、脱网老旧机纯 Java 向量引擎、大模型残缺 JSON 栈式修复，**46 项单测 100% 通过**。
+  - **生产装甲自愈防御**：800MB 破损流式解析、脱网老旧机纯 Java 向量引擎、大模型残缺 JSON 栈式修复，**224 项测试 100% 通过** (40s 并发)。
 
 ### ⚡ 2. [FlashCraft (极光工坊)](https://github.com/Emiliamio/FlashCraft-Desktop) · 工业级桌面业务自动化与商业变现万能脚手架
 - **技术栈**：Python 3.12 + CustomTkinter + Playwright (Edge免安装) + Pandas + UIQueue + PyInstaller
@@ -229,7 +230,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 ## 📐 工程交付标准与质量准则
 
-1. **100% 自动化测试闭环**：全栈全生态核心服务覆盖全量单元与集成测试（**全生态 380+ 项自动化测试 100% 绿灯真实通过**，0 Failures, 0 Skips）；
+1. **100% 自动化测试闭环**：全栈全生态核心服务覆盖全量单元与集成测试（**全生态 500+ 项自动化测试 100% 绿灯真实通过**，0 Failures, 0 Skips）；
 2. **高可用容灾与优雅降级 (Fail-Safe)**：外部依赖（Kafka / Redis / LLM / DB）均配备优雅降级与熔断机制，杜绝系统雪崩；
 3. **严格内存管理与自洁机制**：流式导出临时文件自动销毁（`dispose()`），严控资源占用与无死锁保证；
 4. **统一规范与唯一署名**：代码库与提交记录严格保持 `Emiliamio <mio2110767128@163.com>` 全链路一致。
